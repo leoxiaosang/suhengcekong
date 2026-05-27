@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# 站点地图
+Sitemap: https://www.suhengcekong.com/sitemap.xml
+
+# 不抓取临时文件
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: *.log

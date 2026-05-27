@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>电子皮带秤工作原理及核心结构详解 - 苏衡测控技术科普</title>
+  <meta name="description" content="苏衡测控深度解析电子皮带秤的工作原理、核心结构与信号处理流程，帮助工程师理解动态计量原理，为设备选型与维护提供理论基础。">
+  <meta name="keywords" content="电子皮带秤工作原理,皮带秤结构,皮带秤称重原理,苏衡测控,动态计量原理">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
+    .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
+    .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
+    .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
+    .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
+    .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
+    .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
+    .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
+    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+    th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
+    th{background:var(--primary);color:#fff;font-weight:600}
+    tr:nth-child(even)td{background:#f9f9f9}
+    .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
+    .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
+    .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
+  </style>
+</head>
+<body>
+<div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>📞 188 1190 6890</span><span>✉ info@suhengcekong.cn</span></div></div></div>
+<nav class="navbar"><div class="container nav-inner"><a href="../index.html" class="logo"><span class="logo-zh">苏衡测控</span><span class="logo-en">SUHENG</span></a><ul class="nav-menu"><li><a href="../index.html">首页</a></li><li><a href="../products.html">产品中心</a></li><li><a href="index.html">行业资讯</a></li><li><a href="../contact.html">联系我们</a></li></ul></div></nav>
+<main class="art-wrap">
+<div class="art-bc"><a href="../index.html">首页</a> / <a href="index.html">行业资讯</a> / 电子皮带秤工作原理</div>
+<h1>电子皮带秤工作原理及核心结构详解</h1>
+<div class="art-meta"><span>2026-05-27</span><span>技术科普</span><span>阅读约8分钟</span></div>
+
+<p>电子皮带秤是现代工业散料计量领域应用最广泛的设备之一。与静态称重不同，它需要在物料运动过程中完成精确的动态计量。本文将系统解析苏衡测控<strong>电子皮带秤</strong>的工作原理与核心组成，帮助您深入理解这一核心计量设备。</p>
+
+<h2>一、核心计量公式</h2>
+<p>电子皮带秤的计量原理基于以下物理关系：</p>
+<p style="background:#f5f8fc;padding:16px 20px;border-radius:8px;font-size:16px;font-weight:600;text-align:center;color:var(--primary)">
+  累计重量 = ∫ 线密度（kg/m）× 皮带速度（m/s）× dt
+</p>
+<p>即：在每一个极短的采样周期内，皮带上单位长度的物料重量（线密度）乘以皮带运行速度，得到该时刻的<strong>瞬时流量</strong>；对瞬时流量进行时间积分，就得到<strong>累计重量</strong>。这就是电子皮带秤的核心数学模型。</p>
+
+<h2>二、四大核心部件</h2>
+
+<h3>1. 称重框架（Weighing Bridge）</h3>
+<p>称重框架是整个系统的力学基础。苏衡测控采用焊接式钢结构框架，配置1~4组称重托辊，将皮带上物料的重力传递至传感器。框架设计须保证刚性和稳定性，避免自身变形引入误差。</p>
+
+<h3>2. 称重传感器（Load Cell）</h3>
+<p>称重传感器是精度的核心。苏衡测控采用量程75-500KG的高精度应变式传感器，灵敏度2.0mV/V，综合误差≤±0.02% F.S.。传感器将框架受力转换为电压信号，经放大后送入仪表。</p>
+
+<h3>3. 测速传感器（Speed Sensor）</h3>
+<p>测速传感器安装于皮带机尾轮或专用测速轮上，采用光电编码器或霍尔传感器原理，实时输出与皮带速度成正比的脉冲信号。仪表通过计算脉冲频率得出精确的带速值。</p>
+
+<h3>4. 积算仪表（Integrator）</h3>
+<p>积算仪表是电子皮带秤的"大脑"。它实时采集称重信号和测速信号，按采样周期（通常50~200ms）执行积分运算，输出瞬时流量、累计量、皮带速度等参数，并支持4-20mA、RS485、以太网等多种通讯方式。</p>
+
+<h2>三、信号处理流程</h2>
+<table>
+<tr><th>步骤</th><th>处理环节</th><th>说明</th></tr>
+<tr><td>①</td><td>力信号采集</td><td>传感器输出mV级电压信号</td></tr>
+<tr><td>②</td><td>信号放大/滤波</td><td>消除高频振动和电磁干扰</td></tr>
+<tr><td>③</td><td>A/D转换</td><td>16~24位精度模数转换</td></tr>
+<tr><td>④</td><td>速度信号采集</td><td>编码器脉冲计数</td></tr>
+<tr><td>⑤</td><td>流量积分运算</td><td>实时计算瞬时流量</td></tr>
+<tr><td>⑥</td><td>累计输出</td><td>显示/通讯/打印输出</td></tr>
+</table>
+
+<h2>四、影响精度的关键因素</h2>
+<p><strong>皮带张力：</strong>皮带张力变化会影响称重框架的受力状态，是零点漂移的主要原因。应定期检查皮带张紧装置。</p>
+<p><strong>托辊状态：</strong>卡滞的称重托辊会产生附加阻力，导致计量偏差。应定期润滑和更换磨损托辊。</p>
+<p><strong>物料偏载：</strong>物料在皮带上分布不均会造成横向偏载误差。合理设计导料槽可改善此问题。</p>
+<p><strong>环境温度：</strong>大幅温差会引起传感器零漂。苏衡测控传感器内置温度补偿，工作温度范围-20℃~+60℃。</p>
+
+<div class="art-tip">💡 精度保障建议：建议每季度进行一次链码校验或实物校验，每次校验后记录数据，便于建立设备精度变化趋势图，提前发现异常。</div>
+
+<h2>五、单托辊 vs 多托辊方案</h2>
+<p>根据精度要求，苏衡测控提供两种主流配置：</p>
+<table>
+<tr><th>配置方案</th><th>精度等级</th><th>适用场景</th></tr>
+<tr><td>单托辊（1组）</td><td>0.5~1级</td><td>内部生产统计、过程控制</td></tr>
+<tr><td>双托辊（2组）</td><td>0.25~0.5级</td><td>贸易结算、煤矿计量</td></tr>
+<tr><td>四托辊（4组）</td><td>0.1~0.25级</td><td>港口、电厂精度计量</td></tr>
+</table>
+
+<div class="cta">
+<h3>需要专业的电子皮带秤选型建议？</h3>
+<p>苏衡测控工程师为您免费提供工况分析和精度方案推荐，10年+行业经验保障</p>
+<a href="../contact.html">免费获取选型方案 →</a>
+</div>
+</main>
+<footer class="footer"><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 苏衡测控 | 徐州市苏衡自动化控制技术有限公司</p><span>苏ICP备2024107758号-1</span></div></div></footer>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>行业资讯 - 苏衡测控皮带秤技术文章与行业动态</title>
+  <meta name="description" content="苏衡测控行业资讯中心，提供电子皮带秤、高精度传感器、给料机、给煤机等产品的技术选型指南、维护保养知识、行业动态等专业内容。">
+  <meta name="keywords" content="苏衡测控,皮带秤,电子皮带秤,给料机,给煤机,皮带机,称重传感器,智能仪表">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* SEO 文章页专用样式 */
+    .seo-hero {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .seo-hero h1 { color: #fff; font-size: clamp(28px, 4vw, 42px); font-weight: 800; margin-bottom: 12px; }
+    .seo-hero p { color: rgba(255,255,255,0.7); font-size: 15px; max-width: 560px; margin: 0 auto; }
+
+    .seo-main { padding: 60px 0 80px; background: var(--bg-light); min-height: 600px; }
+    .seo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+
+    .seo-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .seo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+    .seo-card-img {
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .seo-card-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('../images/电子皮带秤.jpg') center/cover no-repeat;
+      opacity: 0.3;
+    }
+    .seo-card-img span { position: relative; z-index: 1; color: #fff; font-size: 14px; font-weight: 500; letter-spacing: 1px; }
+
+    .seo-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .seo-card-tag {
+      display: inline-block;
+      background: rgba(10,74,138,0.08);
+      color: var(--primary);
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 2px;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+    .seo-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.45;
+      margin-bottom: 10px;
+      transition: var(--transition);
+    }
+    .seo-card:hover .seo-card-title { color: var(--primary); }
+    .seo-card-desc { font-size: 14px; color: var(--text-light); line-height: 1.7; flex: 1; }
+    .seo-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--text-light);
+    }
+    .seo-card-meta span { display: flex; align-items: center; gap: 4px; }
+    .seo-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-size: 13.5px;
+      font-weight: 600;
+      margin-top: auto;
+      transition: var(--transition);
+    }
+    .seo-read-more:hover { gap: 10px; }
+
+    @media (max-width: 768px) {
+      .seo-grid { grid-template-columns: 1fr; padding: 0 16px; }
+      .seo-hero { padding: 48px 0 36px; }
+      .seo-main { padding: 40px 0 56px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 顶部信息条 -->
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-left">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.79 19.79 0 01.22 4 2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> 188 1190 6890</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@suhengcekong.cn</span>
+    </div>
+  </div>
+</div>
+
+<!-- 导航 -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo">
+      <span class="logo-zh">苏衡测控</span>
+      <span class="logo-en">SUHENG MEASUREMENT</span>
+    </a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="../index.html">首页</a></li>
+      <li class="nav-item"><a href="../products.html">产品中心</a></li>
+      <li class="nav-item"><a href="../about.html">关于我们</a></li>
+      <li class="nav-item"><a href="../contact.html">联系我们</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- SEO Hero -->
+<div class="seo-hero">
+  <div class="container">
+    <h1>行业技术资讯</h1>
+    <p>苏衡测控深耕称重计量领域十余年，分享电子皮带秤、传感器、给料机等行业技术与经验</p>
+  </div>
+</div>
+
+<!-- 文章列表 -->
+<div class="seo-main">
+  <div class="container">
+    <div class="seo-grid">
+
+      <!-- 文章1 -->
+      <article class="seo-card">
+        <a href="suheng-belt-scale-selection-guide.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>皮带秤选型</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">选型指南</span>
+            <h2 class="seo-card-title">苏衡测控电子皮带秤选型指南：如何选择适合您工况的皮带秤设备？</h2>
+            <p class="seo-card-desc">全面解析电子皮带秤选型的关键参数，包括精度等级、带宽、流量范围、安装环境等因素，帮助您做出正确的采购决策。</p>
+            <div class="seo-card-meta">
+              <span>2026-05-26</span><span>阅读约 8 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 文章2 -->
+      <article class="seo-card">
+        <a href="suheng-electronic-belt-scale-maintenance.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>维护保养</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">维护保养</span>
+            <h2 class="seo-card-title">苏衡测控电子皮带秤日常维护与故障排查：延长使用寿命的专业建议</h2>
+            <p class="seo-card-desc">详细介绍苏衡测控电子皮带秤的日常保养要点、常见故障诊断方法及处理方案，确保设备长期稳定运行。</p>
+            <div class="seo-card-meta">
+              <span>2026-05-26</span><span>阅读约 10 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 文章3 -->
+      <article class="seo-card">
+        <a href="suheng-feeder-coal-feeder-comparison.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>设备对比</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">产品对比</span>
+            <h2 class="seo-card-title">给料机与给煤机的区别：苏衡测控带式给料机在电厂煤矿中的应用优势</h2>
+            <p class="seo-card-desc">深度对比给料机与给煤机的结构特点、工作原理及应用场景，解析苏衡测控系列给料设备的差异化优势。</p>
+            <div class="seo-card-meta">
+              <span>2026-05-26</span><span>阅读约 7 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 文章4 -->
+      <article class="seo-card">
+        <a href="suheng-high-precision-sensor-tech.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>传感技术</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">技术解析</span>
+            <h2 class="seo-card-title">高精度称重传感器技术详解：75-500KG量程传感器在皮带秤系统中的核心作用</h2>
+            <p class="seo-card-desc">从结构设计到信号处理，全面解读苏衡测控高精度称重传感器（量程75-500KG）的技术特性与应用场景。</p>
+            <div class="seo-card-meta">
+              <span>2026-05-26</span><span>阅读约 9 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 文章5 -->
+      <article class="seo-card">
+        <a href="suheng-industry-application-cases.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>应用案例</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">应用案例</span>
+            <h2 class="seo-card-title">苏衡测控皮带秤及配套设备在矿山、电力、港口行业的典型应用案例</h2>
+            <p class="seo-card-desc">精选苏衡测控在不同行业的实际应用案例，展示电子皮带秤、给料机、给煤机等设备的现场运行效果与客户反馈。</p>
+            <div class="seo-card-meta">
+              <span>2026-05-26</span><span>阅读约 11 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 文章6 -->
+      <article class="seo-card">
+        <a href="belt-scale-working-principle.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>技术科普</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">技术科普</span>
+            <h2 class="seo-card-title">电子皮带秤工作原理及核心结构详解</h2>
+            <p class="seo-card-desc">系统解析电子皮带秤的计量原理、四大核心部件与信号处理流程，帮助工程师深入理解动态计量机制。</p>
+            <div class="seo-card-meta">
+              <span>2026-05-27</span><span>阅读约 8 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 文章7 -->
+      <article class="seo-card">
+        <a href="feeder-vs-coal-feeder-selection.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>选型对比</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">选型对比</span>
+            <h2 class="seo-card-title">给料机和给煤机的区别？行业选型攻略</h2>
+            <p class="seo-card-desc">从概念关系、结构原理、应用场景三个维度全面对比，附苏衡测控选型决策树，帮您快速确定设备类型。</p>
+            <div class="seo-card-meta">
+              <span>2026-05-27</span><span>阅读约 7 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 文章8 -->
+      <article class="seo-card">
+        <a href="xuzhou-belt-scale-factory-recommend.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>地域服务</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">地域服务</span>
+            <h2 class="seo-card-title">徐州皮带秤厂家哪家靠谱？实地厂家推荐</h2>
+            <p class="seo-card-desc">徐州本地皮带秤厂家考察指南，附苏衡测控核心优势对比表和客户考察流程，帮您规避采购风险。</p>
+            <div class="seo-card-meta">
+              <span>2026-05-27</span><span>阅读约 6 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 文章9 -->
+      <article class="seo-card">
+        <a href="belt-scale-inaccurate-causes.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>故障运维</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">故障运维</span>
+            <h2 class="seo-card-title">电子皮带秤计量不准的原因及解决方法</h2>
+            <p class="seo-card-desc">系统分析皮带秤计量不准的8大原因及专业排查步骤，帮助工程师快速恢复设备精度，减少停机损失。</p>
+            <div class="seo-card-meta">
+              <span>2026-05-27</span><span>阅读约 9 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 文章10 -->
+      <article class="seo-card">
+        <a href="belt-scale-national-standard-2026.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>行业资讯</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">行业资讯</span>
+            <h2 class="seo-card-title">2026年皮带秤计量新国标标准解读</h2>
+            <p class="seo-card-desc">解读皮带秤JJG195检定规程核心要求、精度等级划分和强制检定规定，帮助企业了解合规要求。</p>
+            <div class="seo-card-meta">
+              <span>2026-05-27</span><span>阅读约 8 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; 2026 苏衡测控 | 徐州市苏衡自动化控制技术有限公司</p>
+      <span>苏ICP备2024107758号-1</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
