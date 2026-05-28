@@ -1,4 +1,25 @@
+# 苏衡测控 robots.txt
+# 允许所有搜索引擎和AI爬虫访问
+
 User-agent: *
+Allow: /
+
+# AI大模型爬虫（GEO优化）
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+Useragent: cohere-ai
+Allow: /
+User-agent: Bytespider
 Allow: /
 
 # 站点地图
