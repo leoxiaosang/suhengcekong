@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智能控制仪表SH-S600/S1200功能与应用详解 - 苏衡测控产品专题</title>
+  <meta name="description" content="苏衡测控深度解析SH-S600和SH-S1200两款智能控制仪表的功能特点、技术参数、通讯接口及在皮带秤、给料机等系统中的应用配置指南。">
+  <meta name="keywords" content="智能控制仪表,SH-S600,SH-S1200,皮带秤仪表,称重控制器,Modbus,OPC UA,苏衡测控">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
+    .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
+    .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
+    .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
+    .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
+    .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
+    .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
+    .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
+    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+    th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
+    th{background:var(--primary);color:#fff;font-weight:600}
+    tr:nth-child(even)td{background:#f9f9f9}
+    .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
+    .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
+    .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
+    .model-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+    .model-card{border:2px solid #e8ecf1;border-radius:10px;padding:20px;transition:.2s}
+    .model-card.featured{border-color:var(--primary);background:rgba(10,74,138,0.02)}
+    .model-name{font-size:18px;font-weight:700;color:var(--text-dark);margin-bottom:12px}
+    .model-tag{font-size:11px;background:var(--accent);color:#fff;padding:2px 8px;border-radius:3px;margin-left:8px}
+    .spec-grid{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:14px;margin-top:12px}
+    .spec-label{color:#64748b}.spec-value{color:var(--text-dark);font-weight:500}
+    .func-group{margin:20px 0}.func-item{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #f5f5f5}
+    .func-icon{width:36px;height:36px;border-radius:8px;background:rgba(10,74,138,0.06);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+    .func-title{font-weight:600;font-size:15px;color:var(--text-dark)}.func-desc{font-size:13px;color:#64748b;margin-top:2px}
+    @media(max-width:600px){.model-compare{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>📞 188 1190 6890</span><span>✉ info@suhengcekong.cn</span></div></div></div>
+<nav class="navbar"><div class="container nav-inner"><a href="../index.html" class="logo"><span class="logo-zh">苏衡测控</span><span class="logo-en">SUHENG</span></a><ul class="nav-menu"><li><a href="../index.html">首页</a></li><li><a href="../products.html">产品中心</a></li><li><a href="index.html">行业资讯</a></li><li><a href="../contact.html">联系我们</a></li></ul></div></nav>
+<main class="art-wrap">
+<div class="art-bc"><a href="../index.html">首页</a> / <a href="index.html">行业资讯</a> / 智能控制仪表详解</div>
+<h1>智能控制仪表SH-S600/S1200功能与应用详解</h1>
+<div class="art-meta"><span>2026-05-30</span><span>产品专题</span><span>阅读约10分钟</span></div>
+
+<p>如果说称重传感器是电子皮带秤的"感官"，那么智能控制仪表就是它的"大脑"。苏衡测控<strong>SH-S600</strong>和<strong>SH-S1200</strong>两款智能控制仪表，分别面向中小型和大中型计量控制系统，集数据采集、运算处理、逻辑控制、通讯联网于一体，是皮带秤及配套设备的核心控制单元。</p>
+
+<h2>一、两款型号定位对比</h2>
+<div class="model-compare">
+<div class="model-card">
+<div class="model-name">SH-S600<span class="model-tag">标准版</span></div>
+<div class="spec-grid">
+<span class="spec-label">显示屏</span><span class="spec-value">7寸彩色LCD触摸屏</span>
+<span class="spec-label">处理器</span><span class="spec-value">ARM Cortex-A7 单核</span>
+<span class="spec-label">存储容量</span><span class="spec-value">512MB RAM + 4GB Flash</span>
+<span class="spec-label">功耗</span><span class="spec-value">≤18W</span>
+<span class="spec-label">适用场景</span><span class="spec-value">单秤计量、小型给料系统</span>
+<span class="spec-label">通讯接口</span><span class="spec-value">RS485 + 以太网 + 4-20mA</span>
+</div>
+</div>
+<div class="model-card featured">
+<div class="model-name">SH-S1200<span class="model-tag" style="background:var(--primary)">增强版</span></div>
+<div class="spec-grid">
+<span class="spec-label">显示屏</span><span class="spec-value">10.1寸彩色LCD触摸屏</span>
+<span class="spec-label">处理器</span><span class="spec-value">ARM Cortex-A53 四核</span>
+<span class="spec-label">存储容量</span><span class="spec-value">1GB RAM + 8GB Flash</span>
+<span class="spec-label">功耗</span><span class="spec-value">≤25W</span>
+<span class="spec-label">适用场景</span><span class="spec-value">多秤联网、复杂给料/给煤系统</span>
+<span class="spec-label">通讯接口</span><span class="spec-value">RS485 + 以太网 + OPC UA + WiFi</span>
+</div>
+</div>
+</div>
+
+<div class="art-tip"><strong>选型建议：</strong>单条皮带秤或简单给料场景选 SH-S600 即可满足需求；多秤联动、需要上位机集成或复杂控制回路（如PID给料控制）的场景推荐 SH-S1200。</div>
+
+<h2>二、核心功能模块</h2>
+
+<div class="func-group">
+<div class="func-item">
+<div class="func-icon">📊</div>
+<div>
+<div class="func-title">高速数据采集与运算</div>
+<div class="func-desc">支持最高200Hz采样频率，内置数字滤波算法（均值滤波+卡尔曼滤波可选），实时计算瞬时流量、累计量、皮带速度等参数。SH-S1200支持多达8路称重信号同时采集。</div>
+</div>
+</div>
+
+<div class="func-item">
+<div class="func-icon">⚙️</div>
+<div>
+<div class="func-title">PID流量控制（仅S1200高级功能）</div>
+<div class="func-desc">内置完善的PID控制模块，适用于给料机和给煤机的定量给料控制。支持前馈+反馈复合控制策略，响应快、超调小。可预设多种配方参数一键切换。</div>
+</div>
+</div>
+
+<div class="func-item">
+<div class="func-icon">🔗</div>
+<div>
+<div class="func-title">多协议通讯联网</div>
+<div class="func-desc">标配 Modbus RTU/TCP 协议，S1200 额外支持 OPC UA 2.0（可直接对接DCS/SCADA/PLC系统）、HTTP RESTful API（便于云端平台集成）、MQTT（物联网推送）。</div>
+</div>
+</div>
+
+<div class="func-item">
+<div class="func-icon">📈</div>
+<div>
+<div class="func-title">数据记录与报表</div>
+<div class="func-desc">内置历史数据库，可存储≥1年的运行数据（班报、日报、月报）。支持U盘导出Excel格式报表，S1200支持远程Web端数据查询和历史趋势曲线展示。</div>
+</div>
+</div>
+
+<div class="func-item">
+<div class="func-icon">⚠️</div>
+<div>
+<div class="func-title">智能报警与诊断</div>
+<div class="func-desc">支持20+种报警类型（零点超限、流量超载、传感器断线、皮带打滑、通讯中断等）。报警触发时自动记录时间戳和现场参数，支持短信/声光报警输出。内置自诊断程序可辅助故障定位。</div>
+</div>
+</div>
+
+<div class="func-item">
+<div class="func-icon">🔒</div>
+<div>
+<div class="func-title">权限管理与审计追踪</div>
+<div class="func-desc">三级用户权限（操作员/工程师/管理员），关键操作（如标定、参数修改）需密码授权并记录操作日志。满足贸易结算场合的合规性要求。</div>
+</div>
+</div>
+</div>
+
+<h2>三、典型应用配置</h2>
+
+<table>
+<tr><th>应用场景</th><th>推荐仪表</th><th>关键配置</th><th>备注</th></tr>
+<tr><td>电子皮带秤计量</td><td>SH-S600</td><td>单通道模式 + Modbus RTU</td><td>最常用的标准配置</td></tr>
+<tr><td>高精度皮带秤（贸易结算）</td><td>SH-S1200</td><td>双通道冗余 + OPC U A + 审计日志</td><td>满足法制计量要求</td></tr>
+<tr><td>定量给料机</td><td>SH-S1200</td><td>PID控制模块 + 4-20mA变频输出 + 配方管理</td><td>闭环流量自动控制</td></tr>
+<tr><td>给煤机（电厂）</td><td>SH-S1200</td><td>双路称重+测速 + DCS接口 + 冗余电源</td><td>可靠性要求极高</td></tr>
+<tr><td>多秤集中管理</td><td>SH-S1200</td><td>最多管理8个子站 + 以太网组网</td><td>适合大型厂区</td></tr>
+</table>
+
+<h2>四、安装与调试要点</h2>
+
+<h3>电气安装要求</h3>
+<table>
+<tr><th>项目</th><th>规格</th><th>说明</th></tr>
+<tr><td>供电电源</td><td>AC 220V ±10% / 50Hz 或 DC 24V</td><td>建议加装UPS不间断电源</td></tr>
+<tr><td>功率消耗</td><td>S600 ≤18W / S1200 ≤25W</td><td>不含外部执行元件功耗</td></tr>
+<tr><td>工作温度</td><td>0 ~ 45℃</td><td>超出范围需加装空调或加热器</td></tr>
+<tr><td>相对湿度</td><td>≤85%RH（无凝露）</td><td>潮湿环境需配备除湿装置</td></tr>
+<tr><td>接地电阻</td><td>≤4Ω</td><td>独立的信号地与保护地</td></tr>
+</table>
+
+<h3>调试流程简述</h3>
+<p>仪表到货后的标准调试步骤：</p>
+<ol style="font-size:15px;line-height:1.9;color:#444;padding-left:20px;">
+<li style="margin-bottom:8px;"><strong>硬件接线检查</strong> → 对照接线图逐一核对电源、传感器、测速器、通讯线缆</li>
+<li style="margin-bottom:8px;"><strong>开机自检</strong> → 仪表上电后进入自检界面，确认各通道信号正常</li>
+<li style="margin-bottom:8px;"><strong>参数初始化</strong> → 输入皮带参数（速度、宽度、托辊间距等）和传感器参数（量程、灵敏度等）</li>
+<li style="margin-bottom:8px;"><strong>零点校准</strong> → 空带运行采集零点基准值</li>
+<li style="margin-bottom:8px;"><strong>间隔值标定</strong> → 通过实物校验或链码校验确定间隔值</li>
+<li style="margin-bottom:8px;"><strong>带料验证</strong> → 实际运行核对流量和累计量是否合理</li>
+<li><strong>通讯联调</strong> → 对接上位机系统确认数据传输正常</li>
+</ol>
+
+<h2>五、常见问题FAQ</h2>
+<table>
+<tr><th>问题</th><th>可能原因</th><th>解决方法</th></tr>
+<tr><td>显示屏不亮</td><td>电源未通/保险丝烧断/屏幕排线松脱</td><td>检查供电电压，更换同规格保险丝</td></tr>
+<tr><td>称重值跳动剧烈</td><td>传感器线路接触不良/干扰过大</td><td>检查接线端子，增加屏蔽措施</td></tr>
+<tr><td>速度显示为零</td><td>测速传感器故障/接线反接/测速轮打滑</td><td>检查测速器供电和安装位置</td></tr>
+<tr><td>Modbus通讯失败</td><td>地址冲突/波特率不一致/终端电阻缺失</td><td>核对通讯参数，添加终端电阻</td></tr>
+<tr><td>累计量清零后不为零</td><td>软件锁未解除/权限不足</td><td>以管理员身份操作</td></tr>
+</table>
+
+<div class="cta">
+<h3>需要仪表选型帮助或技术资料？</h3>
+<p>苏衡测控提供完整的仪表技术手册、通讯协议文档和应用案例库。欢迎联系我们的技术团队获取详细资料或申请样机试用。</p>
+<a href="../product-yibiao.html">查看仪表产品详情 →</a>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; 2026 苏衡测控 | 徐州市苏衡自动化控制技术有限公司</p>
+      <span>苏ICP备2024107758号-1</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

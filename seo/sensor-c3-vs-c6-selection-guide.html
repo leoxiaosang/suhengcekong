@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>称重传感器C3级与C6级的区别及选型建议 - 苏衡测控技术科普</title>
+  <meta name="description" content="苏衡测控详解称重传感器C3精度等级与C6精度等级的技术差异、OIML R60标准定义、适用场景对比及如何根据实际需求选择合适的传感器精度等级。">
+  <meta name="keywords" content="C3传感器,C6传感器,称重传感器精度等级,C3 C6区别,OIML R60,传感器选型,苏衡测控">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
+    .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
+    .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
+    .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
+    .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
+    .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
+    .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
+    .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
+    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+    th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
+    th{background:var(--primary);color:#fff;font-weight:600}
+    tr:nth-child(even)td{background:#f9f9f9}
+    .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
+    .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
+    .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
+    .compare-box{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:22px 0}
+    .grade-card{border-radius:12px;padding:24px;border:2px solid #e8ecf1}
+    .grade-c3{border-color:#378add;background:rgba(55,138,221,0.03)}
+    .grade-c6{border-color:#e85c1a;background:rgba(232,92,26,0.03)}
+    .grade-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .grade-name{font-size:22px;font-weight:800}
+    .grade-c3 .grade-name{color:#185fa5}.grade-c6 .grade-name{color:#c43e0f}
+    .grade-subtitle{font-size:13px;color:#64748b}
+    .grade-spec{margin:12px 0}.grade-spec-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #eee;font-size:14px}
+    .grade-spec-row:last-child{border-bottom:none}
+    .spec-l{color:#64748b}.spec-r{font-weight:600}
+    .vs-divider{text-align:center;position:relative;margin:-10px 0;z-index:1}
+    .vs-text{display:inline-block;background:#fff;padding:4px 16px;border:2px solid #e0e0e0;border-radius:20px;font-size:13px;font-weight:700;color:#94a3b8}
+    .decision-tree{background:#fafbfc;border-radius:10px;padding:22px 24px;margin:20px 0}
+    .decision-node{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#fff;border-radius:8px;margin-bottom:10px;border-left:4px solid var(--primary)}
+    .decision-q{font-weight:600;font-size:15px;color:var(--text-dark)}
+    .decision-a{font-size:14px;color:#64748b;margin-top:4px}
+    .arrow-down{text-align:center;color:#cbd5e1;font-size:20px;margin:4px 0}
+    .check-list li{position:relative;padding-left:24px;margin-bottom:10px;font-size:15px;line-height:1.7;color:#444}.check-list li::before{content:'✓';position:absolute;left:0;color:#16a34a;font-weight:700}
+    @media(max-width:600px){.compare-box{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>📞 188 1190 6890</span><span>✉ info@suhengcekong.cn</span></div></div></div>
+<nav class="navbar"><div class="container nav-inner"><a href="../index.html" class="logo"><span class="logo-zh">苏衡测控</span><span class="logo-en">SUHENG</span></a><ul class="nav-menu"><li><a href="../index.html">首页</a></li><li><a href="../products.html">产品中心</a></li><li><a href="index.html">行业资讯</a></li><li><a href="../contact.html">联系我们</a></li></ul></div></nav>
+<main class="art-wrap">
+<div class="art-bc"><a href="../index.html">首页</a> / <a href="index.html">行业资讯</a> / 传感器C3/C6区别</div>
+<h1>称重传感器C3级与C6级的区别及选型建议</h1>
+<div class="art-meta"><span>2026-05-30</span><span>传感技术</span><span>阅读约9分钟</span></div>
+
+<p>在电子皮带秤和工业称重系统中，<strong>C3</strong>和<strong>C6</strong>是最常见的两个传感器精度等级标识。它们源自国际法制计量组织OIML R60标准，代表了传感器不同的准确度级别。很多用户在选型时会困惑：到底该选C3还是C6？两者差价多少？值得升级吗？本文为您一一解答。</p>
+
+<h2>一、C3 vs C6：核心技术指标对比</h2>
+<div class="compare-box">
+<div class="grade-card grade-c3">
+<div class="grade-header">
+<div>
+<div class="grade-name">C3级</div>
+<div class="grade-subtitle">标准精度等级 — 工业主流选择</div>
+</div>
+</div>
+<div class="grade-spec">
+<div class="grade-spec-row"><span class="spec-l">最大允许误差 (EL)</span><span class="spec-r">±0.02%</span></div>
+<div class="grade-spec-row"><span class="spec-l">最小静载荷输出 (Y)</span><span class="spec-r">≥4000 分度数</span></div>
+<div class="grade-spec-row"><span class="spec-l"> creep (30分钟)</span><span class="spec-r">±0.02%~±0.05%</span></div>
+<div class="grade-spec-row"><span class="spec-l">温度对零点影响</span><span class="spec-r">±0.02%/10K</span></div>
+<div class="grade-spec-row"><span class="spec-l">典型价格区间</span><span class="spec-r" style="color:#185fa5">¥800 ~ ¥2,500/只</span></div>
+<div class="grade-spec-row"><span class="spec-l">适用皮带秤精度</span><span class="spec-r">±0.5% ~ ±1.0%</span></div>
+</div>
+</div>
+
+<div class="grade-card grade-c6">
+<div class="grade-header">
+<div>
+<div class="grade-name">C6级</div>
+<div class="grade-subtitle">高精度等级 — 贸易结算首选</div>
+</div>
+</div>
+<div class="grade-spec">
+<div class="grade-spec-row"><span class="spec-l">最大允许误差 (EL)</span><span class="spec-r">±0.006%~±0.01%</span></div>
+<div class="grade-spec-row"><span class="spec-l">最小静载荷输出 (Y)</span><span class="spec-r">≥6000 分度数</span></div>
+<div class="grade-spec-row"><span class="spec-l">creep (30分钟)</span><span class="spec-r">±0.01%~±0.02%</span></div>
+<div class="grade-spec-row"><span class="spec-l">温度对零点影响</span><span class="spec-r">±0.007%/10K</span></div>
+<div class="grade-spec-row"><span class="spec-l">典型价格区间</span><span class="spec-r" style="color:#c43e0f">¥2,000 ~ ¥6,000/只</span></div>
+<div class="grade-spec-row"><span class="spec-l">适用皮带秤精度</span><span class="spec-r">±0.125% ~ ±0.25%</span></div>
+</div>
+</div>
+</div>
+
+<h2>二、关键差异解读</h2>
+
+<h3>1. 最大允许误差（Error Limit）</h3>
+<p>C6级的最大允许误差约为C3级的<strong>1/3 到 1/2</strong>。这意味着在同等条件下，C6传感器的输出一致性更高、重复性更好。具体来说：</p>
+<ul style="font-size:15px;line-height:1.8;color:#444;padding-left:20px;">
+<li style="margin-bottom:8px;">C3级传感器在满量程范围内的非线性误差控制在 ±0.02% 以内</li>
+<li style="margin-bottom:8px;">C6级则进一步压缩至 ±0.01% 以内甚至更低</li>
+<li>对于一只量程200kg的C3传感器，最大误差约40g；而同级C6传感器可将误差控制在20g以内</li>
+</ul>
+
+<h3>2. 最小静载荷输出分度数（Y值）</h3>
+<p>Y值代表传感器能够分辨的最小载荷变化量。C3级要求 Y≥4000，C6级要求 Y≥6000：</p>
+<table>
+<tr><th>传感器量程</th><th>C3级最小分辨率</th><th>C6级最小分辨率</th></tr>
+<tr><td>75 kg</td><td>18.75 g</td><td>12.5 g</td></tr>
+<tr><td>200 kg</td><td>50 g</td><td>33.3 g</td></tr>
+<tr><td>300 kg</td><td>75 g</td><td>50 g</td></tr>
+<tr><td>500 kg</td><td>125 g</td><td>83.3 g</td></tr>
+</table>
+<p>更高的分辨率意味着在小流量工况下也能保持良好的计量表现。</p>
+
+<h3>3. 温度漂移性能</h3>
+<p>工业现场的温度变化会影响传感器输出。C6级传感器在温度稳定性方面明显优于C3级：</p>
+<ul style="font-size:15px;line-height:1.8;color:#444;padding-left:20px;">
+<li>C3：温度每变化10℃，零点漂移不超过 ±0.02% F.S.</li>
+<li>C6：温度每变化10℃，零点漂移不超过 ±0.007% F.S.（改善约3倍）</li>
+</ul>
+<div class="art-tip"><strong>实际意义：</strong>在昼夜温差较大的户外现场（如矿山、港口），C6级传感器的零点稳定性优势会非常明显——意味着更少的零点校准频率和更稳定的长期精度。</div>
+
+<h2>三、如何选择？决策树</h2>
+<div class="decision-tree">
+<div class="decision-node">
+<div>
+<div class="decision-q">① 您的皮带秤用于什么目的？</div>
+<div class="decision-a">如果是生产过程统计、内部成本核算 → 可考虑 C3级</div>
+<div class="decision-a">如果是贸易结算、商务结算（卖煤/买矿）→ 必须选 C6级</div>
+</div>
+</div>
+<div class="arrow-down">↓</div>
+<div class="decision-node">
+<div>
+<div class="decision-q">② 要求的系统精度是多少？</div>
+<div class="decision-a">±0.5% 及以上 → C3级足够（搭配SH-Z2/Z4皮带秤）</div>
+<div class="decision-a">±0.25% 及以内 → 必须选 C6级（搭配SH-Z-G高精度皮带秤）</div>
+</div>
+</div>
+<div class="arrow-down">↓</div>
+<div class="decision-node">
+<div>
+<div class="decision-q">③ 现场环境条件如何？</div>
+<div class="decision-a">恒温车间/室内环境 → C3级经济实用</div>
+<div class="decision-a">户外/温差大/高湿环境 → 推荐 C6级，温度漂移更小</div>
+</div>
+</div>
+<div class="arrow-down">↓</div>
+<div class="decision-node">
+<div>
+<div class="decision-q">④ 预算约束？</div>
+<div class="decision-a">预算敏感且非贸易结算用途 → C3级性价比最优</div>
+<div class="decision-a">追求长期精度稳定且预算充足 → C6级投资回报更高</div>
+</div>
+</div>
+</div>
+
+<h2>四、苏衡测控产品的传感器配置</h2>
+<table>
+<tr><th>产品型号</th><th>传感器等级</th><th>量程范围</th><th>数量</th><th>适用精度</th></tr>
+<tr><td>SH-Z2 / Z4 电子皮带秤</td><td>C3级</td><td>75 ~ 300kg</td><td>2 ~ 4只</td><td>±0.5% ~ ±1.0%</td></tr>
+<tr><td>SH-Z-G 高精度皮带秤</td><td><strong>C6级</strong></td><td>75 ~ 300kg</td><td>12 ~ 24只</td><td>±0.25%</td></tr>
+<tr><td>SH-JGC60 给料机</td><td>C3级</td><td>75 ~ 200kg</td><td>2 ~ 4只</td><td>±0.25%（静态）</td></tr>
+<tr><td>SH-NJGC-F60 给煤机</td><td>C3级</td><td>75 ~ 200kg</td><td>2 ~ 4只</td><td>±0.5%（控制精度）</td></tr>
+<tr><td>独立传感器产品</td><td>C3级 / C6级均可选</td><td>75 ~ 500kg</td><td>按需订购</td><td>-</td></tr>
+</table>
+
+<h2>五、选型的常见误区</h2>
+<table>
+<tr><th>误区</th><th>真相</th></tr>
+<tr><td>"C6一定比C3好，都选C6没错"</td><td>并非所有场景都需要C6。内部计量选C3性价比更高，过度配置浪费预算</td></tr>
+<tr><td>"换了C6就能把0.5级秤变成0.25级"</td><td>精度由系统整体决定（框架、仪表、安装），仅换传感器不够</td></tr>
+<tr><td>"C3就是低端，C6才是高端"</td><td>C3是国际标准的正规精度等级，完全能满足大多数工业需求</td></tr>
+<tr><td>"价格贵的一定更好"</td><td>关键是匹配需求。C3用在合适的地方就是最佳选择</td></tr>
+</table>
+
+<div class="cta">
+<h3>不确定该选哪种传感器？</h3>
+<p>告诉苏衡测控您的应用场景和精度要求，我们的技术团队会为您推荐最适合的传感器配置方案，平衡精度需求与投资成本。</p>
+<a href="../product-chuanganqi.html">查看传感器产品详情 →</a>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; 2026 苏衡测控 | 徐州市苏衡自动化控制技术有限公司</p>
+      <span>苏ICP备2024107758号-1</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -214,6 +214,38 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- SEO批次5 文章（批次3选题 - 全新关键词簇） -->
+  <url>
+    <loc>https://www.suhengcekong.com/seo/belt-scale-installation-guide.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.suhengcekong.com/seo/belt-scale-calibration-methods.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.suhengcekong.com/seo/port-bulk-material-weighing.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.suhengcekong.com/seo/smart-instrument-sh-s600-s1200-guide.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.suhengcekong.com/seo/sensor-c3-vs-c6-selection-guide.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- FAQ页面 -->
   <url>
     <loc>https://www.suhengcekong.com/faq.html</loc>
