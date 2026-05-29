@@ -17,7 +17,7 @@ User-agent: ClaudeBot
 Allow: /
 User-agent: anthropic-ai
 Allow: /
-Useragent: cohere-ai
+User-agent: cohere-ai
 Allow: /
 User-agent: Bytespider
 Allow: /
