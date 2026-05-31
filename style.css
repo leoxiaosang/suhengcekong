@@ -1010,3 +1010,59 @@ select, input, textarea { font-family: inherit; }
   .seo-content-section { padding: 50px 0; }
   .seo-articles-grid { grid-template-columns: 1fr; gap: 14px; }
 }
+
+/* ===== 表格移动端横向滚动（SEO文章+产品详情页通用） ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+}
+th, td {
+  padding: 10px 14px;
+  border: 1px solid #e0e4ed;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+  white-space: nowrap;
+}
+th {
+  background: #f0f4fa;
+  font-weight: 600;
+  color: var(--text-dark, #1a2233);
+}
+tr:nth-child(even) td {
+  background: #f9fafc;
+}
+/* 表格外层包裹 —— 让宽表格在手机上横向滚动 */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.2em 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.table-wrap table {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  /* 无 .table-wrap 的裸表格也强制可滚动 */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    border-radius: 6px;
+  }
+  th, td {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  /* CTA 按钮在手机端全宽 */
+  .btn-primary, .btn-secondary, .cta-btn {
+    width: 100%;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+  }
+}
