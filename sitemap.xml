@@ -419,4 +419,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- SEO批次8 文章（2026-06-02） -->
+  <url>
+    <loc>https://www.suhengcekong.com/seo/grain-industry-belt-scale-solution.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.suhengcekong.com/seo/belt-tension-measurement-error-analysis.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

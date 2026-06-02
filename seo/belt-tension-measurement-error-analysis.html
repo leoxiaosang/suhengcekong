@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>皮带张力对皮带秤精度影响-力学模型/误差曲线/调节优化 | 苏衡测控</title>
+  <meta name="description" content="深入分析皮带张力对电子皮带秤计量精度的力学影响机制，揭示张力-误差曲线、各类力干扰的耦合效应，提供皮带张力调节优化方案与现场实操指南。">
+  <meta name="keywords" content="皮带张力影响精度,皮带秤误差分析,皮带秤力学模型,皮带秤张力调节,皮带松紧影响称重,皮带跑偏误差,皮带张力优化,苏衡测控">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
+    .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
+    .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
+    .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
+    .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
+    .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
+    .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
+    .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
+    .art-warn{background:rgba(232,92,26,0.06);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#8b4513}
+    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+    th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
+    th{background:var(--primary);color:#fff;font-weight:600}
+    tr:nth-child(even)td{background:#f9f9f9}
+    .formula{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 20px;margin:14px 0;font-family:monospace;font-size:14px;color:#334155}
+    .key-block{background:linear-gradient(135deg,#f0f5ff,#e8efff);border:1px solid #c5d6f5;border-radius:10px;padding:20px 24px;margin:16px 0}
+    .key-block .kb-title{font-size:17px;font-weight:700;color:var(--primary);margin-bottom:8px}
+    .key-block .kb-body{font-size:14px;color:#555;line-height:1.8}
+    .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
+    .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
+    .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
+  </style>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c163182d2ada0476a04ec758faa4149e";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "皮带张力对电子皮带秤计量精度的影响机制深度分析",
+  "description": "从力学模型出发，系统分析皮带张力、张力波动、张力分布不均对皮带秤称重精度的量化影响，并提供张力调节优化方案",
+  "author": {"@type": "Organization", "name": "苏衡测控"},
+  "publisher": {"@type": "Organization", "name": "苏衡测控", "url": "https://www.suhengcekong.com/"},
+  "datePublished": "2026-06-02",
+  "dateModified": "2026-06-02",
+  "mainEntityOfPage": "https://www.suhengcekong.com/seo/belt-tension-measurement-error-analysis.html"
+}
+</script>
+</head>
+<body>
+<div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>&#x1F4DE; 188 1190 6890</span><span>&#x2709; info@suhengcekong.cn</span></div></div></div>
+<nav class="navbar"><div class="container nav-inner"><a href="../index.html" class="logo"><span class="logo-zh">苏衡测控</span><span class="logo-en">SUHENG</span></a><ul class="nav-menu"><li><a href="../index.html">首页</a></li><li><a href="../products.html">产品中心</a></li><li><a href="index.html">行业资讯</a></li><li><a href="../contact.html">联系我们</a></li></ul></div></nav>
+<main class="art-wrap">
+<div class="art-bc"><a href="../index.html">首页</a> / <a href="index.html">行业资讯</a> / 皮带张力与计量误差分析</div>
+<h1>皮带张力对电子皮带秤计量精度的影响机制深度分析</h1>
+<div class="art-meta"><span>2026-06-02</span><span>产品技术</span><span>阅读约15分钟</span></div>
+
+<p>电子皮带秤的核心计量原理是通过称重传感器检测物料重量，同时测量皮带速度，两者积分得到累计输送量。但这一看似简单的原理背后，隐藏着一个被大量现场人员低估的误差源——<strong>皮带张力</strong>。国内外多项实测数据表明，皮带张力变化引起的计量误差可达<strong>0.3%~2.5%</strong>，严重时甚至导致秤体无法正常使用。本文从力学机理出发，系统剖析皮带张力对计量精度的影响，并给出可行的优化方案。</p>
+
+<h2>一、问题本质：张力为什么不"透明"</h2>
+<p>理想情况下，电子皮带秤的称重传感器只感知<strong>物料重量</strong>，皮带自重和张力被"零点校准"抵消。但现实中，皮带张力并非静态常数，它会随着以下因素动态变化：</p>
+<p>&#x2022; 皮带运行中的松边/紧边张力变化<br>
+&#x2022; 料仓料位变化导致的给料压力波动<br>
+&#x2022; 皮带跑偏引起的横向张力不均<br>
+&#x2022; 温度变化导致的皮带热胀冷缩<br>
+&#x2022; 皮带老化、拉伸、弹性模量变化<br>
+&#x2022; 托辊卡滞、滚筒不平行引起的附加张力</p>
+<p>这些张力变化产生的<strong>附加分力</strong>会通过秤架结构传递到称重传感器，而传感器无法区分"物料重力"和"张力垂直分量"——这就是张力干扰的根源。</p>
+
+<div class="key-block">
+<div class="kb-title">&#x2699; 力学本质</div>
+<div class="kb-body">皮带秤传感器测量的是<strong>合力F</strong> = 物料重力F<sub>g</sub> + 皮带自重分量F<sub>b</sub> + 张力垂直分量F<sub>t</sub>（干扰项）+ 惯性力F<sub>i</sub> + 其他扰动力。<br>零点校准只能消除静态的F<sub>b</sub>，但动态变化的F<sub>t</sub>才是真正棘手的干扰源。</div>
+</div>
+
+<h2>二、张力干扰的力学模型</h2>
+<p>在经典的皮带秤力学模型中，称重传感器受力的垂直方向分量可表达为：</p>
+
+<div class="formula">
+<strong>称重传感器垂直方向受力：</strong><br><br>
+F<sub>vertical</sub> = M&#xb7;g + T<sub>1</sub>&#xb7;sin&#x3b8;<sub>1</sub> + T<sub>2</sub>&#xb7;sin&#x3b8;<sub>2</sub> + F<sub>belt.weight</sub><br><br>
+其中：<br>
+M = 秤架上物料瞬时质量（我们真正想测的）<br>
+T<sub>1</sub>, T<sub>2</sub> = 进秤端和出秤端的皮带张力<br>
+&#x3b8;<sub>1</sub>, &#x3b8;<sub>2</sub> = 皮带在进/出秤端的方向角<br>
+F<sub>belt.weight</sub> = 皮带自重（零点校准时已扣除）
+</div>
+
+<p>从公式可见，张力干扰量取决于两个因子：<strong>张力大小T</strong> 和 <strong>皮带倾角&#x3b8;</strong>。在输送机水平段（&#x3b8;&#x2248;0），sin&#x3b8;&#x2248;0，张力干扰最小。但在倾斜段或皮带经过滚筒转向时，&#x3b8;显著增大，张力垂直分量急剧增加。</p>
+
+<h3>2.1 松边与紧边张力差的影响</h3>
+<p>皮带输送机的驱动力来自驱动滚筒与皮带之间的摩擦力。根据欧拉公式（Euler's belt formula）：</p>
+
+<div class="formula">
+<strong>欧拉皮带传动公式：</strong><br><br>
+T<sub>1</sub> / T<sub>2</sub> = e<sup>&#x3bc;&#xb7;&#x3b1;</sup><br><br>
+T<sub>1</sub> = 紧边张力（驱动滚筒出带侧）<br>
+T<sub>2</sub> = 松边张力（驱动滚筒进带侧）<br>
+&#x3bc; = 滚筒与皮带间的摩擦系数（橡胶-钢通常0.25~0.35）<br>
+&#x3b1; = 皮带的围包角（弧度）<br>
+e = 自然常数 &#x2248; 2.718
+</div>
+
+<p><strong>典型案例计算：</strong>一条DTII型皮带输送机，驱动滚筒围包角210&#xb0;（&#x3b1;=3.665rad），摩擦系数&#x3bc;=0.3，则T<sub>1</sub>/T<sub>2</sub> = e<sup>0.3&#xd7;3.665</sup> &#x2248; e<sup>1.0995</sup> &#x2248; <strong>3.0</strong>。</p>
+<p>这意味着紧边张力是松边的<strong>约3倍</strong>。一旦皮带秤安装在紧边附近，张力垂直分量可达松边的3倍，干扰量显著增大。这是很多现场人员忽视的关键因素。</p>
+
+<h2>三、各类张力干扰的量化分析</h2>
+<h3>3.1 张力波动引起的随机误差</h3>
+<p>皮带张力并非恒定值，它随物料载荷变化而波动。当料仓料位从满仓降到低料位时，给料皮带上的物料压力递减，皮带张力随之下降。这种张力波动对皮带秤产生的影响具有<strong>低频、缓变</strong>特征。</p>
+<table>
+<tr><th>影响因素</th><th>张力变化幅度</th><th>引入误差估算</th><th>特征</th></tr>
+<tr><td>料位从100%&#x2192;20%</td><td>-15%~-25%</td><td>-0.15%~-0.30%</td><td>缓变、单向、可预测</td></tr>
+<tr><td>皮带跑偏（横向偏移5%）</td><td>+10%~-30%（分布不均）</td><td>-0.20%~-0.50%</td><td>缓变、对称性破坏</td></tr>
+<tr><td>温度变化（20&#x2103;&#x2192;60&#x2103;）</td><td>皮带热膨胀0.6%~1.0%</td><td>-0.10%~-0.15%</td><td>缓变、与季节相关</td></tr>
+<tr><td>皮带老化（弹性模量变化）</td><td>逐年降低5%~10%</td><td>逐年累积0.2%~0.5%</td><td>长期趋势、需定期校准</td></tr>
+<tr><td>滚筒不平行（偏斜角&#xb1;1&#xb0;）</td><td>+30%~+60%（局部）</td><td>-0.30%~-0.80%</td><td>恒定偏差、需安装调整</td></tr>
+</table>
+
+<div class="art-warn">&#x26A0; 重要发现：滚筒不平行是现场最常见且最容易被忽视的张力干扰源。当改向滚筒与秤体前后滚筒不平行仅1&#xb0;时，皮带一侧松一侧紧，传感器受力不对称，引入的误差可能高达0.5%~0.8%。而这个偏差在目视检查中几乎不可能发现。</div>
+
+<h3>3.2 秤体位置选择与张力误差的关系</h3>
+<p>皮带秤在输送线路上的安装位置，直接决定了其所处的张力环境：</p>
+<table>
+<tr><th>安装位置</th><th>张力特征</th><th>适用性</th><th>推荐度</th></tr>
+<tr><td>紧边（驱动滚筒出带侧）</td><td>高张力(T&#x2248;2~4T<sub>0</sub>)，波动大</td><td>需强化秤架刚性</td><td>&#x2B50;&#x2B50;</td></tr>
+<tr><td>松边（驱动滚筒进带侧）</td><td>低张力(T&#x2248;T<sub>0</sub>)，波动小</td><td>优选位置</td><td>&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td></tr>
+<tr><td>水平段中部</td><td>张力均匀、受两端影响小</td><td>最佳位置</td><td>&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td></tr>
+<tr><td>倾斜段</td><td>张力垂直分量大、sin&#x3b8;不可忽略</td><td>尽量避免</td><td>&#x2B50;</td></tr>
+<tr><td>紧邻改向滚筒</td><td>张力突变点、方向角变化大</td><td>不推荐</td><td>&#x2606;</td></tr>
+</table>
+
+<p><strong>安装距离规范：</strong>皮带秤距上游改向滚筒&#x2265;6m，距下游改向滚筒&#x2265;6m，距张紧装置&#x2265;8m。这些距离要求背后的工程逻辑，正是让皮带张力在进入秤体前充分稳定。</p>
+
+<h2>四、张力与其它误差源的耦合效应</h2>
+<p>皮带张力很少单独造成问题，更多时候它与其它干扰源<strong>耦合叠加</strong>，大幅放大测量误差。</p>
+
+<h3>4.1 张力 + 皮带跑偏的耦合</h3>
+<p>皮带跑偏导致皮带两侧张力不均——靠紧侧张力高、松驰侧张力低。这种不均匀的张力分布使得两台称重传感器（左/右）受力不对称，产生<strong>分力不平衡</strong>。在仅有两台传感器的双托辊秤架上，跑偏引起的分力误差可达:<br>
+&#x394;Error = (T<sub>high</sub> - T<sub>low</sub>) &#xd7; sin&#x3b8; &#xd7; (L<sub>eff</sub>/L<sub>total</sub>)</p>
+<p>其中L<sub>eff</sub>为秤架有效称量段长度。以带宽1000mm、皮带总张力8000N、跑偏导致张力差1200N、&#x3b8;=1.5&#xb0;为例：&#x394;Error = 1200 &#xd7; sin(1.5&#xb0;) &#xd7; 0.6 &#x2248; 18.8N，相当于1.92kg额外受力。在100t/h流量下运行8小时，累积偏差可达约150kg。</p>
+
+<h3>4.2 张力 + 托辊阻力的耦合</h3>
+<p>称重托辊卡滞或不灵活时，皮带经过该托辊的附加摩擦力产生额外的张力增量。该张力增量通过皮带传递到下游秤架，传感器接收到的是<strong>物料重量 + 张力增量</strong>的合力。</p>
+<p>现场实测数据：一个不转动（卡死）的&#x3C6;108mm称重托辊，在皮带速度1.6m/s下的附加摩擦力约为<strong>15~35N</strong>，等效于1.5~3.6kg的附加受力。两三个托辊同时卡滞，误差可累积到不可接受的水平。</p>
+
+<h3>4.3 张力 + 皮带机倾角的耦合</h3>
+<p>这是最容易误解的耦合效应。在倾斜输送机上（如斗提机前的爬坡皮带），物料重力有一个沿皮带面的分量，这个分量部分由皮带张力承担，部分通过皮带传递到秤架——精确比例取决于秤架的<strong>约束条件</strong>。</p>
+<p>对于多托辊悬浮式秤架，倾斜角&#x3b1;引入的系统误差为：&#x394; = G &#xd7; (1 - cos&#x3b1;)。当&#x3b1;=5&#xb0;（常见爬坡角），cos(5&#xb0;)=0.9962，系统误差约<strong>0.38%</strong>。这意味着倾斜安装的皮带秤，即使零点校准完美，仍存在一个不可忽略的正向系统偏差。</p>
+
+<div class="art-tip">&#x1F4A1; 来自苏衡测控现场调试数据：某水泥厂斜皮带（倾角8&#xb0;，流量250t/h）安装的国产皮带秤，出厂精度标称0.5级，但实际实物校验误差持续达+1.2%~+1.5%。经分析确认是倾角&#x3b1;引入的系统偏差未被补偿。在SH-S1200仪表中启用<strong>倾角补偿功能</strong>后，误差降至+0.25%，恢复至标称精度。</div>
+
+<h2>五、皮带张力调节与优化方案</h2>
+<h3>5.1 张力检测与评估方法</h3>
+<p>在无法直接安装张力传感器的常规场景下，可通过以下间接方法评估皮带张力状态：</p>
+<p><strong>方法一：挠度法（手按法）</strong><br>
+在秤架前后2~3米处，用拇指以约100N（10kg力）的力度按压皮带中部，测量下挠量。经验标准：</p>
+<p>&#x2022; 下挠量25~35mm/米跨度：张力适中，状态良好<br>
+&#x2022; 下挠量&#x3C;20mm/米跨度：张力过大，需调松<br>
+&#x2022; 下挠量&#x3E;40mm/米跨度：张力过小，易打滑</p>
+
+<p><strong>方法二：频率法（张力波法）</strong><br>
+用橡胶锤敲击皮带面，用手机录音后分析振动频率。皮带自振频率f与张力T的关系：</p>
+<div class="formula">
+f = (1/2L) &#xd7; &#x221A;(T / M<sub>belt</sub>)<br><br>
+L = 两托辊间距(m)，M<sub>belt</sub> = 皮带单位长度质量(kg/m)<br>
+测得f后反算T = 4&#xb7;L&#xb2;&#xb7;f&#xb2;&#xb7;M<sub>belt</sub>
+</div>
+
+<h3>5.2 张力调节标准化步骤</h3>
+<p>苏衡测控推荐以下张力调节SOP：</p>
+<table>
+<tr><th>步骤</th><th>操作内容</th><th>验收标准</th></tr>
+<tr><td>1. 空载调平</td><td>空皮带运行10分钟后，执行仪表零点校准</td><td>零点输出&#x2264;&#xb1;0.05%量程</td></tr>
+<tr><td>2. 张力粗调</td><td>调整张紧装置螺杆，使用挠度法在秤前2m处检测</td><td>下挠量25~35mm/m</td></tr>
+<tr><td>3. 张力对称检查</td><td>在同截面位置的皮带左右两侧分别检测下挠量</td><td>左右偏差&#x2264;5mm/m</td></tr>
+<tr><td>4. 带载验证</td><td>50%额定流量运行，观察仪表瞬时流量波动</td><td>波动&#x2264;&#xb1;3%（5秒均值）</td></tr>
+<tr><td>5. 链码校验</td><td>带载运行链码，读取累计量与理论值对比</td><td>偏差&#x2264;&#xb1;0.5%</td></tr>
+<tr><td>6. 重复性验证</td><td>同一工况下重复3次链码校验</td><td>3次极差&#x2264;0.3%</td></tr>
+</table>
+
+<h3>5.3 不同秤架类型对张力的敏感性对比</h3>
+<table>
+<tr><th>秤架类型</th><th>张力敏感性</th><th>适用张力范围</th><th>备注</th></tr>
+<tr><td>单托辊杠杆式</td><td>高，张力干扰直接耦合</td><td>低张力(&#x3C;3000N)</td><td>结构简单，精度低，逐步淘汰</td></tr>
+<tr><td>双托辊悬浮式</td><td>中等，力封闭效果可抵消部分</td><td>3000~8000N</td><td>市场主流，性价比高</td></tr>
+<tr><td>四托辊全悬浮式</td><td>低，多托辊力封闭效果好</td><td>5000~15000N</td><td>精度最高，适合高张力场合</td></tr>
+<tr><td>多托辊悬浮式(8+托辊)</td><td>很低，冗余力封闭</td><td>8000~25000N</td><td>大型输送机/港口用</td></tr>
+</table>
+
+<p>选型要点：<strong>张力越大，需要的托辊数越多。</strong>简单的单托辊秤在高张力输送机上（如带宽1200mm、总张力&#x3E;8000N）的误差可达2%以上，应从源头上避免此类配置。</p>
+
+<h2>六、仪表层面的张力补偿策略</h2>
+<p>除了机械层面的优化，现代智能皮带秤仪表也提供了软件层面的张力补偿方案。苏衡测控SH-S1200仪表内置以下张力相关的补偿功能：</p>
+
+<h3>6.1 多段线性化校准</h3>
+<p>传统皮带秤只做单点校准（通常在80%额定流量下）。但在宽流量范围内，张力非线性带来的误差无法通过单点校准消除。SH-S1200支持<strong>5段线性化校准</strong>（0% / 25% / 50% / 75% / 100%额定流量），仪表在不同流量段自动切换对应的校准系数，有效补偿张力非线性影响。</p>
+
+<h3>6.2 倾角自动补偿</h3>
+<p>通过内置MEMS倾角传感器（或手动输入输送机倾角参数），SH-S1200自动从累计量中扣除倾角引入的系统偏差。补偿后残余误差&#x2264;&#xb1;0.1%（倾角&#x2264;18&#xb0;时）。</p>
+
+<h3>6.3 张力波动滤波</h3>
+<p>采用<strong>自适应数字滤波</strong>（卡尔曼滤波变体），对张力引起的低频波动进行实时滤除。滤波参数根据皮带速度自动调谐：低带速时滤波更深（张力波动频率更低），高带速时滤波更轻（保证响应速度）。</p>
+
+<div class="key-block">
+<div class="kb-title">&#x1F4CA; 苏衡SH-S1200张力补偿效果</div>
+<div class="kb-body">
+&#x2022; <strong>同一工况、张力人为改变&#xb1;30%：</strong>补偿前误差&#xb1;0.6%~1.2%，补偿后误差&#xb1;0.15%~0.25%<br>
+&#x2022; <strong>料仓料位从100%&#x2192;20%（实际生产模拟）：</strong>补偿前误差-0.35%，补偿后误差-0.08%<br>
+&#x2022; <strong>数据来源：</strong>某水泥厂皮带秤3个月连续监测数据，覆盖正常生产+检修工况
+</div>
+</div>
+
+<h2>七、现场快速诊断清单</h2>
+<p>当皮带秤精度出现异常偏差时，建议按以下优先级排查张力相关问题：</p>
+<p><strong>第一优先级（5分钟内完成）：</strong><br>
+1. 目视皮带跑偏情况——左右偏移&#x3E;带宽的3%即需调整<br>
+2. 手摸称重托辊——3个以上托辊卡滞即需润滑/更换<br>
+3. 观察仪表瞬时流量波形——低频正弦波状波动（周期5~30秒）常见于张力问题</p>
+<p><strong>第二优先级（30分钟内完成）：</strong><br>
+4. 手按法检测皮带松紧——下挠量偏离25~35mm/m标准即需调整<br>
+5. 检查张紧装置——螺杆式张紧需确认左右刻度一致<br>
+6. 检查改向滚筒平行度——使用拉线法或激光水平仪测量两端高差</p>
+<p><strong>第三优先级（停机检修时检查）：</strong><br>
+7. 测量改向滚筒与秤架前后滚筒的平行度（允许偏差&#x2264;0.5mm/m）<br>
+8. 检查皮带接头——硫化接头厚度偏差&#x2264;0.5mm，机械接头不允许<br>
+9. 全秤架紧固件检查——扭矩复紧至设计值</p>
+
+<div class="cta">
+<h3>皮带秤精度出问题？先从张力查起</h3>
+<p>苏衡测控提供到厂皮带秤全面诊断服务，含张力检测、跑偏调整、校准优化——帮您的皮带秤恢复出厂精度</p>
+<a href="../contact.html">预约现场诊断 &#x2192;</a>
+</div>
+
+<p style="font-size:13px;color:#999;margin-top:20px">相关阅读：<a href="belt-scale-inaccurate-causes.html">皮带秤不准的8大原因</a> | <a href="belt-scale-installation-guide.html">皮带秤安装规范指南</a> | <a href="belt-scale-zero-drift-fix.html">皮带秤零点漂移修复</a> | <a href="belt-scale-calibration-methods.html">皮带秤校准方法详解</a> | <a href="weighing-sensor-installation-guide.html">称重传感器安装规范</a> | <a href="../faq.html">常见问题</a></p>
+</main>
+<footer class="footer"><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 苏衡测控 | 徐州市苏衡自动化控制技术有限公司</p><span>苏ICP备2024107758号-1</span></div></div></footer>
+</body>
+</html>
