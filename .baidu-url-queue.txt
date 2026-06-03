@@ -1,0 +1,65 @@
+# 百度URL推送队列 - 苏衡测控官网
+# 格式: URL | 状态(submitted/pending) | 提交日期 | API返回结果
+# 自动化脚本每日从此取 pending 状态的URL批量提交
+
+## 已提交 (2026-05-30 手动提交 8条)
+https://www.suhengcekong.com/seo/suheng-belt-scale-selection-guide.html | submitted | 2026-05-30 |
+https://www.suhengcekong.com/seo/xuzhou-belt-scale-factory-recommend.html | submitted | 2026-05-30 |
+https://www.suhengcekong.com/seo/belt-scale-accuracy-grade-guide.html | submitted | 2026-05-30 |
+https://www.suhengcekong.com/seo/belt-scale-working-principle.html | submitted | 2026-05-30 |
+https://www.suhengcekong.com/seo/belt-scale-inaccurate-causes.html | submitted | 2026-05-30 |
+https://www.suhengcekong.com/seo/belt-scale-calibration-methods.html | submitted | 2026-05-30 |
+https://www.suhengcekong.com/seo/sensor-c3-vs-c6-selection-guide.html | submitted | 2026-05-30 |
+https://www.suhengcekong.com/seo/feeder-vs-coal-feeder-selection.html | submitted | 2026-05-30 |
+
+## 待提交 - 高优先级页面 (新建GEO优化页 + 核心站页)
+https://www.suhengcekong.com/regions.html | submitted | 2026-05-31 | success:10
+https://www.suhengcekong.com/industries.html | submitted | 2026-05-31 | success:10
+https://www.suhengcekong.com/product-comparison.html | submitted | 2026-05-31 | success:10
+https://www.suhengcekong.com/knowledge.html | submitted | 2026-05-31 | success:10
+https://www.suhengcekong.com/faq.html | submitted | 2026-05-31 | success:10
+https://www.suhengcekong.com/index.html | submitted | 2026-05-31 | success:10
+https://www.suhengcekong.com/products.html | submitted | 2026-05-31 | success:10
+https://www.suhengcekong.com/about.html | submitted | 2026-05-31 | success:10
+https://www.suhengcekong.com/contact.html | submitted | 2026-05-31 | success:10
+https://www.suhengcekong.com/service.html | submitted | 2026-05-31 | success:10
+
+## 待提交 - 产品页
+https://www.suhengcekong.com/product-dianzi.html | submitted | 2026-06-01 | success:10 |
+https://www.suhengcekong.com/product-gaojingdu.html | submitted | 2026-06-01 | success:10 |
+https://www.suhengcekong.com/product-chuanganqi.html | submitted | 2026-06-01 | success:10 |
+https://www.suhengcekong.com/product-yibiao.html | submitted | 2026-06-01 | success:10 |
+https://www.suhengcekong.com/product-geiliaoji.html | submitted | 2026-06-01 | success:10 |
+https://www.suhengcekong.com/product-geimeiji.html | submitted | 2026-06-01 | success:10 |
+https://www.suhengcekong.com/news.html | submitted | 2026-06-01 | success:10 |
+
+## 待提交 - SEO文章 (剩余21篇)
+https://www.suhengcekong.com/seo/index.html | submitted | 2026-06-01 | success:10 |
+https://www.suhengcekong.com/seo/belt-scale-accuracy-02-vs-025.html | submitted | 2026-06-01 | success:10 |
+https://www.suhengcekong.com/seo/belt-scale-installation-guide.html | submitted | 2026-06-01 | success:10 |
+https://www.suhengcekong.com/seo/belt-scale-national-standard-2026.html | submitted | 2026-06-02 | success:10
+https://www.suhengcekong.com/seo/belt-scale-vs-loss-in-weight.html | submitted | 2026-06-02 | success:10
+https://www.suhengcekong.com/seo/belt-scale-zero-drift-fix.html | submitted | 2026-06-02 | success:10
+https://www.suhengcekong.com/seo/coal-mine-belt-scale-solution.html | submitted | 2026-06-02 | success:10
+https://www.suhengcekong.com/seo/domestic-vs-import-belt-scale.html | submitted | 2026-06-02 | success:10
+https://www.suhengcekong.com/seo/explosion-proof-belt-scale-applications.html | submitted | 2026-06-02 | success:10
+https://www.suhengcekong.com/seo/feeder-coal-feeder-loss-in-scale-comparison.html | submitted | 2026-06-02 | success:10
+https://www.suhengcekong.com/seo/high-precision-belt-scale-tech-deep-dive.html | submitted | 2026-06-02 | success:10
+https://www.suhengcekong.com/seo/high-speed-belt-scale-applications.html | submitted | 2026-06-02 | success:10
+https://www.suhengcekong.com/seo/port-bulk-material-weighing.html | submitted | 2026-06-02 | success:10
+https://www.suhengcekong.com/seo/power-plant-coal-feeder-maintenance.html | submitted | 2026-06-03 | success:10
+https://www.suhengcekong.com/seo/smart-instrument-sh-s600-s1200-guide.html | submitted | 2026-06-03 | success:10
+https://www.suhengcekong.com/seo/smart-weigher-industry-trend.html | submitted | 2026-06-03 | success:10
+https://www.suhengcekong.com/seo/suheng-electronic-belt-scale-maintenance.html | submitted | 2026-06-03 | success:10
+https://www.suhengcekong.com/seo/suheng-feeder-coal-feeder-comparison.html | submitted | 2026-06-03 | success:10
+https://www.suhengcekong.com/seo/suheng-high-precision-sensor-tech.html | submitted | 2026-06-03 | success:10
+https://www.suhengcekong.com/seo/suheng-industry-application-cases.html | submitted | 2026-06-03 | success:10
+https://www.suhengcekong.com/seo/xuzhou-belt-scale-factory-selection-guide.html | submitted | 2026-06-03 | success:10
+https://www.suhengcekong.com/seo/xuzhou-belt-scale-installation-service.html | submitted | 2026-06-03 | success:10
+https://www.suhengcekong.com/seo/xuzhou-industrial-weigher-manufacturers.html | submitted | 2026-06-03 | success:10
+
+## 待提交 - 新建落地页 (Tier1 关键词专项)
+https://www.suhengcekong.com/belt-weighing-system.html | pending | 2026-06-03 | 待推送(今日配额已满，明日自动提交)
+https://www.suhengcekong.com/seo/belt-scale-manufacturer-guide.html | pending | 2026-06-03 | 待推送
+https://www.suhengcekong.com/seo/belt-scale-price-guide.html | pending | 2026-06-03 | 待推送
+https://www.suhengcekong.com/seo/belt-scale-accuracy-grade.html | pending | 2026-06-03 | 待推送

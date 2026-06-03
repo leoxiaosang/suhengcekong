@@ -449,4 +449,20 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- SEO文章：皮带秤价格指南 (Tier1 #2) -->
+  <url>
+    <loc>https://www.suhengcekong.com/seo/belt-scale-price-guide.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- SEO文章：皮带秤精度等级 (Tier1 #3) -->
+  <url>
+    <loc>https://www.suhengcekong.com/seo/belt-scale-accuracy-grade.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
