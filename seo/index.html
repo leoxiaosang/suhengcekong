@@ -33,20 +33,19 @@
 
     .seo-card-img {
       aspect-ratio: 16/9;
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
     }
-    .seo-card-img::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url('../images/电子皮带秤.jpg') center/cover no-repeat;
-      opacity: 0.3;
-    }
+    /* 不同类别卡片用不同渐变色 */
+    .seo-card:nth-child(6n+1) .seo-card-img { background: linear-gradient(135deg, #0a4a8a, #1565c0); }
+    .seo-card:nth-child(6n+2) .seo-card-img { background: linear-gradient(135deg, #e85c1a, #ef6c30); }
+    .seo-card:nth-child(6n+3) .seo-card-img { background: linear-gradient(135deg, #2e7d32, #43a047); }
+    .seo-card:nth-child(6n+4) .seo-card-img { background: linear-gradient(135deg, #5d4037, #8d6e63); }
+    .seo-card:nth-child(6n+5) .seo-card-img { background: linear-gradient(135deg, #4527a0, #673ab7); }
+    .seo-card:nth-child(6n+6) .seo-card-img { background: linear-gradient(135deg, #00838f, #00acc1); }
     .seo-card-img span { position: relative; z-index: 1; color: #fff; font-size: 14px; font-weight: 500; letter-spacing: 1px; }
 
     .seo-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
@@ -574,6 +573,148 @@
             <p class="seo-card-desc">矿山皮带秤智能化改造四个层级详解，涵盖精度升级、数据联网、系统集成到AI预测维护，附ROI分析和两个真实改造案例。</p>
             <div class="seo-card-meta">
               <span>2026-06-01</span><span>阅读约 8 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Batch 6 文章 -->
+      <article class="seo-card">
+        <a href="belt-scale-sensor-fault-diagnosis.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>技术科普</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">技术科普</span>
+            <h2 class="seo-card-title">皮带秤传感器故障原因及排查方法</h2>
+            <p class="seo-card-desc">系统梳理电子皮带秤传感器的六大故障类型（信号异常、零点漂移、绝缘下降、过载损伤、灵敏度下降、安装问题），含完整排查流程和三个典型案例。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-03</span><span>阅读约 8 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="seo-card">
+        <a href="smart-belt-scale-instrument-guide.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>技术科普</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">技术科普</span>
+            <h2 class="seo-card-title">智能皮带秤仪表功能及操作说明</h2>
+            <p class="seo-card-desc">全面解析智能皮带秤仪表的七大核心功能模块，涵盖多通道管理、自动校准、通讯联网、数据报表等，附日常操作流程和参数配置指南。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-03</span><span>阅读约 9 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="seo-card">
+        <a href="explosion-proof-belt-scale-standard.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>技术科普</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">技术科普</span>
+            <h2 class="seo-card-title">防爆皮带秤设计标准及适用场景</h2>
+            <p class="seo-card-desc">从防爆等级划分到设计要点全面解析，涵盖隔爆型与本安型方案对比、五类危险行业适用场景和合规避坑指南。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-03</span><span>阅读约 8 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="seo-card">
+        <a href="port-bulk-cargo-belt-scale-case.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>行业应用</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">行业应用</span>
+            <h2 class="seo-card-title">港口散料输送皮带秤应用案例分享</h2>
+            <p class="seo-card-desc">煤港装船、矿石卸船、江砂码头、粮食多物料计量四个港口皮带秤典型案例，含方案设计和实际运行效果数据。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-03</span><span>阅读约 9 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="seo-card">
+        <a href="weighing-equipment-energy-saving.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>行业资讯</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">行业资讯</span>
+            <h2 class="seo-card-title">工业称重设备节能降噪优化技巧</h2>
+            <p class="seo-card-desc">从驱动变频改造、秤架减振设计到智能仪表功耗管理，覆盖节能降噪全链条优化方案，附各项措施的节能降噪效果对比表。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-03</span><span>阅读约 8 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Batch 1 第二轮（2026-06-04） -->
+      <article class="seo-card">
+        <a href="belt-scale-working-principle.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>技术科普</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">技术科普</span>
+            <h2 class="seo-card-title">电子皮带秤工作原理及核心结构详解</h2>
+            <p class="seo-card-desc">从底层力学模型出发，逐层拆解四层结构体系与安装三大难题，帮助工程师深入理解动态计量底层逻辑，为选型与维护提供系统性认知框架。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-04</span><span>阅读约 9 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="seo-card">
+        <a href="feeder-vs-coal-feeder-selection.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>选型对比</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">选型对比</span>
+            <h2 class="seo-card-title">给料机和给煤机的区别？行业选型攻略</h2>
+            <p class="seo-card-desc">厘清给料机与给煤机"从属而非并列"的本质关系，七大维度对比差异，附三项硬门槛和选型决策框架，帮你避坑伪给煤机。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-04</span><span>阅读约 8 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="seo-card">
+        <a href="xuzhou-belt-scale-factory-recommend.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>地域服务</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">地域服务</span>
+            <h2 class="seo-card-title">徐州皮带秤厂家哪家靠谱？实地厂家推荐</h2>
+            <p class="seo-card-desc">基于实地采购视角，分析徐州皮带秤产业格局，提供考察厂家的七个关键维度、现场"三问三看"标准，客观介绍苏衡测控本地化服务优势。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-04</span><span>阅读约 7 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="seo-card">
+        <a href="belt-scale-inaccurate-causes.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>故障运维</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">故障运维</span>
+            <h2 class="seo-card-title">电子皮带秤计量不准的原因及解决方法</h2>
+            <p class="seo-card-desc">将"计量不准"拆解为四大类原因（机械/传感器接线/仪表参数/电磁干扰），提供分类诊断法和标准排查六步流程，帮你30分钟定位问题。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-04</span><span>阅读约 9 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="seo-card">
+        <a href="belt-scale-national-standard-2026.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>行业资讯</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">行业资讯</span>
+            <h2 class="seo-card-title">2026年皮带秤计量新国标标准解读</h2>
+            <p class="seo-card-desc">深度解读JJG 195-2026新规程五大核心变化：精度体系重构、检定周期调整、在线校准纳入、安装环境要求升级，附企业应对四步建议。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-04</span><span>阅读约 8 分钟</span>
             </div>
           </div>
         </a>
