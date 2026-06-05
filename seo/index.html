@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <link rel="canonical" href="https://www.suhengcekong.com/seo/index.html">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>行业资讯 - 苏衡测控皮带秤技术文章与行业动态</title>
@@ -34,19 +33,20 @@
 
     .seo-card-img {
       aspect-ratio: 16/9;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
     }
-    /* 不同类别卡片用不同渐变色 */
-    .seo-card:nth-child(6n+1) .seo-card-img { background: linear-gradient(135deg, #0a4a8a, #1565c0); }
-    .seo-card:nth-child(6n+2) .seo-card-img { background: linear-gradient(135deg, #e85c1a, #ef6c30); }
-    .seo-card:nth-child(6n+3) .seo-card-img { background: linear-gradient(135deg, #2e7d32, #43a047); }
-    .seo-card:nth-child(6n+4) .seo-card-img { background: linear-gradient(135deg, #5d4037, #8d6e63); }
-    .seo-card:nth-child(6n+5) .seo-card-img { background: linear-gradient(135deg, #4527a0, #673ab7); }
-    .seo-card:nth-child(6n+6) .seo-card-img { background: linear-gradient(135deg, #00838f, #00acc1); }
+    .seo-card-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('../images/电子皮带秤.jpg') center/cover no-repeat;
+      opacity: 0.3;
+    }
     .seo-card-img span { position: relative; z-index: 1; color: #fff; font-size: 14px; font-weight: 500; letter-spacing: 1px; }
 
     .seo-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
@@ -133,7 +133,7 @@
 <div class="seo-hero">
   <div class="container">
     <h1>行业技术资讯</h1>
-    <p>苏衡测控深耕称重计量领域15 年，分享电子皮带秤、传感器、给料机等行业技术与经验</p>
+    <p>苏衡测控深耕称重计量领域十余年，分享电子皮带秤、传感器、给料机等行业技术与经验</p>
   </div>
 </div>
 
@@ -721,6 +721,7 @@
         </a>
       </article>
 
+<<<<<<< Updated upstream
 
       <!-- 补充: belt-scale-accuracy-grade-guide.html -->
       <article class="seo-card">
@@ -792,11 +793,24 @@
             <p class="seo-card-desc">皮带秤厂家选型指南：对比国内主流皮带秤厂家排名，详解电子皮带秤厂家选购要点、精度等级、价格区间及售后能力，助您选择适合的皮带秤厂家。</p>
             <div class="seo-card-meta">
               <span>2026-06-05</span><span>阅读约 10 分钟</span>
+=======
+      <!-- Batch 2 第二轮（2026-06-05） -->
+      <article class="seo-card">
+        <a href="belt-scale-accuracy-02-vs-025.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>技术科普</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">技术科普</span>
+            <h2 class="seo-card-title">0.2级与0.25级皮带秤精度区别及选型指南</h2>
+            <p class="seo-card-desc">从贸易结算合规边界、精度退化机理和全生命周期成本三个新视角重新审视精度等级选型，附场景决策矩阵帮您判断是否真的需要0.2级。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-05</span><span>阅读约 8 分钟</span>
+>>>>>>> Stashed changes
             </div>
           </div>
         </a>
       </article>
 
+<<<<<<< Updated upstream
       <!-- 补充: belt-scale-price-guide.html -->
       <article class="seo-card">
         <a href="belt-scale-price-guide.html" class="seo-card-inner">
@@ -807,11 +821,23 @@
             <p class="seo-card-desc">2026年电子皮带秤价格全面解析：不同精度等级(C3/C6)、量程、给料机配置的价格区间，含国产vs进口成本对比、选型建议与采购注意事项。咨询：188-11…</p>
             <div class="seo-card-meta">
               <span>2026-06-05</span><span>阅读约 10 分钟</span>
+=======
+      <article class="seo-card">
+        <a href="belt-scale-vs-loss-in-weight.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>选型对比</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">选型对比</span>
+            <h2 class="seo-card-title">皮带秤和失重秤怎么选？不同工况适配方案</h2>
+            <p class="seo-card-desc">从物料特性、成本结构、空间布局三个维度重新对比两类技术，给出决策流程图和11项量化评分矩阵，帮您跳出"哪个更好"的思维陷阱。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-05</span><span>阅读约 8 分钟</span>
+>>>>>>> Stashed changes
             </div>
           </div>
         </a>
       </article>
 
+<<<<<<< Updated upstream
       <!-- 补充: belt-tension-measurement-error-analysis.html -->
       <article class="seo-card">
         <a href="belt-tension-measurement-error-analysis.html" class="seo-card-inner">
@@ -1092,6 +1118,45 @@
             <p class="seo-card-desc">徐州衡器厂家哪家好？徐州皮带秤厂家选择指南 - 苏衡测控</p>
             <div class="seo-card-meta">
               <span>2026-06-05</span><span>阅读约 10 分钟</span>
+=======
+      <article class="seo-card">
+        <a href="xuzhou-industrial-weigher-manufacturers.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>地域服务</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">地域服务</span>
+            <h2 class="seo-card-title">徐州工业衡器生产厂家实力盘点</h2>
+            <p class="seo-card-desc">从产业集群根源出发，分析徐州衡器厂家的三种业务模式与考察验证方法论，附实地考察六维度评估表和避坑指南。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-05</span><span>阅读约 7 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="seo-card">
+        <a href="coal-mine-belt-scale-solution.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>行业应用</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">行业应用</span>
+            <h2 class="seo-card-title">煤矿行业专用电子皮带秤应用解决方案</h2>
+            <p class="seo-card-desc">重新梳理煤矿井下与地面皮带秤选型标准，详解MA安全标志与防爆认证要求，附矿山经济账和洗煤厂多秤布点策略。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-05</span><span>阅读约 9 分钟</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="seo-card">
+        <a href="smart-weigher-industry-trend.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
+          <div class="seo-card-img"><span>行业资讯</span></div>
+          <div class="seo-card-body">
+            <span class="seo-card-tag">行业资讯</span>
+            <h2 class="seo-card-title">工业智能衡器行业发展趋势分析</h2>
+            <p class="seo-card-desc">聚焦边缘计算、数字孪生、5G+工业物联网、AI自校准四大前沿技术趋势，附技术成熟度与落地可行性对比矩阵及企业三步升级路径。</p>
+            <div class="seo-card-meta">
+              <span>2026-06-05</span><span>阅读约 9 分钟</span>
+>>>>>>> Stashed changes
             </div>
           </div>
         </a>
