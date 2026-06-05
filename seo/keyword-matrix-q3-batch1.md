@@ -160,6 +160,9 @@
 
 | 日期 | 覆盖关键词 | 覆盖文件 |
 |------|-----------|----------|
+| 2026-06-05 | #9 高精度皮带秤厂家 (7.9) | seo/seo-gaojingdu-pidaiban-changjia.html |
+| 2026-06-05 | #10 给煤机皮带秤 (7.8) | seo/seo-geimeiji-pidaiban.html |
+| 2026-06-05 | #12 称重传感器厂家 (7.6) | seo/seo-chengzhong-chuanganqi-changjia.html |
 | 2026-06-04 | #4 定量给料机厂家 (8.7) | seo/seo-dingliang-geiliaoji-changjia.html |
 | 2026-06-04 | #5 称重传感器选型 (8.5) | seo/seo-chengzhong-chuanganqi-xuanxing.html |
 | 2026-06-04 | #19 皮带秤常见故障 (6.9) | seo/seo-pidaiban-changjian-guzhang.html |
@@ -188,5 +191,9 @@
 | # | 关键词 | 综合分 | 方向 |
 |---|--------|--------|------|
 | 13 | 皮带秤控制器 | 7.5 | 仪表产品页 |
+| 14 | 失重秤厂家 | 7.4 | 失重秤专题 |
+| 20 | 电子皮带秤品牌 | 6.8 | 品牌对比 |
 | 23 | 配料系统厂家 | 6.5 | 配料系统专题 |
+| 24 | 皮带秤传感器更换 | 6.4 | 维护教程 |
 | 25 | 化工厂称重方案 | 6.3 | 化工行业方案 |
+| 29 | 皮带秤积算仪 | 5.9 | 积算仪产品页 |
