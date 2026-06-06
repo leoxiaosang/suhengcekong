@@ -68,3 +68,24 @@ https://www.suhengcekong.com/seo/belt-scale-accuracy-grade.html | submitted | 20
 https://www.suhengcekong.com/seo/seo-dingliang-geiliaoji-changjia.html | submitted | 2026-06-05 | success:7
 https://www.suhengcekong.com/seo/seo-chengzhong-chuanganqi-xuanxing.html | submitted | 2026-06-05 | success:7
 https://www.suhengcekong.com/seo/seo-pidaiban-changjian-guzhang.html | submitted | 2026-06-05 | success:7
+
+## 待提交 - 漏推页面补录 (2026-06-06 发现19篇未推送)
+https://www.suhengcekong.com/seo/belt-scale-sensor-fault-diagnosis.html | submitted | 2026-06-06 | success:10
+https://www.suhengcekong.com/seo/belt-tension-measurement-error-analysis.html | submitted | 2026-06-06 | success:10
+https://www.suhengcekong.com/seo/cement-industry-belt-scale-solution.html | submitted | 2026-06-06 | success:10
+https://www.suhengcekong.com/seo/cement-plant-belt-scale-solution.html | submitted | 2026-06-06 | success:10
+https://www.suhengcekong.com/seo/explosion-proof-belt-scale-standard.html | submitted | 2026-06-06 | success:10
+https://www.suhengcekong.com/seo/feeder-pid-control-principle.html | submitted | 2026-06-06 | success:10
+https://www.suhengcekong.com/seo/grain-industry-belt-scale-solution.html | submitted | 2026-06-06 | success:10
+https://www.suhengcekong.com/seo/loss-in-weight-error-adjustment.html | submitted | 2026-06-06 | success:10
+https://www.suhengcekong.com/seo/loss-in-weight-system-workflow.html | submitted | 2026-06-06 | success:10
+https://www.suhengcekong.com/seo/mining-intelligent-upgrade-belt-scale.html | submitted | 2026-06-06 | success:10
+https://www.suhengcekong.com/seo/port-bulk-cargo-belt-scale-case.html | pending | 2026-06-06 |
+https://www.suhengcekong.com/seo/seo-chengzhong-chuanganqi-changjia.html | pending | 2026-06-06 |
+https://www.suhengcekong.com/seo/seo-gaojingdu-pidaiban-changjia.html | pending | 2026-06-06 |
+https://www.suhengcekong.com/seo/seo-geimeiji-pidaiban.html | pending | 2026-06-06 |
+https://www.suhengcekong.com/seo/smart-belt-scale-instrument-guide.html | pending | 2026-06-06 |
+https://www.suhengcekong.com/seo/steel-plant-belt-scale-solution.html | pending | 2026-06-06 |
+https://www.suhengcekong.com/seo/vibration-feeder-vs-belt-feeder.html | pending | 2026-06-06 |
+https://www.suhengcekong.com/seo/weighing-equipment-energy-saving.html | pending | 2026-06-06 |
+https://www.suhengcekong.com/seo/weighing-sensor-installation-guide.html | pending | 2026-06-06 |
