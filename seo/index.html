@@ -33,21 +33,20 @@
 
     .seo-card-img {
       aspect-ratio: 16/9;
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
     }
-    .seo-card-img::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url('../images/电子皮带秤.jpg') center/cover no-repeat;
-      opacity: 0.3;
-    }
-    .seo-card-img span { position: relative; z-index: 1; color: #fff; font-size: 14px; font-weight: 500; letter-spacing: 1px; }
+    /* 6色循环渐变 — 纯CSS，无图片，无::after */
+    .seo-card:nth-child(6n+1) .seo-card-img { background: linear-gradient(135deg, #0a4a8a, #1565c0); }
+    .seo-card:nth-child(6n+2) .seo-card-img { background: linear-gradient(135deg, #e85c1a, #ef6c30); }
+    .seo-card:nth-child(6n+3) .seo-card-img { background: linear-gradient(135deg, #2e7d32, #43a047); }
+    .seo-card:nth-child(6n+4) .seo-card-img { background: linear-gradient(135deg, #5d4037, #8d6e63); }
+    .seo-card:nth-child(6n+5) .seo-card-img { background: linear-gradient(135deg, #4527a0, #673ab7); }
+    .seo-card:nth-child(6n+6) .seo-card-img { background: linear-gradient(135deg, #00838f, #00acc1); }
+    .seo-card-img span { position: relative; z-index: 1; color: #fff; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
 
     .seo-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
     .seo-card-tag {
