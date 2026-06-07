@@ -34,6 +34,12 @@
     .pid-block .pb-title{font-size:17px;font-weight:700;color:var(--primary);margin-bottom:8px}
     .pid-block .pb-value{font-size:22px;font-weight:800;color:#e85c1a;margin:8px 0}
     .pid-block .pb-desc{font-size:13px;color:#666;line-height:1.7}
+      /* 文章封面 */
+.art-hero h1{color:#fff;font-size:clamp(22px,3.5vw,36px);font-weight:800;margin-bottom:14px;line-height:1.35;max-width:700px;margin-left:auto;margin-right:auto}
+    .art-hero{ background: linear-gradient(135deg, #2e7d32,#43a047); padding: 64px 20px 44px; text-align: center; margin-bottom: 0; }
+    .art-hero .tag { display: inline-block; background: rgba(255,255,255,0.18); color: #fff; font-size: 12px; font-weight: 600; padding: 3px 12px; border-radius: 2px; margin-bottom: 14px; }
+    .art-hero h1 { color: #fff; font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; margin-bottom: 14px; line-height: 1.35; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .art-hero .meta { color: rgba(255,255,255,0.75); font-size: 13.5px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
   </style>
 <!-- 百度统计 -->
 <script>
@@ -73,11 +79,16 @@ var _hmt = _hmt || [];
 <body>
 <div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>📞 188 1190 6890</span><span>✉ info@suhengcekong.cn</span></div></div></div>
 <nav class="navbar"><div class="container nav-inner"><a href="../index.html" class="logo"><span class="logo-zh">苏衡测控</span><span class="logo-en">SUHENG</span></a><ul class="nav-menu"><li><a href="../index.html">首页</a></li><li><a href="../products.html">产品中心</a></li><li><a href="index.html">行业资讯</a></li><li><a href="../contact.html">联系我们</a></li></ul></div></nav>
+<div class="art-hero">
+  <div class="container">
+    <span class="tag">给料机PID控制原理详解</span>
+<h1>给料机PID控制原理详解\-闭环调节/参数整定/实战调参\ \|\ 苏衡测控</h1>
+        <div class="meta">
+<span>2026-06-01</span><span>给料机PID控制原理详解</span><span>阅读约14分钟</span></div>
+  </div>
+</div>
 <main class="art-wrap">
 <div class="art-bc"><a href="../index.html">首页</a> / <a href="index.html">行业资讯</a> / 给料机PID控制原理详解</div>
-<h1>给料机PID控制原理详解：从闭环调节到实战调参</h1>
-<div class="art-meta"><span>2026-06-01</span><span>产品技术</span><span>阅读约14分钟</span></div>
-
 <p>在散料连续生产过程中，给料机的流量稳定性直接决定了下游工艺的产品质量和能耗水平。无论是皮带秤给料机、螺旋给料机还是<strong>失重式给料秤</strong>，要实现精确的流量控制，PID（比例-积分-微分）闭环控制都是核心技术。本文从控制原理出发，结合苏衡测控给料机仪表的实战经验，系统讲解PID控制的底层逻辑与参数整定方法。</p>
 
 <h2>一、给料机为什么需要PID控制</h2>

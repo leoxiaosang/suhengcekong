@@ -10,7 +10,9 @@
   <style>
     .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
     .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
-    .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
+    /* 文章封面区 */
+.art-hero h1{color:#fff;font-size:clamp(22px,3.5vw,36px);font-weight:800;margin-bottom:14px;line-height:1.35;max-width:700px;margin-left:auto;margin-right:auto}
+.art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
     .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
     .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
     .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
@@ -24,16 +26,24 @@
     .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
     .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
     .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
+      .art-hero{ background: linear-gradient(135deg, #0a4a8a,#1565c0); padding: 64px 20px 44px; text-align: center; margin-bottom: 0; }
+    .art-hero .tag { display: inline-block; background: rgba(255,255,255,0.18); color: #fff; font-size: 12px; font-weight: 600; padding: 3px 12px; border-radius: 2px; margin-bottom: 14px; }
+    .art-hero h1 { color: #fff; font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; margin-bottom: 14px; line-height: 1.35; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .art-hero .meta { color: rgba(255,255,255,0.75); font-size: 13.5px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
   </style>
 </head>
 <body>
 <div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>📞 188 1190 6890</span><span>✉ info@suhengcekong.cn</span></div></div></div>
 <nav class="navbar"><div class="container nav-inner"><a href="../index.html" class="logo"><span class="logo-zh">苏衡测控</span><span class="logo-en">SUHENG</span></a><ul class="nav-menu"><li><a href="../index.html">首页</a></li><li><a href="../products.html">产品中心</a></li><li><a href="index.html">行业资讯</a></li><li><a href="../contact.html">联系我们</a></li></ul></div></nav>
+<div class="art-hero">
+  <div class="container">
+    <span class="tag">故障运维</span>
+<h1>皮带秤零点漂移故障快速处理技巧</h1>
+        <div class="meta"><span>2026-06-06</span><span>故障运维</span><span>阅读约9分钟</span></div>
+  </div>
+</div>
 <main class="art-wrap">
 <div class="art-bc"><a href="../index.html">首页</a> / <a href="index.html">行业资讯</a> / 故障运维</div>
-<h1>皮带秤零点漂移故障快速处理技巧</h1>
-<div class="art-meta"><span>2026-06-06</span><span>故障运维</span><span>阅读约9分钟</span></div>
-
 <p>零点漂移是皮带秤运维中最高频的故障现象，但"漂了"只是表象，根因可能来自机械、电气、环境、参数四个完全不同的方向。很多现场人员遇到零漂的第一反应是点一次"自动置零"——这种做法<strong>治标不治本，掩盖了真实问题</strong>。本文提供一套分级诊断流程，帮你在15~30分钟内定位根因。</p>
 
 <h2>一、零漂的本质：不只是"显示不为零"</h2>
