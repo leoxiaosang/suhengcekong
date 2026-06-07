@@ -57,11 +57,51 @@
     .cta-btn { display: inline-block; background: #e85c1a; color: #fff; padding: 10px 28px; border-radius: 6px; text-decoration: none; font-weight: 700; margin-top: 10px; }
     footer { background: #0a4a8a; color: rgba(255,255,255,.72); text-align: center; padding: 28px; font-size: 13px; }
     @media (max-width: 640px) { .hero h1 { font-size: 22px; } .content { padding: 0 14px 40px; } }
-  </style>
-</head>
+  
+    .art-hero { background: var(--primary); color: #fff; padding: 56px 40px 48px; text-align: center; }
+    .art-hero .tag { display: inline-block; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35); border-radius: 20px; padding: 4px 16px; font-size: 13px; margin-bottom: 18px; }
+    .art-hero h1 { font-size: 32px; margin-bottom: 12px; }
+    .art-hero .meta { display: flex; gap: 20px; justify-content: center; font-size: 14px; opacity: .85; flex-wrap: wrap; }
+    .art-hero:nth-child(6n+1) { background: linear-gradient(135deg, #0a4a8a 0%, #1a6bc7 100%); }
+    .art-hero:nth-child(6n+2) { background: linear-gradient(135deg, #c05621 0%, #e85c1a 100%); }
+    .art-hero:nth-child(6n+3) { background: linear-gradient(135deg, #1a7a3a 0%, #2d9f5f 100%); }
+    .art-hero:nth-child(6n+4) { background: linear-gradient(135deg, #6b4226 0%, #8b5a3a 100%); }
+    .art-hero:nth-child(6n+5) { background: linear-gradient(135deg, #4a194a 0%, #7b3fa3 100%); }
+    .art-hero:nth-child(6n+6) { background: linear-gradient(135deg, #0a5a6a 0%, #1a8a9a 100%); }
+</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://www.suhengcekong.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "技术文章",
+        "item": "https://www.suhengcekong.com/seo/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "选型指南",
+        "item": "https://www.suhengcekong.com/seo/seo-pidaiban-kongzhiqi.html"
+      }
+    ]
+  }
+  </script>
+  <meta property="og:image" content="https://www.suhengcekong.com/images/hero-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  </head>
 <body>
 
-<div class="nav">
+<nav>
   <a href="https://www.suhengcekong.com" class="logo">苏衡测控</a>
   <a href="https://www.suhengcekong.com">首页</a>
   <a href="https://www.suhengcekong.com/products.html">产品中心</a>
@@ -70,12 +110,12 @@
   <a href="https://www.suhengcekong.com/contact.html">联系我们</a>
 </div>
 
-<div class="hero">
+<div class="art-hero">
   <h1>皮带秤控制器选型与参数设置完整指南</h1>
   <p>电子皮带秤的"大脑"——智能控制器/积算仪的功能解析、参数配置和选型要点</p>
 </div>
 
-<div class="content">
+<main class="art-wrap">
 
   <div class="article-meta">
     <span>📅 2026-06-07</span>
@@ -265,7 +305,16 @@
     <a href="https://www.suhengcekong.com/contact.html" class="cta-btn">在线咨询</a>
   </div>
 
-</div>
+</nav>
+  <div class="art-hero">
+    <div class="tag">选型指南</div>
+    <h1>皮带秤控制器选型与参数设置完整指南</h1>
+    <div class="meta">
+      <span>📅 2026-06-07</span>
+      <span>👁️ 阅读约 11 分钟</span>
+    </div>
+  </div>
+</main>
 
 <footer>
   <p>&copy; 2026 苏衡测控 | 徐州苏衡自动化控制技术有限公司 | 皮带秤·称重传感器·给料机·智能仪表</p>
