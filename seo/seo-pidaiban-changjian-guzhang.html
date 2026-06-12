@@ -25,7 +25,9 @@
   <script type="application/ld+json">
 {"@context": "https:/schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "电子皮带秤最常见的故障有哪些？", "acceptedAnswer": {"@type": "Answer", "text": "12大类常见故障按发生频率排序：①零点漂移（最高频，几乎所有皮带秤都会遇到）②计量值系统性偏大或偏小③显示数值跳变/不稳定④无法完成置零操作⑤精度逐渐下降⑥与上位机通讯中断⑦皮带跑偏严重⑧仪表死机或重启⑨校准无法通过⑩给料控制震荡⑪电机/减速机异响⑫防爆失效报警。其中前5类占了现场故障的80%以上。"}}, {"@type": "Question", "name": "皮带秤显示数字乱跳怎么处理？", "acceptedAnswer": {"@type": "Answer", "text": "显示乱跳通常是信号层面的故障，按顺序排查：①检查传感器到接线盒的电缆是否松动或有破皮（最常见原因）②检查接线盒端子是否氧化或进水③检查屏蔽层接地是否良好④确认附近没有新增的大功率设备产生电磁干扰⑤用万用表测量传感器输出电压是否稳定（不应有>±0.5mV的跳变）⑥如果某一路传感器信号异常，单独断开测试确认是否该传感器损坏。"}}, {"@type": "Question", "name": "皮带秤仪表通讯不上怎么办？", "acceptedAnswer": {"@type": "Answer", "text": "通讯故障排查：①物理层——检查通讯线是否接好（RS485的A/B线不能接反）②参数层——双方波特率/数据位/停止位/地址是否一致③协议层——Modbus寄存器地址是否正确④设备层——仪表是否处于通讯模式（有些仪表需要在菜单中开启）⑤环境层——长距离通讯是否需要加终端电阻（120Ω）。建议先用USB转485转换器和调试软件直接读取仪表数据来判断是哪一层的问题。"}}, {"@type": "Question", "name": "皮带秤需要多久维护一次？", "acceptedAnswer": {"@type": "Answer", "text": "建议维护周期：①每日——目视检查（托辊转动、皮带状况、秤体清洁、零点记录）②每周——检查张紧装置、皮带接头、导料槽状态③每月——清理称架积料、检查传感器接线、备份仪表参数④每季度——链条码校准、检查托辊磨损、皮带张力调整⑤每半年——全面检查传感器线性度、仪表自诊断、机械紧固件力矩⑥每年——第三方检定（贸易结算场景）或实物校准、易损件预防性更换。"}}, {"@type": "Question", "name": "什么时候需要找厂家来维修皮带秤？", "acceptedAnswer": {"@type": "Answer", "text": "建议联系厂家的场景：①自行排查无法定位的疑难故障②需要更换传感器或仪表（涉及重新标定）③精度持续下降且无法通过校准恢复④设备到达大修周期（一般3-5年）⑤涉及防爆设备的检修（需要有资质的人员）⑥需要升级改造（如从C3升级到C6）。苏衡测控为客户提供24-48小时上门技术服务，电话188-1190-6890。"}}]}
 </script>
-  <style>
+    <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="seo-style.css">
+<style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f7f9fc; color: #23272f; line-height: 1.8; }
     .nav { background: #0a4a8a; padding: 0 40px; display: flex; align-items: center; height: 60px; position: sticky; top: 0; z-index: 100; }
