@@ -1066,3 +1066,36 @@ tr:nth-child(even) td {
     box-sizing: border-box;
   }
 }
+
+/* ===== 防复制 / 防爬取保护 ===== */
+body > header,
+body > footer,
+body > main,
+.art-wrap,
+.art-content,
+.seo-card-body,
+.product-detail-info,
+.about-text,
+.knowledge-body {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+img {
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+}
+/* 输入框、文本域、代码块保留可选功能 */
+input,
+textarea,
+[contenteditable="true"],
+pre,
+code,
+blockquote,
+.art-tldr {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}

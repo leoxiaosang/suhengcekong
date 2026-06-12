@@ -208,3 +208,46 @@ document.querySelector('.subscribe-form').addEventListener('submit', function(e)
     this.reset();
   }, 2500);
 });
+
+// ─── 防复制 / 防爬取保护 ───────────────────────────────────
+(function() {
+  /* 禁用右键菜单 */
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    return false;
+  });
+
+  /* 禁用开发者工具与保存快捷键 */
+  document.addEventListener('keydown', function(e) {
+    var k = e.key.toLowerCase();
+    var ctrl = e.ctrlKey || e.metaKey;
+    if (
+      k === 'f12' ||
+      (ctrl && e.shiftKey && (k === 'i' || k === 'j')) ||
+      (ctrl && (k === 'u' || k === 's' || k === 'p'))
+    ) {
+      e.preventDefault();
+      return false;
+    }
+    /* 非 input/textarea 中禁止 Ctrl+C/V/X/A */
+    var tag = (e.target.tagName || '').toUpperCase();
+    if (!['INPUT', 'TEXTAREA'].includes(tag) && ctrl && ['c', 'x', 'a'].includes(k)) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  /* 禁止图片拖拽 */
+  document.addEventListener('dragstart', function(e) {
+    if (e.target && e.target.tagName === 'IMG') {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  /* 为所有图片添加 draggable=false */
+  var imgs = document.querySelectorAll('img');
+  for (var i = 0; i < imgs.length; i++) {
+    imgs[i].setAttribute('draggable', 'false');
+  }
+})();
