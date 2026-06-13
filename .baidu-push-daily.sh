@@ -3,9 +3,7 @@
 #  百度URL推送脚本 - 逐条推送版本
 #  说明: 根据踩坑经验，批量推送(多URL一次POST)会触发
 #        "over quota"错误，必须一条一条单独POST
-#  配额: 每日10条
-#  今日已用: 1 (测试)
-#  今日剩余: 9
+#  配额: 每日20条 (2026-06-13 百度后台截图确认)
 # ============================================================
 
 set -uo pipefail
@@ -16,7 +14,7 @@ QUEUE_FILE=".baidu-url-queue.txt"
 LOG_FILE=".baidu-push-log.txt"
 API_URL="http://data.zz.baidu.com/urls?site=www.suhengcekong.com&token=hysPuLuaxFUCI6OS"
 DATE=$(date +%Y-%m-%d)
-PUSH_LIMIT=10  # 今日剩余配额（已用1条，留9条+1条buffer）
+PUSH_LIMIT=20  # 百度后台确认每日配额 20
 
 echo "=== 百度URL推送 $DATE (逐条模式) ==="
 echo "目标推送: 最多 $PUSH_LIMIT 条"
