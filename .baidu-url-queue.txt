@@ -131,3 +131,16 @@ https://www.suhengcekong.com/seo/thermal-power-coal-feeder-solutions.html | pend
 https://www.suhengcekong.com/seo/cement-industry-belt-scale-case.html | pending |
 https://www.suhengcekong.com/seo/chemical-fertilizer-belt-scale-solutions.html | pending |
 https://www.suhengcekong.com/seo/grain-storage-belt-scale-solutions.html | pending |
+## 2026-06-13 内容优化记录（不重复推送）
+已对以下10篇做内容优化（URL已在队列，无需重复提交）:
+- loss-in-weight-system-workflow.html
+- vibration-feeder-vs-belt-feeder.html
+- cement-industry-belt-scale-solution.html
+- loss-in-weight-error-adjustment.html
+- mining-intelligent-upgrade-belt-scale.html
+- belt-scale-sensor-fault-diagnosis.html
+- smart-belt-scale-instrument-guide.html
+- explosion-proof-belt-scale-standard.html
+- port-bulk-cargo-belt-scale-case.html
+- weighing-equipment-energy-saving.html
+
