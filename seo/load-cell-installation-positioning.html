@@ -148,67 +148,67 @@
 本文基于 GB/T 7721-2008、OIML R50（国际建议）、50+ 现场案例，把 5 类经典结构的最优安装位置画清楚，<strong>把角度偏差和精度损失的量化关系</strong>列明白。</p>
 </section>
 
-<section id="id" class="art-section">
-<h2>title</h2>
-html
+<section id="stage-1" class="art-section">
+<h2>1. 称重传感器的工作原理：3 个物理量</h2>
+<p>称重传感器（Load Cell）输出的是<strong>电信号</strong>，但<strong>感知的是 3 个物理量</strong>：</p><ul><li><strong>称重段皮带上物料的重量（垂直分力 G）：</strong>这是<strong>主信号</strong>，传感器测到的 mV 信号与 G 成正比</li><li><strong>皮带张力变化：</strong>张力变化会<strong>叠加到称重信号上</strong>，必须消除或补偿（这就是为什么称重要避开皮带的<strong>张力变化区</strong>，如张紧滚筒附近）</li><li><strong>托辊摩擦 / 皮带跑偏带来的侧向力：</strong>侧向力<strong>不参与称重</strong>，但会<strong>附加到传感器上</strong>，降低精度。安装角度偏差就是侧向力的主因</li></ul><p>所以<strong>最优安装位置</strong>的 3 个核心要求是：</p><ol><li><strong>垂直受力路径</strong>（传感器垂直于皮带，无附加侧向力）</li><li><strong>避开张力变化区</strong>（距张紧滚筒 ≥3 倍托辊间距）</li><li><strong>稳定的称重段</strong>（物料在皮带上分布稳定）</li></ol>
 </section>
 
-<section id="id" class="art-section">
-<h2>title</h2>
-html
+<section id="stage-2" class="art-section">
+<h2>2. 5 类经典结构：选型 + 适用工况</h2>
+<p>5 类经典结构各有适用场景，<strong>选错结构 = 精度上限被锁死</strong>。下面给完整对照表：</p><table class='art-table'><thead><tr><th>结构类型</th><th>传感器数量</th><th>适用流量</th><th>精度上限</th><th>成本</th><th>典型场景</th></tr></thead><tbody><tr><td><strong>单托辊称重</strong></td><td>1 个</td><td>≤200 t/h</td><td>±1%</td><td>★（最低）</td><td>小型料仓、化肥厂、饲料厂、小型水泥厂</td></tr><tr><td><strong>双托辊称重</strong></td><td>2 个（对称）</td><td>200-1000 t/h</td><td>±0.5%</td><td>★★</td><td>火电厂入炉煤、化工原料、冶金烧结</td></tr><tr><td><strong>多托辊阵列</strong></td><td>4-8 个（多组）</td><td>≥1000 t/h</td><td>±0.25%</td><td>★★★</td><td>贸易结算、大型火电厂、港口、矿山</td></tr><tr><td><strong>全悬浮式</strong></td><td>2-4 个（悬浮式）</td><td>不限</td><td>±0.25%</td><td>★★★★</td><td>高粉尘、强振动、宽皮带（如水泥窑头）、冶金原料</td></tr><tr><td><strong>半悬浮式</strong></td><td>2-4 个（一端悬浮）</td><td>不限</td><td>±0.5%</td><td>★★★</td><td>大带宽（≥1400mm）、强冲击料流</td></tr></tbody></table><h3>2.1 选型决策树</h3><ul><li>流量 ≤200 t/h → <strong>单托辊</strong>（性价比最优）</li><li>200-1000 t/h + 贸易结算 → <strong>多托辊</strong></li><li>200-1000 t/h + 生产监控 → <strong>双托辊</strong></li><li>≥1000 t/h + 强振动 / 高粉尘 → <strong>全悬浮</strong></li><li>≥1000 t/h + 大带宽（≥1400mm）→ <strong>半悬浮</strong></li><li>贸易结算（强检秤）→ <strong>多托辊 / 全悬浮</strong>（精度 0.5 级）</li></ul>
 </section>
 
-<section id="id" class="art-section">
-<h2>title</h2>
-html
+<section id="stage-3" class="art-section">
+<h2>3. 单托辊 / 双托辊 / 多托辊定位实操</h2>
+<h3>3.1 单托辊称重（结构最简、定位最关键）</h3><p>单托辊用<strong>1 个称重传感器</strong>替代 1 个普通托辊，结构最简单，但<strong>对位置最敏感</strong>。</p><p><strong>最优位置：</strong>距离<strong>落料点 3-5 个托辊间距</strong>（物料在皮带上已经摊平、张力稳定），距离<strong>张紧滚筒 ≥6 个托辊间距</strong>（避开张力变化区）。</p><p><strong>安装角度：</strong>传感器<strong>垂直于皮带</strong>，角度偏差 ≤0.5°。现场用<strong>水平仪 + 角度尺</strong>双向校验。</p><p><strong>过载保护：</strong><strong>必须有机械限位装置</strong>（如止动螺栓），防止物料卡死或皮带跑偏时<strong>过载损坏传感器</strong>。</p><h3>3.2 双托辊称重（最经典方案）</h3><p>双托辊用<strong>2 个称重传感器</strong>对称替代 2 个相邻托辊，<strong>对称抵消侧向力</strong>，精度比单托辊<strong>提升 2 倍</strong>。</p><p><strong>最优位置：</strong></p><ul><li>2 个传感器<strong>对称布置</strong>（左右 / 上下对称）</li><li>称重段 = <strong>2 个托辊间距</strong>（一般 600-1200mm）</li><li>距落料点 ≥3 个托辊间距，距张紧滚筒 ≥6 个托辊间距</li><li>2 个传感器受力<strong>均匀</strong>（误差 ≤5%），用<strong>塞尺 + 砝码</strong>实测校验</li></ul><p><strong>安装步骤：</strong></p><ol><li>标记 2 个称重托辊的位置（用钢卷尺 + 记号笔）</li><li>拆除原普通托辊，换上<strong>称重托辊（含传感器座）</strong></li><li>调整传感器垂直度，水平仪读数 ≤0.3mm/m</li><li>调整 2 个传感器的<strong>预压缩量</strong>（一般 0.2-0.5mm），保证受力均匀</li><li>安装<strong>限位装置</strong>（4 个方向），间隙 1-2mm</li><li>通电测试，仪表上 2 路传感器信号应<strong>平衡</strong>（差异 ≤5%）</li></ol><h3>3.3 多托辊阵列（贸易结算首选）</h3><p>多托辊阵列用<strong>4-8 个传感器</strong>替代 4-8 个连续托辊，<strong>称重段更长</strong>，代表性强，精度可达 0.5 级。</p><p><strong>最优位置：</strong></p><ul><li>称重段 = <strong>4-8 个托辊间距</strong>（2400-4800mm）</li><li>距落料点 ≥3 个托辊间距，距张紧滚筒 ≥8 个托辊间距</li><li><strong>每个托辊下方 1 个传感器</strong>，<strong>等距布置</strong>，高度误差 ≤1mm</li><li>托辊必须<strong>同一厂家、同一规格</strong>（转动惯量一致），否则皮重波动大</li></ul><p><strong>精度优势：</strong>称重段长 → 单个托辊的局部振动 / 摩擦被<strong>平均化</strong>，信噪比提升 2-3 倍。代价是<strong>成本 + 维护量</strong>也翻倍。</p>
 </section>
 
-<section id="id" class="art-section">
-<h2>title</h2>
-html
+<section id="stage-4" class="art-section">
+<h2>4. 全悬浮 / 半悬浮定位 + 限位装置</h2>
+<h3>4.1 全悬浮式（高精度 + 免维护的旗舰方案）</h3><p>全悬浮式把<strong>整段秤架悬浮</strong>在 2-4 个传感器上，<strong>没有托辊参与称重</strong>，皮重波动极小。</p><p><strong>结构特点：</strong></p><ul><li>秤架<strong>两端固定在机架上</strong>（仅起支撑作用）</li><li>秤架<strong>中间通过 2-4 个传感器</strong>悬挂在机架横梁上</li><li>皮带从秤架上<strong>平稳通过</strong>，无托辊（或者有<strong>非称重托辊</strong>）</li><li><strong>无需标定</strong>（皮重由结构决定，长期稳定）</li></ul><p><strong>最优位置：</strong></p><ul><li>称重段长度 = <strong>2-4 倍带宽</strong>（如带宽 1000mm，称重段 2000-4000mm）</li><li>2 个传感器<strong>对称布置</strong>在秤架中心两侧</li><li>4 个传感器<strong>四角布置</strong>（更稳定）</li></ul><p><strong>关键安装：</strong></p><ul><li>秤架<strong>水平度 ≤0.2mm/m</strong>（比双托辊更严）</li><li>传感器<strong>预压缩量 0.3-0.5mm</strong>（用塞尺实测）</li><li><strong>4 方向限位装置</strong>（左右 ≤2mm、上下 ≤3mm），防止侧向冲击</li><li>秤架<strong>独立基础</strong>，与机架完全解耦（避免机架振动干扰）</li></ul><h3>4.2 半悬浮式（大带宽 / 强冲击场景）</h3><p>半悬浮式是<strong>全悬浮的简化版</strong>，一端固定在机架上，另一端用<strong>2-4 个传感器</strong>支撑。适合<strong>带宽 ≥1400mm、强冲击料流</strong>的工况。</p><p><strong>最优位置：</strong></p><ul><li>称重段 = <strong>2-3 倍带宽</strong></li><li>固定端靠近<strong>落料点</strong>（承受冲击）</li><li>传感器端在<strong>远离落料点</strong>（测量稳定段）</li></ul><p><strong>限位装置：</strong>必须<strong>双向机械限位</strong>（左右 + 上下），防止物料冲击导致秤架水平位移。</p><h3>4.3 限位装置的 4 方向</h3><table class='art-table'><thead><tr><th>方向</th><th>限位方式</th><th>间隙</th><th>作用</th></tr></thead><tbody><tr><td><strong>左右</strong></td><td>横向止动螺栓 / 弹性挡块</td><td>1-2 mm</td><td>防止秤架水平侧移</td></tr><tr><td><strong>上下（向上）</strong></td><td>向上止动块（可调）</td><td>2-3 mm</td><td>防止物料卡死时上抬损坏传感器</td></tr><tr><td><strong>上下（向下）</strong></td><td>向下止动块（固定）</td><td>0.5-1 mm</td><td>防止传感器过载（断皮带时）</td></tr><tr><td><strong>前后</strong></td><td>纵向拉杆 / 缓冲垫</td><td>1-2 mm</td><td>防止皮带张力变化时秤架前后位移</td></tr></tbody></table><p><strong>关键：</strong>限位间隙<strong>必须实测</strong>，用塞尺逐一校验。间隙过小会<strong>夹死</strong>（传感器长期受力偏移），间隙过大会<strong>失去限位作用</strong>（冲击时损坏传感器）。</p>
 </section>
 
-<section id="id" class="art-section">
-<h2>title</h2>
-html
+<section id="stage-5" class="art-section">
+<h2>5. 角度 / 位置误差的量化影响</h2>
+<p>很多现场对<strong>安装角度误差</strong>不重视，觉得"差 1° 没关系"。实际量化：<strong>1° 角度偏差 → 横向附加力 17% → 精度损失 0.3%</strong>。</p><h3>5.1 角度偏差 vs 精度损失（量化表）</h3><table class='art-table'><thead><tr><th>安装角度偏差</th><th>横向附加力</th><th>精度损失（理论）</th><th>实际影响</th></tr></thead><tbody><tr><td>0.1°</td><td>1.7%</td><td>0.03%</td><td>可忽略</td></tr><tr><td><strong>0.5°（标准上限）</strong></td><td>8.7%</td><td>0.15%</td><td>优秀</td></tr><tr><td>1.0°</td><td>17.4%</td><td>0.3%</td><td>精度等级降 1 级</td></tr><tr><td>2.0°</td><td>34.2%</td><td>0.6%</td><td>0.5 级降到 1 级</td></tr><tr><td>3.0°</td><td>50.0%</td><td>0.9%</td><td>1 级降到 2 级</td></tr><tr><td>5.0°</td><td>87.2%</td><td>1.5%+</td><td>误差不可控</td></tr></tbody></table><h3>5.2 位置偏差 vs 精度损失</h3><table class='art-table'><thead><tr><th>位置偏差类型</th><th>精度损失</th><th>原因</th></tr></thead><tbody><tr><td>距落料点太近（&lt;2 个托辊间距）</td><td>物料未摊平，瞬时流量波动大</td><td>动态信号噪声大</td></tr><tr><td>距张紧滚筒太近（&lt;4 个托辊间距）</td><td>张力变化叠加到称重信号</td><td>零点漂移大</td></tr><tr><td>2 个传感器不对称（高度差 &gt;1mm）</td><td>0.1-0.2%</td><td>两路信号不平衡</td></tr><tr><td>称重段太短（&lt;1.5 倍带宽）</td><td>代表性差，皮重波动大</td><td>重复性劣化</td></tr><tr><td>称重托辊与普通托辊混装</td><td>皮重不均匀</td><td>零点漂移</td></tr></tbody></table><h3>5.3 现场校验方法</h3><ul><li><strong>角度校验：</strong>用<strong>数字角度尺</strong>（精度 0.05°）贴在传感器侧面，测与水平面的夹角</li><li><strong>垂直度校验：</strong>用<strong>精密水平仪</strong>（精度 0.02mm/m）放在传感器顶部，测垂直度</li><li><strong>位置校验：</strong>用<strong>钢卷尺</strong>测距落料点 / 张紧滚筒的距离，误差 ≤50mm</li><li><strong>对称校验：</strong>双传感器时，2 路信号在仪表上<strong>显示</strong>，差值 ≤5%</li></ul>
 </section>
 
-<section id="id" class="art-section">
-<h2>title</h2>
-html
+<section id="stage-6" class="art-section">
+<h2>6. 5 类常见错误安装 + 整改</h2>
+<p>整理 50+ 现场案例，<strong>5 类最常见错误</strong>，附整改方案：</p><table class='art-table'><thead><tr><th>错误类型</th><th>典型表现</th><th>精度影响</th><th>整改方案</th></tr></thead><tbody><tr><td><strong>① 角度偏差大（&gt;1°）</strong></td><td>安装时没校正 / 水平仪精度不够</td><td>精度损失 0.3-1.5%</td><td>用数字角度尺重新校正，误差 ≤0.5°</td></tr><tr><td><strong>② 距落料点太近</strong></td><td>为了"省空间"把称重段放在落料点附近</td><td>动态信号噪声大</td><td>重新选位，≥3 个托辊间距</td></tr><tr><td><strong>③ 距张紧滚筒太近</strong></td><td>皮带长度有限，称重段挨着张紧装置</td><td>零点漂移大</td><td>调整张紧装置位置或加长皮带</td></tr><tr><td><strong>④ 限位装置没装或间隙不对</strong></td><td>过载时传感器损坏 / 限位夹死</td><td>传感器寿命减半 / 信号偏移</td><td>按上表 4 方向装限位，实测间隙</td></tr><tr><td><strong>⑤ 多托辊不同厂家混装</strong></td><td>转动惯量差异，皮重波动</td><td>零点漂移 0.2-0.5%</td><td>更换为同一厂家、同一规格托辊</td></tr></tbody></table><h3>6.1 整改的优先顺序</h3><ol><li><strong>先查角度</strong>（5 分钟就能校验，影响最大）</li><li><strong>再查位置</strong>（距落料点 / 张紧滚筒距离）</li><li><strong>三查限位</strong>（4 方向间隙实测）</li><li><strong>四查对称 / 高度</strong>（双传感器时）</li><li><strong>五查托辊一致性</strong>（多托辊时）</li></ol>
 </section>
 
-<section id="id" class="art-section">
-<h2>title</h2>
-html
+<section id="faq" class="art-section">
+<h2>7. 安装 5 大常见问题 FAQ</h2>
+<div class='faq-item'><h3>Q1：单托辊称重能不能升级成双托辊？</h3><p><strong>A：</strong>可以，但<strong>需要更换秤架</strong>（单托辊秤架无法加装第二组传感器）。如果原秤架空间够（≥2 个托辊间距），可以<strong>增加 1 个传感器 + 1 套称重托辊</strong>，成本约为新秤的 30-40%。精度可从 ±1% 提升到 ±0.5%。</p></div><div class='faq-item'><h3>Q2：称重传感器有方向要求吗？</h3><p><strong>A：</strong>有。<strong>绝大多数传感器有方向标识</strong>（箭头或 + / - 标记），箭头方向<strong>必须垂直向下</strong>（与重力方向一致）。反向安装会<strong>输出反向信号</strong>，导致仪表无法读数或符号错乱。接线时也分 + / - 信号，<strong>不能接反</strong>。现场调试时<strong>先做空载信号测试</strong>，确认信号方向正确。</p></div><div class='faq-item'><h3>Q3：传感器 1° 角度偏差影响到底多大？</h3><p><strong>A：</strong>量化看：</p><ul><li>1° 偏差 → 横向力 17.4% → 精度损失 0.3%</li><li>2° 偏差 → 横向力 34.2% → 精度损失 0.6%</li><li>5° 偏差 → 横向力 87.2% → 精度损失 1.5%+</li></ul><p>举个例子：原本 0.5 级秤（精度 ±0.25%），<strong>角度偏差 1° 就降到 1 级</strong>（精度 ±0.5%）。所以<strong>角度是精度的命门</strong>，必须用数字角度尺校正，不能凭肉眼或低精度水平仪。</p></div><div class='faq-item'><h3>Q4：皮带跑偏会不会影响传感器？</h3><p><strong>A：</strong>会，而且影响很大。皮带跑偏时：</p><ul><li>物料<strong>分布不均</strong>，瞬时流量波动大</li><li>皮带<strong>侧向力</strong>附加到传感器上（精度损失 0.2-1%）</li><li>严重跑偏时皮带<strong>摩擦秤架</strong>，<strong>直接损坏传感器</strong></li></ul><p>所以皮带秤<strong>前后必须有防偏装置</strong>（如槽形调心托辊、挡轮、张紧装置），<strong>传感器限位装置</strong>也是最后一道防线。如果现场皮带跑偏严重，<strong>先治跑偏再谈精度</strong>。</p></div><div class='faq-item'><h3>Q5：传感器过载了会怎样？怎么判断？</h3><p><strong>A：</strong>传感器过载（超过额定容量 150-200%）会：</p><ul><li><strong>弹性体塑性变形</strong>，零点永久偏移</li><li>严重时<strong>弹性体断裂</strong>，传感器报废</li><li>输出信号<strong>饱和</strong>（卡在最大 / 最小值），仪表报警</li></ul><p><strong>判断方法：</strong>空载时传感器输出应接近<strong>额定输出的 50-80%</strong>（已预压缩），如果空载输出 < 30% 或 > 90%，<strong>大概率过载</strong>。过载后传感器<strong>无法维修，必须更换</strong>，且要查清过载原因（物料卡死 / 皮带断裂 / 限位失效）再换新传感器。</p></div>
 </section>
 
 
 <section class="faq-section">
 <h2>❓ 常见问题 FAQ</h2>
   <div class="faq-item">
-    <h3>q</h3>
-    <p>a</p>
+    <h3>称重传感器安装位置怎么选？</h3>
+    <p>3 个核心要求：①垂直受力路径（传感器垂直于皮带，无附加侧向力）②避开张力变化区（距张紧滚筒 ≥3 倍托辊间距）③稳定的称重段（距落料点 ≥3 个托辊间距，物料已摊平）。</p>
   </div>
   <div class="faq-item">
-    <h3>q</h3>
-    <p>a</p>
+    <h3>5 类经典称重结构怎么选？</h3>
+    <p>单托辊：≤200t/h，生产监控；双托辊：200-1000t/h，性价比最优；多托辊：≥1000t/h 或贸易结算，精度 0.5 级；全悬浮：高粉尘、强振动，免维护；半悬浮：大带宽（≥1400mm）、强冲击。</p>
   </div>
   <div class="faq-item">
-    <h3>q</h3>
-    <p>a</p>
+    <h3>传感器安装角度偏差 1° 影响多大？</h3>
+    <p>1° 角度偏差 → 横向附加力 17.4% → 精度损失约 0.3%。原本 0.5 级秤会降到 1 级。校正必须用数字角度尺（精度 0.05°），不能用肉眼或低精度水平仪。</p>
   </div>
   <div class="faq-item">
-    <h3>q</h3>
-    <p>a</p>
+    <h3>限位装置的间隙多少合适？</h3>
+    <p>左右间隙 1-2mm、向上间隙 2-3mm、向下间隙 0.5-1mm、前后间隙 1-2mm。间隙过小会夹死（传感器长期受力偏移），间隙过大会失去限位作用（冲击时损坏传感器）。</p>
   </div>
   <div class="faq-item">
-    <h3>q</h3>
-    <p>a</p>
+    <h3>传感器过载了会怎样？</h3>
+    <p>弹性体塑性变形导致零点永久偏移，严重时弹性体断裂导致传感器报废。判断：空载输出应接近额定输出的 50-80%，如果<30% 或>90% 大概率过载，必须更换并查清过载原因。</p>
   </div>
 </section>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "q", "acceptedAnswer": {"@type": "Answer", "text": "a"}}, {"@type": "Question", "name": "q", "acceptedAnswer": {"@type": "Answer", "text": "a"}}, {"@type": "Question", "name": "q", "acceptedAnswer": {"@type": "Answer", "text": "a"}}, {"@type": "Question", "name": "q", "acceptedAnswer": {"@type": "Answer", "text": "a"}}, {"@type": "Question", "name": "q", "acceptedAnswer": {"@type": "Answer", "text": "a"}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "称重传感器安装位置怎么选？", "acceptedAnswer": {"@type": "Answer", "text": "3 个核心要求：①垂直受力路径（传感器垂直于皮带，无附加侧向力）②避开张力变化区（距张紧滚筒 ≥3 倍托辊间距）③稳定的称重段（距落料点 ≥3 个托辊间距，物料已摊平）。"}}, {"@type": "Question", "name": "5 类经典称重结构怎么选？", "acceptedAnswer": {"@type": "Answer", "text": "单托辊：≤200t/h，生产监控；双托辊：200-1000t/h，性价比最优；多托辊：≥1000t/h 或贸易结算，精度 0.5 级；全悬浮：高粉尘、强振动，免维护；半悬浮：大带宽（≥1400mm）、强冲击。"}}, {"@type": "Question", "name": "传感器安装角度偏差 1° 影响多大？", "acceptedAnswer": {"@type": "Answer", "text": "1° 角度偏差 → 横向附加力 17.4% → 精度损失约 0.3%。原本 0.5 级秤会降到 1 级。校正必须用数字角度尺（精度 0.05°），不能用肉眼或低精度水平仪。"}}, {"@type": "Question", "name": "限位装置的间隙多少合适？", "acceptedAnswer": {"@type": "Answer", "text": "左右间隙 1-2mm、向上间隙 2-3mm、向下间隙 0.5-1mm、前后间隙 1-2mm。间隙过小会夹死（传感器长期受力偏移），间隙过大会失去限位作用（冲击时损坏传感器）。"}}, {"@type": "Question", "name": "传感器过载了会怎样？", "acceptedAnswer": {"@type": "Answer", "text": "弹性体塑性变形导致零点永久偏移，严重时弹性体断裂导致传感器报废。判断：空载输出应接近额定输出的 50-80%，如果<30% 或>90% 大概率过载，必须更换并查清过载原因。"}}]}
 </script>
 
 
