@@ -91,16 +91,16 @@ https://www.suhengcekong.com/seo/weighing-equipment-energy-saving.html | submitt
 https://www.suhengcekong.com/seo/weighing-sensor-installation-guide.html | submitted | 2026-06-13 | success:1 2026-06-06 |
 
 ## 待提交 - 2026-06-07 新文章
-https://www.suhengcekong.com/seo/seo-pidaiban-kongzhiqi.html | pending | 2026-06-07 |
-https://www.suhengcekong.com/seo/seo-shizhongchen-changjia.html | pending | 2026-06-07 |
-https://www.suhengcekong.com/seo/seo-dianzi-pidaiban-pinpai.html | pending | 2026-06-07 |
-https://www.suhengcekong.com/seo/belt-scale-accuracy-02-vs-025.html | pending |
-https://www.suhengcekong.com/seo/belt-scale-accuracy-not-reaching.html | pending |
-https://www.suhengcekong.com/seo/belt-scale-calibration-frequency.html | pending |
-https://www.suhengcekong.com/seo/belt-scale-national-standards-system.html | pending |
-https://www.suhengcekong.com/seo/belt-scale-sensor-vs-speed-sensor-system.html | pending |
-https://www.suhengcekong.com/seo/belt-scale-vs-loss-in-weight.html | pending |
-https://www.suhengcekong.com/seo/belt-scale-zero-drift-fix.html | pending |
+https://www.suhengcekong.com/seo/seo-pidaiban-kongzhiqi.html | submitted | 2026-06-14 | success:1
+https://www.suhengcekong.com/seo/seo-shizhongchen-changjia.html | submitted | 2026-06-14 | success:1 2026-06-07 |
+https://www.suhengcekong.com/seo/seo-dianzi-pidaiban-pinpai.html | submitted | 2026-06-14 | success:1 2026-06-07 |
+https://www.suhengcekong.com/seo/belt-scale-accuracy-02-vs-025.html | submitted | 2026-06-14 | success:1
+https://www.suhengcekong.com/seo/belt-scale-accuracy-not-reaching.html | submitted | 2026-06-14 | success:1
+https://www.suhengcekong.com/seo/belt-scale-calibration-frequency.html | submitted | 2026-06-14 | success:1
+https://www.suhengcekong.com/seo/belt-scale-national-standards-system.html | submitted | 2026-06-14 | success:1
+https://www.suhengcekong.com/seo/belt-scale-sensor-vs-speed-sensor-system.html | submitted | 2026-06-14 | success:1
+https://www.suhengcekong.com/seo/belt-scale-vs-loss-in-weight.html | submitted | 2026-06-14 | success:1
+https://www.suhengcekong.com/seo/belt-scale-zero-drift-fix.html | submitted | 2026-06-14 | success:1
 https://www.suhengcekong.com/seo/belt-scale-zero-drift-why.html | pending |
 https://www.suhengcekong.com/seo/cement-plant-feeder-selection-energy-saving.html | pending |
 https://www.suhengcekong.com/seo/coal-mine-belt-scale-solution.html | pending |
