@@ -642,25 +642,26 @@ var _hmt = _hmt || [];
           </div>
         </div>
       </div>
-      <form class="contact-form" onsubmit="return false;">
+      <form class="contact-form" action="https://formspree.io/f/xvznlpdw" method="POST">
+        <input type="hidden" name="_subject" value="苏衡测控官网新咨询-首页">
         <div class="form-row">
           <div class="form-group">
             <label>您的姓名 *</label>
-            <input type="text" placeholder="请输入姓名" required>
+            <input type="text" name="name" placeholder="请输入姓名" required>
           </div>
           <div class="form-group">
             <label>联系电话 *</label>
-            <input type="tel" placeholder="请输入联系电话" required>
+            <input type="tel" name="phone" placeholder="请输入联系电话" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label>电子邮件</label>
-            <input type="email" placeholder="请输入邮箱地址">
+            <input type="email" name="email" placeholder="请输入邮箱地址">
           </div>
           <div class="form-group">
             <label>所在行业</label>
-            <select>
+            <select name="industry">
               <option value="">请选择行业</option>
               <option>矿山行业</option>
               <option>电力行业</option>
@@ -675,7 +676,7 @@ var _hmt = _hmt || [];
         </div>
         <div class="form-group full">
           <label>需求描述</label>
-          <textarea rows="5" placeholder="请描述您的需求（如：皮带秤选型、精度要求、带宽等），我们将尽快为您回复…"></textarea>
+          <textarea name="message" rows="5" placeholder="请描述您的需求（如：皮带秤选型、精度要求、带宽等），我们将尽快为您回复…"></textarea>
         </div>
         <button type="submit" class="btn-submit">提交需求 →</button>
       </form>
@@ -753,8 +754,9 @@ var _hmt = _hmt || [];
     <div class="container subscribe-inner">
       <h3>获取最新报价</h3>
       <p>留下您的联系方式，专业工程师为您免费选型报价</p>
-      <form class="subscribe-form" onsubmit="return false;">
-        <input type="email" placeholder="请输入您的邮箱地址">
+      <form class="subscribe-form" action="https://formspree.io/f/xvznlpdw" method="POST">
+        <input type="hidden" name="_subject" value="苏衡测控官网新咨询-订阅">
+        <input type="email" name="email" placeholder="请输入您的邮箱地址" required>
         <button type="submit">立即咨询</button>
       </form>
     </div>
