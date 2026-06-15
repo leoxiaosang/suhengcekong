@@ -193,8 +193,10 @@ var _hmt = _hmt || [];
   <!-- 搜索框 -->
   <div class="search-bar" id="searchBar">
     <div class="container">
-      <input type="text" placeholder="搜索产品、方案、新闻…" />
-      <button>搜索</button>
+      <form action="search.html" method="get" onsubmit="this.querySelector('input').value=this.querySelector('input').value.trim()||'皮带秤';">
+        <input type="text" name="q" placeholder="搜索产品、方案、新闻…" />
+        <button type="submit">搜索</button>
+      </form>
       <button class="close-search" id="closeSearch">✕</button>
     </div>
   </div>
