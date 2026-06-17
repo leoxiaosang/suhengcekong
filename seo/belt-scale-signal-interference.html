@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="canonical" href="https://www.suhengcekong.com/seo/belt-scale-signal-interference.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>皮带秤称重信号干扰排查与屏蔽接地规范 - 苏衡测控</title>
+  
+  <meta property="og:title" content="皮带秤称重信号干扰排查与屏蔽接地规范 - 苏衡测控">
+  <meta property="og:description" content="苏衡测控结合上百个工业现场故障排查记录，从干扰源识别、信号线缆布线、屏蔽层接地、滤波参数调校、接地电阻测试等维度，系统梳理皮带秤mV级信号干扰排查与屏蔽接地规范。">
+  <meta property="og:image" content="https://www.suhengcekong.com/images/电子皮带秤.jpg">
+  <meta property="og:type" content="website">
+  <meta name="description" content="苏衡测控结合上百个工业现场故障排查记录，从干扰源识别、信号线缆布线、屏蔽层接地、滤波参数调校、接地电阻测试等维度，系统梳理皮带秤mV级信号干扰排查与屏蔽接地规范。">
+  <meta name="keywords" content="皮带秤信号干扰,称重信号干扰,称重传感器屏蔽,信号接地规范,皮带秤接地电阻,电磁干扰排查">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="seo-style.css">
+  <style>
+    .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
+    .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
+    .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
+    .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
+    .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
+    .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
+    .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
+    .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
+    .art-warn{background:rgba(232,92,26,0.06);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#7a3a10}
+    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+    th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
+    th{background:var(--primary);color:#fff;font-weight:600}
+    tr:nth-child(even)td{background:#f9f9f9}
+    .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
+    .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
+    .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
+    .art-hero h1{color:#fff;font-size:clamp(22px,3.5vw,36px);font-weight:800;margin-bottom:14px;line-height:1.35;max-width:700px;margin-left:auto;margin-right:auto}
+    .art-hero{ background: linear-gradient(135deg, #0a4a8a,#1565c0); padding: 64px 20px 44px; text-align: center; margin-bottom: 0; }
+    .art-hero .tag { display: inline-block; background: rgba(255,255,255,0.18); color: #fff; font-size: 12px; font-weight: 600; padding: 3px 12px; border-radius: 2px; margin-bottom: 14px; }
+    .art-hero .meta { color: rgba(255,255,255,0.75); font-size: 13.5px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+    .art-tldr{background:linear-gradient(135deg,#f0f7ff,#e8f4e8);border-left:5px solid var(--primary);padding:20px 24px;margin:0 0 32px;border-radius:0 8px 8px 0}
+    .art-tldr .tldr-label{display:inline-block;background:var(--primary);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:3px;margin-bottom:12px}
+    .art-tldr p{font-size:14.5px;line-height:1.75;color:#333;margin-bottom:12px!important}
+    .art-tldr ul{margin:0;padding-left:18px}
+    .art-tldr li{font-size:13.5px;line-height:1.7;color:#444;margin-bottom:6px}
+    .art-def{background:#fffbf0;border-left:4px solid #e6a23c;padding:14px 20px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#5c4a00}
+    .check-list{padding-left:0;list-style:none}
+    .check-list li{position:relative;padding-left:28px;margin-bottom:10px;font-size:15px;line-height:1.7}
+    .check-list li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+    .sig-path{font-family:monospace;background:#f5f7fb;padding:3px 8px;border-radius:3px;font-size:13px}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.suhengcekong.com/" },
+      { "@type": "ListItem", "position": 2, "name": "行业资讯", "item": "https://www.suhengcekong.com/seo/" },
+      { "@type": "ListItem", "position": 3, "name": "皮带秤称重信号干扰排查与屏蔽接地规范", "item": "https://www.suhengcekong.com/seo/belt-scale-signal-interference.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "皮带秤称重信号干扰排查与屏蔽接地规范 - 苏衡测控",
+    "author": {
+      "@type": "Organization",
+      "name": "苏衡测控",
+      "url": "https://www.suhengcekong.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "苏衡测控",
+      "url": "https://www.suhengcekong.com"
+    },
+    "datePublished": "2026-06-17",
+    "dateModified": "2026-06-17",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.suhengcekong.com/seo/belt-scale-signal-interference.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "皮带秤称重信号干扰排查与屏蔽接地规范",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "干扰源识别与信号路径定位",
+        "text": "干扰源识别与信号路径定位"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "信号线缆选型与布线规范",
+        "text": "信号线缆选型与布线规范"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "屏蔽层接地与接地电阻测试",
+        "text": "屏蔽层接地与接地电阻测试"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "仪表滤波参数调校与现场验证",
+        "text": "仪表滤波参数调校与现场验证"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "皮带秤称重信号干扰最常见的来源是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "工业现场皮带秤称重信号干扰最常见的三大来源：①变频器输出谐波（3kHz~10kHz）通过动力线缆辐射到信号线；②电焊机接地回路电流经接地网耦合到传感器激励回路；③大功率电机启停时的浪涌电压（可达额定电压3~5倍）通过电源线路传导到仪表A/D前端。苏衡测控在河北某电厂的实测中，一台45kW变频器的运行使称重信号噪声从0.2mV增大到1.8mV。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "皮带秤称重信号屏蔽层应该单端接地还是双端接地？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "皮带秤称重信号线（mV级）屏蔽层推荐采用单端接地方案：传感器端接地，仪表端悬空。因为双端接地会形成地环路，当两地之间存在电位差（工业现场常见0.5~2V）时，环流会直接在屏蔽层中产生干扰电流，反而耦合到信号芯线。苏衡测控的传感器采用六线制接法，屏蔽层仅在传感器端通过金属夹片与称重框架连接，框架再通过独立接地桩接入大地，仪表端屏蔽层用热缩管绝缘处理。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "皮带秤称重系统接地电阻应该控制在多少以内？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "皮带秤称重系统接地电阻应控制在4Ω以下，传感器信号地与大功率设备动力地之间的电位差应小于0.5V。如果现场接地网与变频器、电焊机共用，接地电阻可能升高到10Ω以上，此时必须单独设置称重专用接地桩，与动力接地网保持5米以上距离。苏衡测控在接地电阻测试中推荐使用接地电阻测试仪（如ETCR2000），在干燥季节每月测试一次，雨季每周测试一次。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>&#x1F4DE; 188 1190 6890</span><span>&#x2709; info@suhengcekong.cn</span></div></div></div>
+<nav class="navbar"><div class="container nav-inner"><a href="../index.html" class="logo"><span class="logo-zh">苏衡测控</span><span class="logo-en">SUHENG</span></a><ul class="nav-menu"><li><a href="../index.html">首页</a></li><li><a href="../products.html">产品中心</a></li><li><a href="index.html">行业资讯</a></li><li><a href="../contact.html">联系我们</a></li></ul></div></nav>
+<div class="art-hero">
+  <div class="container">
+    <span class="tag">信号干扰排查</span>
+    <h1>皮带秤称重信号干扰排查与屏蔽接地规范</h1>
+    <div class="meta">
+      <span>2026-06-17</span><span>信号干扰排查</span><span>阅读约11分钟</span>
+    </div>
+  </div>
+</div>
+<main class="art-wrap">
+  <div class="art-tldr">
+    <div class="tldr-label">核心结论</div>
+    <p><strong>皮带秤称重信号干扰</strong>是工业现场最常见的故障类型之一，约占所有计量异常投诉的35%。苏衡测控技术团队结合上百个现场排查记录，总结出以下关键要点。</p>
+    <ul>
+      <li>传感器输出仅2.0mV/V，干扰噪声超过0.5mV即可导致0.25%级精度失效</li>
+      <li>变频器谐波是头号干扰源，3kHz~10kHz频段与称重信号频带重叠</li>
+      <li>屏蔽层必须单端接地（传感器端），双端接地形成地环路反而引入干扰</li>
+      <li>信号线缆与动力线缆平行间距应≥300mm，交叉时垂直走线</li>
+      <li>接地电阻≤4Ω，信号地与动力地电位差≤0.5V</li>
+      <li>仪表数字滤波可补偿高频噪声，但会引入10~50ms相位延迟</li>
+    </ul>
+  </div>
+
+  <div class="art-bc"><a href="../index.html">首页</a> / <a href="index.html">行业资讯</a> / 皮带秤称重信号干扰排查</div>
+
+  <p>皮带秤称重传感器输出的是毫伏级信号。一只量程500kg的C3级传感器，在满量程时输出约2.0mV/V。如果激励电压是10V，满量程输出就是20mV。0.25级精度要求误差不超过0.025%F.S.，也就是5μV。这个量级，别说工业现场的电磁干扰，就连人体静电（可达3000V）从旁边走过产生的感应电压，都足以让它跳动。</p>
+  <p>苏衡测控服务工程师每年处理的技术支持电话中，约35%最终追溯到信号干扰问题。不是传感器坏了，不是仪表坏了，是信号在传输过程中被"污染"了。本文从干扰源识别、线缆选型、屏蔽接地、滤波调校四个维度，给出系统性的排查方法。</p>
+
+  <h2>一、干扰源识别与信号路径定位</h2>
+  <p>排查干扰的第一步，不是换线缆，而是确定干扰从哪进来的。苏衡测控的排查方法很简单：断开法，逐段缩小范围。</p>
+
+  <h3>1.1 干扰源的三大类</h3>
+  <p>工业现场的电磁干扰可以归结为三大类：</p>
+  <p><strong>辐射干扰</strong>：变频器、电焊机、大功率电机运行时产生的高频电磁场，直接耦合到信号线缆。河北某电厂的现场实测：一台45kW变频器运行时，距离信号线1米处，磁场强度达到0.8A/m，称重信号噪声从0.2mV增大到1.8mV。</p>
+  <p><strong>传导干扰</strong>：浪涌电压、谐波电流通过电源线路或接地网传导到仪表A/D前端。某水泥厂在大功率风机启动瞬间，称重信号出现±5mV的尖峰，持续约200ms，直接导致瞬时流量跳变。</p>
+  <p><strong>接地回路干扰</strong>：当传感器和仪表分别接在两个不同的接地点时，两地之间的电位差会在信号回路中形成环流。山西某煤矿的接地网与电焊机共用，两地电位差达到1.2V，称重信号基线漂移了0.8mV。</p>
+
+  <h3>1.2 断开法定位干扰路径</h3>
+  <p>苏衡测控的现场排查流程：①将传感器从接线盒断开，用短接帽替代传感器接入仪表。如果干扰消失，说明干扰来自传感器或传感器到接线盒的线缆；②如果干扰仍在，断开接线盒到仪表的线缆，用信号发生器给仪表输入一个稳定信号。如果干扰消失，说明干扰来自接线盒到仪表的传输路径；③如果干扰仍然存在，说明干扰来自仪表本身或仪表的电源。</p>
+  <p>这个流程可以在30分钟内定位到干扰段，避免盲目更换传感器或仪表。苏衡测控的维修记录显示，约60%的干扰问题出在传输路径（线缆和接线盒），25%出在传感器端接地，只有15%与仪表本身有关。</p>
+
+  <div class="art-tip">&#x1F4A1; 现场经验：很多维护人员看到信号跳动就认为是传感器坏了。实际上，在更换传感器之前，用万用表交流电压档测量传感器输出端（激励断开时），如果读数大于0.3mV，说明外部干扰已经大于传感器本底噪声，此时换传感器无效。</div>
+
+  <h2>二、信号线缆选型与布线规范</h2>
+  <p>信号线缆是干扰进入系统的第一道关口。选错线缆或布线不当，后续所有的屏蔽和滤波都是亡羊补牢。</p>
+
+  <h3>2.1 线缆选型：六线制优于四线制</h3>
+  <p>苏衡测控的传感器标配六线制接法：激励+（Exc+）、激励-（Exc-）、信号+（Sig+）、信号-（Sig-）、屏蔽层（Shield）、接地线（GND）。六线制与四线制的本质区别在于：六线制在仪表端测量激励电压，实时补偿长距离传输导致的激励电压衰减。如果采用四线制，100米线缆的电阻（约2.5Ω）会使10V激励衰减到约9.5V，传感器输出相应下降5%，这个误差会被误判为干扰。</p>
+  <p>线缆截面积：信号线（Sig+、Sig-）推荐0.35mm²屏蔽双绞线，激励线（Exc+、Exc-）推荐0.5mm²屏蔽线。屏蔽层覆盖率应≥85%，编织密度≥60目/英寸。苏衡测控现场使用的高柔性屏蔽线（如Lapp ÖLFLEX系列）在100万次弯曲后屏蔽覆盖率仍保持80%以上，适合皮带机频繁振动的环境。</p>
+
+  <h3>2.2 布线规范：间距与走向</h3>
+  <p>信号线缆与动力线缆的平行间距应≥300mm。如果受现场条件限制，无法满足300mm，必须在两者之间设置金属隔板（厚度≥1.5mm的镀锌钢板），隔板两端接地。</p>
+  <p>交叉走线时，信号线与动力线必须垂直交叉（90°），交叉点之间的距离应≥100mm。平行走向是最差的情况，因为平行长度越长，互感耦合越强。苏衡测控在江苏某化工厂的整改案例中，将信号线与380V动力线从平行30米改为垂直交叉3处，信号噪声下降了72%。</p>
+  <p>线缆敷设应避免形成环路。信号线从传感器到仪表，尽量走最短路径，不要绕成圈或回字形。如果必须留余量，余量部分应呈"S"形松散摆放，而不是紧密盘绕。盘绕的线圈会产生电感，放大高频干扰。</p>
+
+  <table>
+    <tr><th>线缆类型</th><th>最小平行间距</th><th>推荐间距</th><th>备注</th></tr>
+    <tr><td>传感器信号线 vs 220V动力线</td><td>200mm</td><td>300mm</td><td>需屏蔽</td></tr>
+    <tr><td>传感器信号线 vs 380V动力线</td><td>300mm</td><td>500mm</td><td>需屏蔽+金属隔板</td></tr>
+    <tr><td>传感器信号线 vs 变频器输出线</td><td>500mm</td><td>800mm</td><td>必须金属隔板</td></tr>
+    <tr><td>传感器信号线 vs 电焊机电缆</td><td>1000mm</td><td>1500mm</td><td>最好分槽敷设</td></tr>
+  </table>
+
+  <h2>三、屏蔽层接地与接地电阻测试</h2>
+  <p>屏蔽层的作用不是隔绝干扰，而是为干扰提供一个低阻抗的返回路径，使干扰电流在屏蔽层流动而不是进入信号芯线。屏蔽层能否有效工作，取决于接地质量。</p>
+
+  <h3>3.1 单端接地 vs 双端接地</h3>
+  <p>这是现场争议最多的话题。苏衡测控的结论是：皮带秤称重信号线（mV级）必须采用单端接地方案。</p>
+  <p>原因在于：工业现场的两接地点之间，几乎必然存在电位差。这个电位差来自大功率设备的接地电流、接地网电阻、土壤电阻率差异等。实测数据显示，水泥厂和电厂的接地网电位差通常在0.5~2V之间。如果屏蔽层两端都接地，这个电位差会在屏蔽层中驱动电流（I=U/R，屏蔽层电阻约0.1Ω/m，100米线就是10Ω，1V电位差产生100mA电流），这个电流产生的磁场直接耦合到信号芯线。</p>
+  <p>苏衡测控的标准做法：屏蔽层仅在传感器端接地，通过金属夹片与称重框架连接，框架再通过独立接地桩接入大地。仪表端屏蔽层用热缩管绝缘处理，悬空不接地。这样既避免了地环路，又保证了屏蔽层在干扰源近端接地。</p>
+
+  <div class="art-warn">&#x26A0; 常见错误：有些维护人员看到屏蔽层在仪表端悬空，以为是接线没接完，顺手把它接到仪表外壳的接地螺丝上。这个做法会把仪表外壳的噪声引入信号回路。仪表外壳接地是安全接地（防触电），与信号接地是两个不同的系统，不能混接。</div>
+
+  <h3>3.2 接地电阻测试</h3>
+  <p>接地电阻是屏蔽效果的硬指标。苏衡测控要求：称重系统专用接地电阻≤4Ω，信号地与动力地之间的电位差≤0.5V。</p>
+  <p>测试方法：使用接地电阻测试仪（如ETCR2000或Fluke 1623-2），在接地桩与远方参考地之间测量。测试时应注意：①断开接地线与设备的连接，单独测量接地桩本身；②在干燥季节每月测试一次，雨季每周测试一次（雨水会降低土壤电阻率，但也可能腐蚀接地体）；③如果接地电阻超过4Ω，需要增加接地桩数量或改用深埋接地棒（深度≥2.5m，插入土壤电阻率较低层）。</p>
+  <p>苏衡测控在内蒙古某矿区的整改案例：原有接地电阻12Ω，因为接地网与3台变频器和2台电焊机共用。整改方案是在称重框架旁单独埋设一根接地棒（Φ20mm镀锌钢，长2.5m），接地电阻降到2.8Ω。同时，用一根16mm²铜排将传感器屏蔽层、称重框架、仪表外壳分别连接到专用接地桩，与动力接地网保持5米以上的距离。整改后，称重信号噪声从1.5mV降到0.2mV。</p>
+
+  <h2>四、仪表滤波参数调校与现场验证</h2>
+  <p>当硬件屏蔽和接地已经做到位，但仍然存在残余噪声时，需要通过仪表的数字滤波进行补偿。滤波不是万能的，但它可以把信号中不影响计量精度的部分滤掉。</p>
+
+  <h3>4.1 滤波类型与适用场景</h3>
+  <p>苏衡测控仪表内置三种数字滤波：</p>
+  <p><strong>滑动平均滤波</strong>：对最近N个采样值取平均。N越大，噪声抑制越强，但响应速度越慢。适用于流量变化缓慢的场合（如给料机）。N取16时，10Hz采样率下响应延迟约800ms。</p>
+  <p><strong>中值滤波</strong>：取最近N个采样值的中位数。对脉冲型干扰（如电焊机火花）特别有效，但会牺牲响应速度。N取8时，延迟约400ms。</p>
+  <p><strong>低通滤波</strong>：设定截止频率，只保留低于该频率的信号成分。适用于变频器谐波干扰（3kHz~10kHz），但截止频率过低会滤掉真实的快速重量变化。苏衡测控推荐截止频率设为称重信号带宽的2倍（约5Hz），因为皮带秤重量信号的有效频率成分通常在2Hz以下。</p>
+
+  <h3>4.2 调校流程与验证</h3>
+  <p>滤波参数不能随意设置，必须有验证。苏衡测控的调校流程：①在仪表上开启原始数据输出模式，记录5分钟的原始采样值（不经过滤波），计算噪声标准差σ；②逐步增大滤波深度，每增加一档，记录5分钟数据，计算新的σ。当σ降低到0.1%F.S.以下时停止；③用标准砝码（或链码）进行实物校验，比较滤波前后的计量误差。如果滤波后误差反而增大，说明滤波深度过头，把真实信号也滤掉了。</p>
+  <p>在江苏某港口的实测中，未滤波时噪声σ=0.35%F.S.，开启滑动平均N=16后σ降到0.08%F.S.，但实物校验误差从0.12%增加到0.18%。原因是物料冲击产生的快速重量变化（持续约200ms）被滑动平均平滑掉了。最终调整为滑动平均N=8（σ=0.15%F.S.），兼顾了噪声抑制和响应速度。</p>
+
+  <div class="art-tip">&#x1F4A1; 现场经验：仪表滤波参数的设置，不要依赖默认值。不同现场的干扰频谱差异很大，变频器多的现场用低通滤波，电焊机多的现场用中值滤波，粉尘振动多的现场用滑动平均。最佳参数只能通过现场测试确定。</div>
+
+  <div class="cta">
+    <h3>皮带秤信号干扰排查需要专业支持？</h3>
+    <p>苏衡测控提供现场电磁环境测试服务，含信号频谱分析、接地电阻测试、屏蔽效能评估，24-48小时上门</p>
+    <a href="../contact.html">预约现场测试服务 &#x2192;</a>
+  </div>
+
+  <div class="related-articles">
+    <h3>&#x1F4DA; 相关文章</h3>
+    <ul>
+      <li><a href="belt-scale-sensor-fault-diagnosis.html">称重传感器故障诊断与信号异常排查方法 - 苏衡测控</a></li>
+      <li><a href="belt-scale-inaccurate-causes.html">电子皮带秤计量不准的原因及解决方法 - 苏衡测控故障运维指南</a></li>
+      <li><a href="belt-scale-routine-maintenance-checklist.html">皮带秤日常维护保养检查清单 - 苏衡测控运维指南</a></li>
+    </ul>
+  </div>
+</main>
+<footer class="footer"><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 苏衡测控 | 徐州市苏衡自动化控制技术有限公司</p><span>苏ICP备2024107758号-1</span></div></div></footer>
+</body>
+</html>
