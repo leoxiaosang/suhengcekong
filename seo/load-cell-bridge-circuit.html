@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="canonical" href="https://www.suhengcekong.com/seo/load-cell-bridge-circuit.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>称重传感器桥路原理与接线方式详解：四线制、六线制、八线制的区别与应用 - 苏衡测控</title>
+  
+  <meta property="og:title" content="称重传感器桥路原理与接线方式详解：四线制、六线制、八线制的区别与应用 - 苏衡测控">
+  <meta property="og:description" content="苏衡测控从惠斯通电桥原理出发，系统讲解称重传感器的四线制、六线制、八线制接线方式，从桥路补偿、长线传输、温度漂移、现场接线规范等维度，帮助技术人员正确接线与故障排查。">
+  <meta property="og:image" content="https://www.suhengcekong.com/images/电子皮带秤.jpg">
+  <meta property="og:type" content="website">
+  <meta name="description" content="苏衡测控从惠斯通电桥原理出发，系统讲解称重传感器的四线制、六线制、八线制接线方式，从桥路补偿、长线传输、温度漂移、现场接线规范等维度，帮助技术人员正确接线与故障排查。">
+  <meta name="keywords" content="称重传感器桥路,传感器四线制,传感器六线制,传感器八线制,惠斯通电桥,传感器接线,传感器桥路原理,称重传感器接线方式">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="seo-style.css">
+  <style>
+    .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
+    .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
+    .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
+    .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
+    .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
+    .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
+    .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
+    .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
+    .art-warn{background:rgba(232,92,26,0.06);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#7a3a10}
+    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+    th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
+    th{background:var(--primary);color:#fff;font-weight:600}
+    tr:nth-child(even)td{background:#f9f9f9}
+    .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
+    .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
+    .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
+    .art-hero h1{color:#fff;font-size:clamp(22px,3.5vw,36px);font-weight:800;margin-bottom:14px;line-height:1.35;max-width:700px;margin-left:auto;margin-right:auto}
+    .art-hero{ background: linear-gradient(135deg, #0a4a8a,#1565c0); padding: 64px 20px 44px; text-align: center; margin-bottom: 0; }
+    .art-hero .tag { display: inline-block; background: rgba(255,255,255,0.18); color: #fff; font-size: 12px; font-weight: 600; padding: 3px 12px; border-radius: 2px; margin-bottom: 14px; }
+    .art-hero .meta { color: rgba(255,255,255,0.75); font-size: 13.5px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+    .art-tldr{background:linear-gradient(135deg,#f0f7ff,#e8f4e8);border-left:5px solid var(--primary);padding:20px 24px;margin:0 0 32px;border-radius:0 8px 8px 0}
+    .art-tldr .tldr-label{display:inline-block;background:var(--primary);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:3px;margin-bottom:12px}
+    .art-tldr p{font-size:14.5px;line-height:1.75;color:#333;margin-bottom:12px!important}
+    .art-tldr ul{margin:0;padding-left:18px}
+    .art-tldr li{font-size:13.5px;line-height:1.7;color:#444;margin-bottom:6px}
+    .art-def{background:#fffbf0;border-left:4px solid #e6a23c;padding:14px 20px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#5c4a00}
+    .check-list{padding-left:0;list-style:none}
+    .check-list li{position:relative;padding-left:28px;margin-bottom:10px;font-size:15px;line-height:1.7}
+    .check-list li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+    .circuit-diagram{background:#f8fafc;border:1px solid #e2e8f0;padding:16px 20px;margin:14px 0;border-radius:8px;font-family:monospace;font-size:13px;line-height:1.6}
+    .wire-color{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:middle}
+    .wire-red{background:#e74c3c}
+    .wire-black{background:#2c3e50}
+    .wire-green{background:#27ae60}
+    .wire-white{background:#ecf0f1;border:1px solid #bdc3c7}
+    .wire-blue{background:#3498db}
+    .wire-yellow{background:#f1c40f}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.suhengcekong.com/" },
+      { "@type": "ListItem", "position": 2, "name": "行业资讯", "item": "https://www.suhengcekong.com/seo/" },
+      { "@type": "ListItem", "position": 3, "name": "称重传感器桥路原理与接线方式详解", "item": "https://www.suhengcekong.com/seo/load-cell-bridge-circuit.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "称重传感器桥路原理与接线方式详解：四线制、六线制、八线制的区别与应用 - 苏衡测控",
+    "author": {
+      "@type": "Organization",
+      "name": "苏衡测控",
+      "url": "https://www.suhengcekong.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "苏衡测控",
+      "url": "https://www.suhengcekong.com"
+    },
+    "datePublished": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.suhengcekong.com/seo/load-cell-bridge-circuit.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "称重传感器桥路原理与接线方式详解",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "惠斯通电桥原理与传感器输出",
+        "text": "惠斯通电桥原理与传感器输出"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "四线制、六线制、八线制的区别",
+        "text": "四线制、六线制、八线制的区别"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "长线传输与温度补偿",
+        "text": "长线传输与温度补偿"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "现场接线规范与故障排查",
+        "text": "现场接线规范与故障排查"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "称重传感器为什么用六线制而不是四线制？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "六线制比四线制多两根线（激励反馈线），用于实时监测传感器端的实际激励电压。当传感器与仪表之间的线缆较长（>50米）时，线缆电阻（约0.025Ω/m）会导致激励电压衰减。例如：100米线缆，电阻2.5Ω，激励电流10mA时，电压降25mV。如果仪表输出10V激励，传感器端实际只收到9.975V，传感器输出相应降低0.25%。六线制的两根反馈线将传感器端的实际激励电压传回仪表，仪表自动补偿激励电压，确保传感器端始终为10V。四线制没有这个反馈，长距离时误差不可控。苏衡测控的所有皮带秤传感器标配六线制，确保100米内无衰减误差。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "称重传感器信号线可以延长吗？最长能接多长？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "称重传感器信号线可以延长，但有长度限制。四线制传感器推荐最长30米（信号线），六线制传感器推荐最长100米，八线制传感器推荐最长150米。延长信号线的影响：①线缆电阻增加，信号衰减（信号线0.1-0.2mV/m衰减）；②电磁干扰增强，噪声增大（每增加10米，噪声约增加0.01mV）；③电容增大，信号响应变慢（每增加10米，响应延迟约0.5ms）。苏衡测控的延长方案：使用屏蔽双绞线（截面积0.35mm²），屏蔽层单端接地，信号线与动力线间距≥300mm。超过50米时，建议加信号放大器（将mV信号放大为V级信号，再传输），抗干扰能力提高10倍。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "称重传感器接线颜色代表什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "称重传感器接线颜色遵循行业通用标准，但不同厂家可能略有差异。苏衡测控的标准配色：六线制——红（Exc+激励正）、黑（Exc-激励负）、绿（Sig+信号正）、白（Sig-信号负）、蓝（Sen+反馈正）、黄（Sen-反馈负）。四线制——红（Exc+）、黑（Exc-）、绿（Sig+）、白（Sig-）。八线制——在四线制基础上增加两根屏蔽层接地线（黄绿双色）和两根温度补偿线（棕、灰）。接线时必须核对传感器标签上的接线图，不要仅凭颜色。苏衡测控在江苏某水泥厂的案例：维护人员误将Exc+和Sig+接反，导致传感器输出反向，仪表显示负值，排查2小时才发现是颜色看错。建议：首次接线后，用万用表测量：激励端电阻约350-450Ω（4只350Ω应变片串联），信号端电阻约350-450Ω，确认无误后再通电。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>&#x1F4DE; 188 1190 6890</span><span>&#x2709; info@suhengcekong.cn</span></div></div></div>
+<nav class="navbar"><div class="container nav-inner"><a href="../index.html" class="logo"><span class="logo-zh">苏衡测控</span><span class="logo-en">SUHENG</span></a><ul class="nav-menu"><li><a href="../index.html">首页</a></li><li><a href="../products.html">产品中心</a></li><li><a href="index.html">行业资讯</a></li><li><a href="../contact.html">联系我们</a></li></ul></div></nav>
+<div class="art-hero">
+  <div class="container">
+    <span class="tag">传感器技术</span>
+    <h1>称重传感器桥路原理与接线方式详解：四线制、六线制、八线制的区别与应用</h1>
+    <div class="meta">
+      <span>2026-07-02</span><span>传感器技术</span><span>阅读约11分钟</span>
+    </div>
+  </div>
+</div>
+<main class="art-wrap">
+  <div class="art-tldr">
+    <div class="tldr-label">核心结论</div>
+    <p><strong>称重传感器桥路</strong>是皮带秤计量的核心物理基础。苏衡测控从惠斯通电桥原理出发，结合现场接线经验，总结出以下关键技术要点。</p>
+    <ul>
+      <li>应变式传感器基于惠斯通电桥，4只应变片组成全桥，灵敏度约2.0mV/V</li>
+      <li>四线制：Exc+、Exc-、Sig+、Sig-，适合短距离（<30米），无激励补偿</li>
+      <li>六线制：增加Sen+、Sen-反馈线，实时补偿激励电压衰减，适合长距离（<100米）</li>
+      <li>八线制：增加温度补偿线和屏蔽接地线，适合高精度或极端环境（<150米）</li>
+      <li>线缆电阻：0.025Ω/m（激励线）、0.05Ω/m（信号线），100米线缆激励衰减约0.25%</li>
+      <li>接线颜色：红（Exc+）、黑（Exc-）、绿（Sig+）、白（Sig-）、蓝（Sen+）、黄（Sen-）</li>
+    </ul>
+  </div>
+
+  <div class="art-bc"><a href="../index.html">首页</a> / <a href="index.html">行业资讯</a> / 称重传感器桥路原理与接线方式</div>
+
+  <p>一位维护人员拿着六线制传感器，看着接线盒里的6根线，不知道该接哪两个端子。他试了红接绿、黑接白，仪表显示满量程漂移。又试了红接蓝、黑接黄，仪表显示负值。折腾了2小时后，他打电话问苏衡测控技术部："这六线制的传感器，是不是有两根线是备用的？"</p>
+  <p>这不是个例。苏衡测控每年接到约200个技术支持电话，其中约15%与传感器接线有关。四线制、六线制、八线制，每种接线方式都有特定用途，接错不仅计量不准，还可能损坏传感器。本文从惠斯通电桥原理出发，把传感器的桥路结构、接线方式、补偿原理、现场规范讲清楚。</p>
+
+  <h2>一、惠斯通电桥原理与传感器输出</h2>
+  <p>应变式称重传感器的核心是一个<strong>惠斯通电桥</strong>（Wheatstone Bridge）。电桥由4只应变片（电阻应变计）组成，粘贴在弹性体（通常为合金钢或不锈钢）的特定位置。当弹性体受力变形时，应变片的电阻值发生变化，电桥失去平衡，输出一个与载荷成正比的电压信号。</p>
+
+  <h3>1.1 电桥结构与输出公式</h3>
+  <p>标准的全桥电路：4只应变片，其中2只受拉（电阻增大），2只受压（电阻减小）。电桥的输出电压公式：U_out = U_in × K × ε，其中U_in是激励电压（通常为5V或10V），K是应变片灵敏系数（约2.0），ε是弹性体应变（受力产生的形变比例）。</p>
+  <p>对于一只量程500kg的传感器：激励电压10V时，满量程输出约2.0mV/V × 10V = 20mV。如果皮带秤用3只传感器并联，总输出仍为20mV（并联不增加输出电压，只增加输出电流能力）。仪表的A/D转换器需要将这个20mV信号转换为数字量，24位A/D的分辨率约0.0012μV，远小于20mV，所以分辨率足够。</p>
+
+  <h3>1.2 应变片的粘贴与补偿</h3>
+  <p>4只应变片在弹性体上的粘贴位置经过精密设计：2只贴在受拉面（弹性体弯曲时的拉伸侧），2只贴在受压面（压缩侧）。这种对称布局有两个作用：①温度补偿——当温度变化时，4只应变片的电阻变化方向相同（都增大或都减小），电桥输出不受影响；②弯曲补偿——当弹性体发生弯曲变形时，受拉面和受压面的应变方向相反，电桥输出只与弯曲变形有关，与拉伸/压缩变形无关。</p>
+  <p>苏衡测控的传感器生产工艺：应变片采用进口箔式应变片（如Vishay或HBM），灵敏系数公差≤±0.5%。贴片前对弹性体表面进行喷砂处理（Ra≤3.2μm），用专用贴片胶（如M-Bond 200或同类环氧树脂）在恒温恒湿条件下（温度25±1℃，湿度50±5%RH）粘贴，固化时间24小时。贴片后老化处理：在80℃下保持48小时，释放残余应力，稳定应变片性能。</p>
+
+  <div class="art-tip">&#x1F4A1; 关键参数：传感器的输出灵敏度（mV/V）是核心指标。灵敏度2.0mV/V意味着：激励电压10V时，满量程输出20mV。灵敏度不是越高越好——过高的灵敏度（如3.0mV/V）意味着弹性体更薄、更柔，虽然输出信号大，但抗过载能力下降。苏衡测控的标准传感器灵敏度2.0mV/V，平衡了输出信号和机械强度。</div>
+
+  <h2>二、四线制、六线制、八线制的区别</h2>
+  <p>传感器从接线盒引出的线缆数量，决定了接线方式。不同线制适用于不同的传输距离和精度要求。</p>
+
+  <h3>2.1 四线制：最简单，但局限性大</h3>
+  <p>四线制是最基本的接线方式：2根激励线（Exc+、Exc-）和2根信号线（Sig+、Sig-）。</p>
+  <p>四线制的问题是：当传感器与仪表之间的线缆较长时，线缆电阻会导致激励电压衰减。例如：100米长的0.5mm²铜线，电阻约2.5Ω。如果仪表输出10V激励，电流10mA，线缆压降=2.5Ω×10mA=25mV。传感器端实际收到的激励电压=10V-0.025V=9.975V。传感器输出相应降低0.25%（因为输出与激励电压成正比）。这个误差对于0.5级皮带秤（允许误差0.25%）已经接近极限，对于0.25级皮带秤（允许误差0.125%）不可接受。</p>
+  <p>四线制适用场景：传感器与仪表距离<30米，环境温度变化<10℃/天，精度要求≥0.5级。苏衡测控的四线制传感器通常用于小型皮带秤或实验室设备，工业现场不推荐。</p>
+
+  <h3>2.2 六线制：工业标准，长距离补偿</h3>
+  <p>六线制在四线制基础上增加2根<strong>激励反馈线</strong>（Sen+、Sen-）。这两根线将传感器端的实际激励电压传回仪表，仪表通过内部电路自动调节输出电压，确保传感器端始终为设定的10V（或5V）。</p>
+  <p>六线制的工作原理：仪表输出10V → 经过线缆电阻（2.5Ω）→ 传感器端收到9.975V → 反馈线将9.975V传回仪表 → 仪表检测到电压偏低 → 仪表将输出电压调高到10.025V → 传感器端实际收到10.000V。这个闭环补偿过程是实时的，每秒更新数百次，确保传感器端激励电压稳定。</p>
+  <p>苏衡测控的所有工业皮带秤传感器标配六线制。在100米线缆、温度变化20℃/天的条件下，六线制的激励电压补偿精度≤0.01%，完全满足0.25级皮带秤要求。六线制适用场景：传感器与仪表距离<100米，精度要求0.25-1.0级，是工业现场的标准配置。</p>
+
+  <h3>2.3 八线制：高精度，极端环境</h3>
+  <p>八线制在六线制基础上再增加2根线：温度补偿线（T+、T-）和屏蔽接地线（GND）。温度补偿线连接传感器内部的温度传感器（如PT100或热敏电阻），实时监测传感器本体温度，仪表根据温度变化动态修正零点漂移和灵敏度漂移。</p>
+  <p>八线制的优势：在极端温度环境（如-20℃~+60℃）下，温度补偿线可以将温度引起的误差降低80%以上。例如：未补偿时，温度漂移0.0015%F.S./℃，温差40℃时误差0.06%；有温度补偿时，误差降至0.012%。</p>
+  <p>八线制适用场景：高精度计量（0.25级以下）、极端温度环境（温差>40℃）、长距离传输（>100米）、科研级应用。苏衡测控的八线制传感器用于精密配料、实验室天平、贸易结算级皮带秤等场景。</p>
+
+  <table>
+    <tr><th>线制</th><th>线缆数</th><th>最大距离</th><th>精度适用</th><th>价格差异</th><th>适用场景</th></tr>
+    <tr><td>四线制</td><td>4</td><td>30米</td><td>≥0.5级</td><td>基准</td><td>小型设备、实验室</td></tr>
+    <tr><td>六线制</td><td>6</td><td>100米</td><td>0.25-1.0级</td><td>+15%</td><td>工业标准配置</td></tr>
+    <tr><td>八线制</td><td>8</td><td>150米</td><td><0.25级</td><td>+30%</td><td>高精度、极端环境</td></tr>
+  </table>
+
+  <h2>三、长线传输与温度补偿</h2>
+  <p>传感器与仪表之间的线缆，不仅是信号传输通道，也是误差引入的源头。线缆电阻、电磁干扰、温度变化，都会影响信号质量。</p>
+
+  <h3>3.1 线缆电阻与信号衰减</h3>
+  <p>铜线电阻公式：R = ρ × L / A，其中ρ是铜的电阻率（0.0175Ω·mm²/m），L是线缆长度（m），A是截面积（mm²）。以0.35mm²截面积、100米长为例：R = 0.0175 × 100 / 0.35 = 5Ω。信号线电阻5Ω，传感器输出阻抗约350Ω，分压比=5/(350+5)=1.4%，信号衰减1.4%。对于20mV的满量程输出，衰减后仅剩19.72mV，误差0.28mV，相当于0.28%F.S.。</p>
+  <p>苏衡测控的解决方案：①增加信号线截面积（从0.35mm²增加到0.5mm²），100米线缆电阻从5Ω降到3.5Ω，信号衰减从1.4%降到0.98%；②六线制激励补偿（解决激励衰减问题）；③信号放大器（在传感器端将mV信号放大为V级信号，如0-10V或4-20mA，抗衰减能力提高1000倍）。</p>
+
+  <h3>3.2 电磁干扰与屏蔽</h3>
+  <p>工业现场的电磁干扰源：变频器（3-10kHz谐波）、电焊机（脉冲干扰）、大功率电机（启动浪涌）。这些干扰通过辐射或传导耦合到信号线，导致称重信号噪声增大。</p>
+  <p>屏蔽层的接地方案：六线制传感器的屏蔽层采用<strong>单端接地</strong>——传感器端接地（通过金属夹片与称重框架连接），仪表端悬空（用热缩管绝缘）。双端接地会形成地环路，当两地之间存在电位差（工业现场常见0.5-2V）时，环流会在屏蔽层中产生干扰电流，反而耦合到信号芯线。</p>
+  <p>苏衡测控在河北某电厂的实测：变频器运行时，未屏蔽信号线噪声1.8mV；屏蔽层双端接地时噪声1.2mV；屏蔽层单端接地时噪声0.3mV。单端接地的屏蔽效果优于双端接地6倍。</p>
+
+  <h3>3.3 温度补偿原理</h3>
+  <p>温度变化会影响传感器输出的两个参数：零点（空载输出）和灵敏度（满载输出）。零点漂移主要由弹性体热膨胀和应变片电阻温度系数引起，灵敏度漂移主要由弹性体弹性模量温度系数引起。</p>
+  <p>八线制的温度补偿线连接传感器内部的温度传感器（如PT100铂电阻），实时测量传感器本体温度。仪表根据温度数据，从预设的温度补偿表中查找对应的零点修正值和灵敏度修正值，动态调整输出。补偿表的建立：在传感器出厂时，在-20℃、0℃、20℃、40℃、60℃五个温度点分别测试零点和灵敏度，拟合出温度-漂移曲线，存入仪表固件。</p>
+  <p>苏衡测控的补偿精度：在-20℃~+60℃范围内，温度补偿后的零点漂移≤0.002%F.S./℃，灵敏度漂移≤0.003%F.S./℃。未补偿时，零点漂移约0.015%F.S./℃，灵敏度漂移约0.02%F.S./℃。八线制的温度补偿可以将温度误差降低85%以上。</p>
+
+  <h2>四、现场接线规范与故障排查</h2>
+  <p>正确的接线是传感器正常工作的前提。苏衡测控的现场接线规范，基于数百个故障案例总结。</p>
+
+  <h3>4.1 接线规范</h3>
+  <p>①接线前断电：切勿带电操作，传感器激励电压10V，误触信号线可能损坏A/D转换器。</p>
+  <p>②核对颜色：苏衡测控标准配色——<span class="wire-color wire-red"></span>红（Exc+）、<span class="wire-color wire-black"></span>黑（Exc-）、<span class="wire-color wire-green"></span>绿（Sig+）、<span class="wire-color wire-white"></span>白（Sig-）、<span class="wire-color wire-blue"></span>蓝（Sen+）、<span class="wire-color wire-yellow"></span>黄（Sen-）。不同厂家颜色可能不同，必须以传感器标签为准。</p>
+  <p>③测量确认：接线前用万用表测量，激励端电阻约350-450Ω（4只350Ω应变片串联），信号端电阻约350-450Ω，反馈端电阻约0.5-2Ω（两根反馈线短接后的电阻）。如果阻值异常，说明传感器内部开路或短路，不能通电。</p>
+  <p>④屏蔽层处理：屏蔽层在传感器端通过金属夹片与称重框架连接，框架再通过独立接地桩接入大地。仪表端屏蔽层用热缩管绝缘，悬空不接地。</p>
+  <p>⑤防水处理：接线盒内放置干燥剂，电缆格兰头拧紧后涂硅酮密封胶，防止雨水渗入。</p>
+
+  <h3>4.2 常见故障排查</h3>
+  <p>故障1：仪表显示无信号。排查：①测量激励端电压（应为10V±0.1V），如果无电压，检查仪表输出；②测量信号端电压（空载时应为0±0.5mV），如果信号端电压为10V，说明Sig+与Exc+短路；③检查线缆是否断线（万用表通断档）。</p>
+  <p>故障2：仪表显示满量程漂移。排查：①检查Sig+与Sig-是否接反（输出反向）；②检查屏蔽层是否双端接地（形成地环路）；③检查传感器是否超载（机械限位是否接触）。</p>
+  <p>故障3：仪表显示数值跳动。排查：①检查信号线是否与动力线平行（间距<300mm）；②检查屏蔽层是否接地（未接地时噪声大）；③检查接线端子是否松动（接触电阻变化导致信号跳动）。</p>
+
+  <div class="art-tip">&#x1F4A1; 现场经验：约30%的传感器"故障"实际上是接线问题。苏衡测控建议：接线后用万用表做三步检查——①通断检查（确认无开路）；②绝缘检查（确认无短路，信号线与激励线之间电阻>10MΩ）；③电压检查（通电后测量信号端空载电压，应在0±0.5mV）。三步检查通过，再运行标定程序。</div>
+
+  <div class="cta">
+    <h3>传感器接线遇到难题？</h3>
+    <p>苏衡测控提供远程技术支持，含接线指导、故障排查、信号测试，24小时响应</p>
+    <a href="../contact.html">获取技术支持 &#x2192;</a>
+  </div>
+
+  <div class="related-articles">
+    <h3>&#x1F4DA; 相关文章</h3>
+    <ul>
+      <li><a href="load-cell-installation-guide.html">称重传感器安装规范</a></li>
+      <li><a href="load-cell-installation-anti-interference.html">称重传感器安装抗干扰措施</a></li>
+      <li><a href="load-cell-selection-10-parameters.html">称重传感器选型10大参数</a></li>
+    </ul>
+  </div>
+</main>
+<footer class="footer"><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 苏衡测控 | 徐州市苏衡自动化控制技术有限公司</p><span>苏ICP备2024107758号-1</span></div></div></footer>
+</body>
+</html>
