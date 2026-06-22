@@ -110,27 +110,27 @@ https://www.suhengcekong.com/seo/feeder-flow-unstable-causes.html | submitted | 
 https://www.suhengcekong.com/seo/high-speed-belt-scale-applications.html | submitted | 2026-06-15 | success:1
 https://www.suhengcekong.com/seo/jiangsu-belt-scale-market-guide.html | submitted | 2026-06-15 | success:1
 https://www.suhengcekong.com/seo/jjg195-verification-regulation-guide.html | submitted | 2026-06-15 | success:1
-https://www.suhengcekong.com/seo/load-cell-waterproof-ip-rating-guide.html | pending |
-https://www.suhengcekong.com/seo/metering-compliance-management-guide.html | pending |
-https://www.suhengcekong.com/seo/north-jiangsu-mining-belt-scale-guide.html | pending |
-https://www.suhengcekong.com/seo/power-plant-coal-feeder-maintenance.html | pending |
-https://www.suhengcekong.com/seo/sensor-strain-gauge-working-principle.html | pending |
-https://www.suhengcekong.com/seo/smart-weigher-industry-trend.html | pending |
-https://www.suhengcekong.com/seo/weighing-sensor-accuracy-factors.html | pending |
-https://www.suhengcekong.com/seo/weighing-sensor-how-to-choose.html | pending |
-https://www.suhengcekong.com/seo/weighing-sensor-maintenance-guide.html | pending |
-https://www.suhengcekong.com/seo/weighing-sensor-signal-troubleshoot.html | pending |
-https://www.suhengcekong.com/seo/weighing-sensor-types-comparison.html | pending |
-https://www.suhengcekong.com/seo/xuzhou-belt-scale-installation-service.html | pending |
-https://www.suhengcekong.com/seo/xuzhou-industrial-weigher-manufacturers.html | pending |
-https://www.suhengcekong.com/seo/xuzhou-industrial-weighing-automation.html | pending |
+https://www.suhengcekong.com/seo/load-cell-waterproof-ip-rating-guide.html | submitted | 2026-06-16 | success:1
+https://www.suhengcekong.com/seo/metering-compliance-management-guide.html | submitted | 2026-06-16 | success:1
+https://www.suhengcekong.com/seo/north-jiangsu-mining-belt-scale-guide.html | submitted | 2026-06-16 | success:1
+https://www.suhengcekong.com/seo/power-plant-coal-feeder-maintenance.html | submitted | 2026-06-16 | success:1
+https://www.suhengcekong.com/seo/sensor-strain-gauge-working-principle.html | submitted | 2026-06-16 | success:1
+https://www.suhengcekong.com/seo/smart-weigher-industry-trend.html | submitted | 2026-06-16 | success:1
+https://www.suhengcekong.com/seo/weighing-sensor-accuracy-factors.html | submitted | 2026-06-16 | success:1
+https://www.suhengcekong.com/seo/weighing-sensor-how-to-choose.html | submitted | 2026-06-16 | success:1
+https://www.suhengcekong.com/seo/weighing-sensor-maintenance-guide.html | submitted | 2026-06-16 | success:1
+https://www.suhengcekong.com/seo/weighing-sensor-signal-troubleshoot.html | submitted | 2026-06-16 | success:1
+https://www.suhengcekong.com/seo/weighing-sensor-types-comparison.html | submitted | 2026-06-17 | success:1
+https://www.suhengcekong.com/seo/xuzhou-belt-scale-installation-service.html | submitted | 2026-06-17 | success:1
+https://www.suhengcekong.com/seo/xuzhou-industrial-weigher-manufacturers.html | submitted | 2026-06-17 | success:1
+https://www.suhengcekong.com/seo/xuzhou-industrial-weighing-automation.html | submitted | 2026-06-17 | success:1
 
 ## 待提交 - 应用场景深化系列 (2026-06-13 新增)
-https://www.suhengcekong.com/seo/steel-plant-belt-scale-applications.html | pending |
-https://www.suhengcekong.com/seo/thermal-power-coal-feeder-solutions.html | pending |
-https://www.suhengcekong.com/seo/cement-industry-belt-scale-case.html | pending |
-https://www.suhengcekong.com/seo/chemical-fertilizer-belt-scale-solutions.html | pending |
-https://www.suhengcekong.com/seo/grain-storage-belt-scale-solutions.html | pending |
+https://www.suhengcekong.com/seo/steel-plant-belt-scale-applications.html | submitted | 2026-06-17 | success:1
+https://www.suhengcekong.com/seo/thermal-power-coal-feeder-solutions.html | submitted | 2026-06-17 | success:1
+https://www.suhengcekong.com/seo/cement-industry-belt-scale-case.html | submitted | 2026-06-17 | success:1
+https://www.suhengcekong.com/seo/chemical-fertilizer-belt-scale-solutions.html | submitted | 2026-06-17 | success:1
+https://www.suhengcekong.com/seo/grain-storage-belt-scale-solutions.html | submitted | 2026-06-17 | success:1
 ## 2026-06-13 内容优化记录（不重复推送）
 已对以下10篇做内容优化（URL已在队列，无需重复提交）:
 - loss-in-weight-system-workflow.html
@@ -146,19 +146,22 @@ https://www.suhengcekong.com/seo/grain-storage-belt-scale-solutions.html | pendi
 
 
 # 2026-06-12 新增 13 篇 SEO 文章
-https://www.suhengcekong.com/seo/instrument-rs485-modbus-communication.html | pending | |
-https://www.suhengcekong.com/seo/instrument-remote-monitoring-iot.html | pending | |
-https://www.suhengcekong.com/seo/instrument-parameter-setup-guide.html | pending | |
-https://www.suhengcekong.com/seo/belt-scale-commissioning-steps.html | pending | |
-https://www.suhengcekong.com/seo/belt-scale-installation-acceptance.html | pending | |
-https://www.suhengcekong.com/seo/load-cell-installation-positioning.html | pending | |
-https://www.suhengcekong.com/seo/belt-scale-routine-maintenance-checklist.html | pending | |
-https://www.suhengcekong.com/seo/belt-scale-wear-parts-replacement.html | pending | |
-https://www.suhengcekong.com/seo/belt-scale-price-breakdown.html | pending | |
-https://www.suhengcekong.com/seo/weighing-equipment-purchase-guide.html | pending | |
-https://www.suhengcekong.com/seo/suheng-vs-import-price-comparison.html | pending | |
-https://www.suhengcekong.com/seo/suheng-customer-case-cement.html | pending | |
-https://www.suhengcekong.com/seo/suheng-customer-case-power-plant.html | pending | |
+https://www.suhengcekong.com/seo/instrument-rs485-modbus-communication.html | submitted | 2026-06-17 | success:1 |
+https://www.suhengcekong.com/seo/instrument-remote-monitoring-iot.html | submitted | 2026-06-18 | success:1 |
+https://www.suhengcekong.com/seo/instrument-parameter-setup-guide.html | submitted | 2026-06-18 | success:1 |
+https://www.suhengcekong.com/seo/belt-scale-commissioning-steps.html | submitted | 2026-06-18 | success:1 |
+https://www.suhengcekong.com/seo/belt-scale-installation-acceptance.html | submitted | 2026-06-18 | success:1 |
+https://www.suhengcekong.com/seo/load-cell-installation-positioning.html | submitted | 2026-06-18 | success:1 |
+https://www.suhengcekong.com/seo/belt-scale-routine-maintenance-checklist.html | submitted | 2026-06-18 | success:1 |
+https://www.suhengcekong.com/seo/belt-scale-wear-parts-replacement.html | submitted | 2026-06-18 | success:1 |
+https://www.suhengcekong.com/seo/belt-scale-price-breakdown.html | submitted | 2026-06-18 | success:1 |
+https://www.suhengcekong.com/seo/weighing-equipment-purchase-guide.html | submitted | 2026-06-18 | success:1 |
+https://www.suhengcekong.com/seo/suheng-vs-import-price-comparison.html | submitted | 2026-06-18 | success:1 |
+https://www.suhengcekong.com/seo/suheng-customer-case-cement.html | submitted | 2026-06-19 | success:1 |
+https://www.suhengcekong.com/seo/suheng-customer-case-power-plant.html | submitted | 2026-06-19 | success:1 |
 
 ## 全站搜索页 (2026-06-15 新增)
-https://www.suhengcekong.com/search.html | pending | |
+https://www.suhengcekong.com/search.html | submitted | 2026-06-19 | success:1 |
+
+## 新增文章 (2026-06-20)
+https://www.suhengcekong.com/seo/belt-scale-procurement-spec-guide.html | pending | |
