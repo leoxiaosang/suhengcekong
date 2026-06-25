@@ -182,4 +182,7 @@ https://www.suhengcekong.com/seo/load-cell-bridge-circuit.html | submitted | 202
 https://www.suhengcekong.com/seo/belt-scale-mes-integration-guide.html | submitted | 2026-06-23 | success:1 |
 
 ## 新增文章 (2026-06-24)
-https://www.suhengcekong.com/seo/aggregate-dosing-belt-scale-case.html | pending | 2026-06-24 |
+https://www.suhengcekong.com/seo/aggregate-dosing-belt-scale-case.html | submitted | 2026-06-24 | success:1 2026-06-24 |
+
+## 新增文章 (2026-06-25)
+https://www.suhengcekong.com/seo/lithium-battery-material-belt-scale-case.html | pending | | |
