@@ -245,6 +245,50 @@ document.querySelector('.subscribe-form').addEventListener('submit', function(e)
     }
   });
 
+  /* 禁用 selectstart（鼠标拖动选中文本） */
+  document.addEventListener('selectstart', function(e) {
+    var tag = (e.target.tagName || '').toUpperCase();
+    if (!['INPUT', 'TEXTAREA', 'PRE', 'CODE'].includes(tag)) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  /* 禁用 beforecopy（复制前事件） */
+  document.addEventListener('beforecopy', function(e) {
+    e.preventDefault();
+    return false;
+  });
+
+  /* 禁用打印预览 */
+  window.addEventListener('beforeprint', function(e) {
+    e.preventDefault();
+    window.print = function() {};
+    return false;
+  });
+
+  /* 检测开发者工具（窗口尺寸差） */
+  var devToolsOpen = false;
+  function checkDevTools() {
+    var w = window.outerWidth - window.innerWidth;
+    var h = window.outerHeight - window.innerHeight;
+    if (w > 200 || h > 200) {
+      if (!devToolsOpen) {
+        devToolsOpen = true;
+        console.clear();
+        console.log('%c', 'font-size:0');
+      }
+    } else {
+      devToolsOpen = false;
+    }
+  }
+  setInterval(checkDevTools, 500);
+
+  /* 禁止 iframe 嵌套（防止被第三方站点嵌入抓取） */
+  if (window.top !== window.self) {
+    window.top.location = window.self.location;
+  }
+
   /* 为所有图片添加 draggable=false */
   var imgs = document.querySelectorAll('img');
   for (var i = 0; i < imgs.length; i++) {

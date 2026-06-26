@@ -1138,6 +1138,37 @@ body > main,
 img {
   -webkit-user-drag: none !important;
   -khtml-user-drag: none !important;
+  pointer-events: none !important;
+}
+/* 链接内的图片保留点击性 */
+a img {
+  pointer-events: auto !important;
+}
+/* 文字选中高亮透明化 */
+::selection {
+  background: transparent !important;
+  color: inherit !important;
+}
+::-moz-selection {
+  background: transparent !important;
+  color: inherit !important;
+}
+/* 图片容器透明覆盖层 */
+.img-protect {
+  position: relative;
+  display: inline-block;
+}
+.img-protect::after,
+.news-list-img::after,
+.seo-card-img::after,
+.product-gallery::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  background: transparent;
+  cursor: default;
+  pointer-events: auto;
 }
 /* 输入框、文本域、代码块保留可选功能 */
 input,
