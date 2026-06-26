@@ -27,11 +27,17 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      transition: transform .2s, box-shadow .2s;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
       display: flex;
       flex-direction: column;
+      cursor: pointer;
+      border: 2px solid transparent;
     }
-    .seo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .seo-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
     .seo-card-img {
       height: 90px;
       display: flex;
