@@ -181,6 +181,8 @@ select, input, textarea { font-family: inherit; }
   border-radius: var(--radius);
   cursor: pointer;
   transition: var(--transition);
+  display: block;
+  text-decoration: none;
 }
 .mega-item img {
   width: 100%;
