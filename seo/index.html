@@ -68,13 +68,64 @@
     .seo-card:hover .seo-card-title { color: var(--primary); }
     .seo-card-desc { font-size: 14px; color: var(--text-light); line-height: 1.7; flex: 1; }
     .seo-card-meta { display: flex; gap: 16px; font-size: 13px; color: var(--text-light); margin-top: 14px; padding-top: 14px; border-top: 1px solid #f0f0f0; }
+    /* Tab 筛选系统 */
+    .seo-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+      justify-content: center;
+    }
+    .seo-tab {
+      padding: 8px 18px;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      background: #fff;
+      color: #666;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all .2s;
+      white-space: nowrap;
+    }
+    .seo-tab:hover { border-color: var(--primary); color: var(--primary); }
+    .seo-tab.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .seo-tab .count {
+      font-size: 11px;
+      opacity: .7;
+      margin-left: 4px;
+    }
+    .seo-card.hidden { display: none; }
+    .seo-empty {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      color: #999;
+      font-size: 14px;
+      grid-column: 1 / -1;
+    }
+    .seo-empty.show { display: block; }
   </style>
 </head>
 <body>
   <div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>📞 188 1190 6890</span><span>✉ info@suhengcekong.cn</span></div></div></div>
   <nav class="navbar"><div class="container nav-inner"><a href="../index.html" class="logo"><span class="logo-zh">苏衡测控</span><span class="logo-en">SUHENG</span></a><ul class="nav-menu"><li><a href="../index.html">首页</a></li><li><a href="../products.html">产品中心</a></li><li><a href="index.html">行业资讯</a></li><li><a href="../contact.html">联系我们</a></li></ul></div></nav>
-  <div class="seo-hero"><h1>行业资讯</h1><p>皮带秤技术文章、选型指南、应用案例、维护教程——累计 127 篇原创内容</p></div>
-  <main class="seo-main"><div class="container"><div class="seo-grid">
+  <div class="seo-hero"><h1>行业资讯</h1><p>皮带秤技术文章、选型指南、应用案例、维护教程——累计 161 篇原创内容</p></div>
+  <main class="seo-main"><div class="container">
+      <div class="seo-tabs">
+        <button class="seo-tab active" data-filter="all">全部<span class="count">161</span></button>
+        <button class="seo-tab" data-filter="案例">应用案例</button>
+        <button class="seo-tab" data-filter="方案">行业方案</button>
+        <button class="seo-tab" data-filter="选型">选型指南</button>
+        <button class="seo-tab" data-filter="技术">技术文章</button>
+        <button class="seo-tab" data-filter="维护">维护指南</button>
+        <button class="seo-tab" data-filter="标准">行业标准</button>
+        <button class="seo-tab" data-filter="地域">地域服务</button>
+      </div>
+      <div class="seo-grid">
 
       <article class="seo-card">
         <a href="coal-gasifier-feed-coal-belt-scale-case.html" style="color:inherit;text-decoration:none;display:flex;flex-direction:column;height:100%">
@@ -2066,8 +2117,64 @@
             </div>
           </a>
         </article>
-  </div></div></main>
+  </div><div class="seo-empty">该分类暂无文章，请查看其他分类</div></div></div></main>
   <footer class="footer"><div class="container footer-inner"><div class="footer-left"><span class="logo-zh">苏衡测控</span><p class="footer-slogan">以精细化管理降低企业能耗成本</p><p>电话：188 1190 6890</p><p>邮箱：info@suhengcekong.cn</p><p>地址：江苏省徐州市铜山区康平路</p></div><div class="footer-links"><h4>产品中心</h4><a href="../product-dianzi.html">电子皮带秤</a><a href="../product-gaojingdu.html">高精度皮带秤</a><a href="../product-chuanganqi.html">称重传感器</a><a href="../product-yibiao.html">智能仪表</a></div><div class="footer-links"><h4>服务支持</h4><a href="../service.html">服务流程</a><a href="../faq.html">常见问题</a><a href="../contact.html">联系我们</a></div><div class="footer-links"><h4>关于我们</h4><a href="../about.html">公司简介</a><a href="../news.html">新闻动态</a></div></div><div class="footer-bottom"><p>© 2012-2026 徐州苏衡测控科技有限公司 版权所有 | <a href="https://beian.miit.gov.cn" target="_blank">苏ICP备2024107758号-1</a></p></div></footer>
-  <script>document.querySelectorAll('.seo-card').forEach(c=>{c.addEventListener('mouseenter',()=>c.style.transform='translateY(-4px)');c.addEventListener('mouseleave',()=>c.style.transform='')});</script>
+  <script>
+// === Tab 分类系统 ===
+(function(){
+  const tagMap = {
+    '应用案例':'案例','新能源锂电':'案例','行业应用':'案例',
+    '行业方案':'方案',
+    '选型指南':'选型','采购指南':'选型',
+    '技术文章':'技术','技术原理':'技术',
+    '维护指南':'维护',
+    '行业标准':'标准',
+    '地域服务':'地域'
+  };
+  const cards = document.querySelectorAll('.seo-card');
+  // 自动分类
+  const counts = {};
+  cards.forEach(function(c){
+    var tag = c.querySelector('.seo-card-tag');
+    if(!tag) return;
+    var cat = tagMap[tag.textContent.trim()] || '其他';
+    c.setAttribute('data-category', cat);
+    counts[cat] = (counts[cat]||0) + 1;
+  });
+  // 更新tab数量
+  var tabs = document.querySelectorAll('.seo-tab[data-filter]');
+  tabs.forEach(function(t){
+    var f = t.getAttribute('data-filter');
+    if(f === 'all') return;
+    var count = counts[f] || 0;
+    var span = t.querySelector('.count');
+    if(span) span.textContent = count;
+  });
+  // Tab 点击
+  var activeTab = document.querySelector('.seo-tab.active');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      if(activeTab) activeTab.classList.remove('active');
+      t.classList.add('active');
+      activeTab = t;
+      var filter = t.getAttribute('data-filter');
+      var visible = 0;
+      cards.forEach(function(c){
+        if(filter === 'all' || c.getAttribute('data-category') === filter){
+          c.classList.remove('hidden');
+          visible++;
+        } else {
+          c.classList.add('hidden');
+        }
+      });
+      var empty = document.querySelector('.seo-empty');
+      if(empty){
+        if(visible === 0) empty.classList.add('show');
+        else empty.classList.remove('show');
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>
