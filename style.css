@@ -100,8 +100,8 @@ select, input, textarea { font-family: inherit; }
 
 /* 菜单 */
 .nav-menu { display: flex; align-items: center; gap: 0; height: 100%; }
-.nav-item { position: relative; height: 100%; display: flex; align-items: center; }
-.nav-item > a {
+.nav-item, .nav-menu li { position: relative; height: 100%; display: flex; align-items: center; }
+.nav-item > a, .nav-menu li > a {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -114,7 +114,7 @@ select, input, textarea { font-family: inherit; }
   transition: var(--transition);
   position: relative;
 }
-.nav-item > a::after {
+.nav-item > a::after, .nav-menu li > a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -124,8 +124,8 @@ select, input, textarea { font-family: inherit; }
   background: var(--accent);
   transition: var(--transition);
 }
-.nav-item:hover > a { color: var(--primary); }
-.nav-item:hover > a::after { left: 18px; right: 18px; }
+.nav-item:hover > a, .nav-menu li:hover > a { color: var(--primary); }
+.nav-item:hover > a::after, .nav-menu li:hover > a::after { left: 18px; right: 18px; }
 .arrow { font-size: 10px; transition: var(--transition); }
 .nav-item:hover .arrow { transform: rotate(180deg); }
 
@@ -181,6 +181,8 @@ select, input, textarea { font-family: inherit; }
   border-radius: var(--radius);
   cursor: pointer;
   transition: var(--transition);
+  display: block;
+  text-decoration: none;
 }
 .mega-item img {
   width: 100%;
