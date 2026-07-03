@@ -52,18 +52,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南 - 苏衡测控",
-  "author": {"@type": "Organization", "name": "苏衡测控", "url": "https://www.suhengcekong.com"},
-  "publisher": {"@type": "Organization", "name": "苏衡测控", "url": "https://www.suhengcekong.com"},
-  "datePublished": "2026-06-11",
-  "dateModified": "2026-06-11",
-  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.suhengcekong.com/seo/xuzhou-industrial-weighing-automation.html"}
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南 - 苏衡测控","author":{"@type":"Organization","name":"苏衡测控","url":"https://www.suhengcekong.com"},"publisher":{"@type":"Organization","name":"苏衡测控","url":"https://www.suhengcekong.com"},"datePublished":"2026-06-11","dateModified":"2026-06-11","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.suhengcekong.com/seo/xuzhou-industrial-weighing-automation.html"},"image":"https://www.suhengcekong.com/images/电子皮带秤.jpg"}</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "皮带秤仪表如何与西门子PLC通讯？","acceptedAnswer": {"@type": "Answer","text": "西门子S7系列PLC（S7-200/300/1200/1500）与皮带秤仪表通讯的主要方式：①RS485 Modbus RTU——通过CM485扩展模块，在TIA Portal中使用MB_COMM_LOAD和MB_MASTER功能块，轮询仪表寄存器（苏衡SH-300标准寄存器定义可提供）；②4-20mA模拟量——通过SM1231 AI模拟量输入模块，将流量信号转换为工程量。Modbus方式可以读取多个参数（流量/累计/状态），推荐使用。"}},{"@type": "Question","name": "皮带秤数据怎么上传到MES系统？","acceptedAnswer": {"@type": "Answer","text": "常见路径：皮带秤仪表（Modbus TCP/RTU）→工业以太网→PLC→OPC UA服务器→MES系统。如果MES是国产系统（如用友/金蝶/派格工业），通常支持直接的Modbus TCP采集，可以跳过PLC中转。苏衡测控SH-300仪表支持Modbus TCP，可直接配置IP地址接入工厂网络。"}},{"@type": "Question","name": "老旧皮带秤改造成智能化大概要多少钱？","acceptedAnswer": {"@type": "Answer","text": "分三种改造深度：①仅替换仪表（保留传感器/秤体），增加Modbus通讯——材料费3000-8000元，施工1天；②加装RTU数据采集盒（无需停机）——材料2000-5000元，施工半天；③全套更换（传感器+仪表+秤架+通讯）——1.5-5万元，施工1-3天。建议先评估现有传感器状态，如果传感器精度还好则优先换仪表，成本最低。"}},{"@type": "Question","name": "PROFIBUS和Modbus哪个适合皮带秤？","acceptedAnswer": {"@type": "Answer","text": "两者都可以，取决于现场主控系统：如果工厂已经是西门子PROFIBUS网络（常见于大型水泥厂、汽车制造），皮带秤选PROFIBUS-DP版本集成最顺畅（总线拓扑，响应时间<10ms）；如果是一般工厂，Modbus RTU/TCP更经济（协议免费，PLC原生支持）。苏衡测控两种协议均支持，无需额外费用。"}},{"@type": "Question","name": "徐州有没有提供称重系统集成的厂家？","acceptedAnswer": {"@type": "Answer","text": "苏衡测控提供从传感器、仪表到上位机集成的全套服务，在徐州工程机械、水泥、矿山企业有多个DCS/PLC对接项目经验。也可以只购买设备+仪表，自行对接（提供完整技术手册和示例程序）。徐州其他规模较大的称重企业一般以硬件供货为主，系统集成能力参差不齐，建议前期沟通时明确询问'有没有类似项目的集成经验'。"}}]}
 </script>
@@ -174,6 +163,23 @@
 <p style="font-size:12px;color:#aaa;text-align:center;margin-top:36px;font-style:italic;letter-spacing:0.5px;">案例为我公司售后及技术人员根据对应现场整理。</p>
 </div>
 </main>
+
+<section class="related-products" style="background:#f7f9fc;padding:36px 24px;margin:40px auto;max-width:920px;border-radius:12px;">
+  <h3 style="color:#1a3a5c;font-size:1.4em;margin:0 0 20px;text-align:center;">相关产品</h3>
+  <div class="related-products-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+        <a href="product-dianzi.html" class="related-product-card">
+          <h4>电子皮带秤</h4>
+          <p>±0.25%精度, 15年厂家, 支持非标定制</p>
+          <span class="cta">查看产品详情 →</span>
+        </a>
+        <a href="product-chuanganqi.html" class="related-product-card">
+          <h4>称重传感器</h4>
+          <p>C3/C6级精度, 合金钢IP68防护</p>
+          <span class="cta">查看产品详情 →</span>
+        </a>
+  </div>
+</section>
+
 <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 徐州苏衡测控设备有限公司 版权所有 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">苏ICP备2024107758号-1</a></p></div></div></footer>
 <script src="../main.js" defer></script>
 </body>

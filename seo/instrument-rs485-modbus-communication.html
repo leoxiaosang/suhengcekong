@@ -49,29 +49,7 @@
     .art-def{background:#fffbf0;border-left:4px solid #e6a23c;padding:14px 20px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#5c4a00}
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "皮带秤仪表RS485 Modbus通信协议详解与配置指南-苏衡测控",
-  "author": {
-    "@type": "Organization",
-    "name": "苏衡测控",
-    "url": "https://www.suhengcekong.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "苏衡测控",
-    "url": "https://www.suhengcekong.com"
-  },
-  "datePublished": "2026-06-14",
-  "dateModified": "2026-06-14",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.suhengcekong.com/seo/instrument-rs485-modbus-communication.html"
-  }
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"皮带秤仪表RS485 Modbus通信协议详解与配置指南-苏衡测控","author":{"@type":"Organization","name":"苏衡测控","url":"https://www.suhengcekong.com"},"publisher":{"@type":"Organization","name":"苏衡测控","url":"https://www.suhengcekong.com"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.suhengcekong.com/seo/instrument-rs485-modbus-communication.html"},"image":"https://www.suhengcekong.com/images/电子皮带秤.jpg"}</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "皮带秤仪表RS485通信最远能传多远？", "acceptedAnswer": {"@type": "Answer", "text": "RS485标准传输距离1200米（9600bps下），但实际工业现场受电缆质量、波特率、电磁环境影响。建议：①选用屏蔽双绞线（STP）②波特率≤19200时距离可达1000米③工业现场加终端电阻120Ω④长距离或强干扰场景改用光纤转换器或RS485中继器。"}}, {"@type": "Question", "name": "一台主机最多能接多少台皮带秤仪表？", "acceptedAnswer": {"@type": "Answer", "text": "RS485总线理论支持32个节点（标准芯片负载能力），实际建议≤16台。超过16台需用RS485集线器扩展，或选用支持256节点的增强型收发器（如MAX14870）。每台仪表需分配唯一从站地址（1-247），主机轮询时需设置合理间隔（建议≥100ms）。"}}, {"@type": "Question", "name": "Modbus RTU和Modbus TCP能混用吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。常用方案是：现场设备用Modbus RTU（RS485），通过Modbus网关（如SG-TCPS）转换为Modbus TCP（以太网），再接入上位机/DCS。转换时需注意字节序和寄存器映射差异。苏衡SH-S1200等新型仪表原生支持Modbus TCP，可直连工业以太网。"}}, {"@type": "Question", "name": "皮带秤数据通过Modbus读出来后还需要处理吗？", "acceptedAnswer": {"@type": "Answer", "text": "需要。Modbus读取的原始数据是瞬时流量（吨/小时）和累计量（吨），需做：①单位换算（寄存器值÷10或÷100）②数据平滑（滑动平均）③累积量断电保护（仪表自带）④异常值过滤（剔除明显偏离值）。建议上位机用专业SCADA软件或自研程序处理。"}}, {"@type": "Question", "name": "通信故障最常见的3个原因是什么？", "acceptedAnswer": {"@type": "Answer", "text": "①接线错误：A/B接反（最常见）、屏蔽层未接地②地址冲突：两台仪表设为相同从站地址③波特率/数据位不匹配：主从端参数不一致。排查方法：①用Modbus Poll工具单接一台仪表测试②用万用表测A-B间电压（正常2-6V）③检查终端电阻。"}}]}
 </script>
@@ -538,6 +516,23 @@ client.close()</code></pre>
 
 <p style="font-size:12px;color:#aaa;text-align:center;margin-top:36px;font-style:italic;letter-spacing:0.5px;">案例为我公司售后及技术人员根据对应现场整理。</p>
 </main>
+
+<section class="related-products" style="background:#f7f9fc;padding:36px 24px;margin:40px auto;max-width:920px;border-radius:12px;">
+  <h3 style="color:#1a3a5c;font-size:1.4em;margin:0 0 20px;text-align:center;">相关产品</h3>
+  <div class="related-products-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+        <a href="product-dianzi.html" class="related-product-card">
+          <h4>电子皮带秤</h4>
+          <p>±0.25%精度, 15年厂家, 支持非标定制</p>
+          <span class="cta">查看产品详情 →</span>
+        </a>
+        <a href="product-yibiao.html" class="related-product-card">
+          <h4>皮带秤控制器/智能仪表</h4>
+          <p>PID闭环控制, 支持多路通讯</p>
+          <span class="cta">查看产品详情 →</span>
+        </a>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">

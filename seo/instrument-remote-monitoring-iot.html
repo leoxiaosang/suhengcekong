@@ -49,29 +49,7 @@
     .art-def{background:#fffbf0;border-left:4px solid #e6a23c;padding:14px 20px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#5c4a00}
 </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "皮带秤仪表IoT远程监控方案：4G/WiFi/工业以太网全场景落地-苏衡测控",
-  "author": {
-    "@type": "Organization",
-    "name": "苏衡测控",
-    "url": "https://www.suhengcekong.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "苏衡测控",
-    "url": "https://www.suhengcekong.com"
-  },
-  "datePublished": "2026-06-14",
-  "dateModified": "2026-06-14",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.suhengcekong.com/seo/instrument-remote-monitoring-iot.html"
-  }
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"皮带秤仪表IoT远程监控方案：4G/WiFi/工业以太网全场景落地-苏衡测控","author":{"@type":"Organization","name":"苏衡测控","url":"https://www.suhengcekong.com"},"publisher":{"@type":"Organization","name":"苏衡测控","url":"https://www.suhengcekong.com"},"datePublished":"2026-06-14","dateModified":"2026-06-14","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.suhengcekong.com/seo/instrument-remote-monitoring-iot.html"},"image":"https://www.suhengcekong.com/images/电子皮带秤.jpg"}</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "皮带秤IoT远程监控比传统RS485方案贵多少？", "acceptedAnswer": {"@type": "Answer", "text": "增加成本约2000-5000元/台（含4G模块+云平台年费），但省去现场布线（节省布线成本5-10万元/km）和人工抄表费用（按2人/班计算，年节省10万元以上）。按3年使用周期计算，TCO反而降低40%以上。"}}, {"@type": "Question", "name": "4G远程监控在工厂信号差的地方怎么解决？", "acceptedAnswer": {"@type": "Answer", "text": "三种方案：①外置高增益天线（5dBi或7dBi定向天线）②选用4G+NB-IoT双模模块（NB信号更强）③加装信号放大器。极端情况下可改用工业以太网（光纤）回传。苏衡SH-S1200-4G型号支持外置天线，增益可达8dBi。"}}, {"@type": "Question", "name": "MQTT和Modbus能在皮带秤系统中共存吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。常见架构是：仪表（Modbus RTU/TCP）→ 边缘网关（Modbus主站+MQTT客户端）→ 云平台（MQTT broker）。网关完成Modbus到MQTT的协议转换、数据缓存、断网重传。这是目前最成熟的工业IoT架构。"}}, {"@type": "Question", "name": "皮带秤历史数据能在云端保存多久？", "acceptedAnswer": {"@type": "Answer", "text": "分三层存储：①实时数据（最近24小时）：高频读写，用于实时监控②近期数据（1年）：用于日报/月报生成③归档数据（3-10年）：冷存储，用于审计和行业分析。主流云平台（阿里云、华为云、AWS）均可配置分层存储策略，总成本约0.1-0.5元/台/天。"}}, {"@type": "Question", "name": "远程监控报警有哪些类型？", "acceptedAnswer": {"@type": "Answer", "text": "六大类报警：①流量异常（偏差>10%标称值）②累计量跳变（可能作弊或传感器故障）③通信中断（心跳超时）④设备故障（仪表自诊断代码）⑤数据越界（瞬时流量超量程）⑥计划性提醒（校准周期、维护到期）。报警可通过短信、微信、邮件、APP推送多通道送达。"}}]}
 </script>
@@ -557,7 +535,24 @@ while True:
     </div>
   </section>
 
-  <footer class="footer">
+  
+<section class="related-products" style="background:#f7f9fc;padding:36px 24px;margin:40px auto;max-width:920px;border-radius:12px;">
+  <h3 style="color:#1a3a5c;font-size:1.4em;margin:0 0 20px;text-align:center;">相关产品</h3>
+  <div class="related-products-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+        <a href="product-dianzi.html" class="related-product-card">
+          <h4>电子皮带秤</h4>
+          <p>±0.25%精度, 15年厂家, 支持非标定制</p>
+          <span class="cta">查看产品详情 →</span>
+        </a>
+        <a href="product-comparison.html" class="related-product-card">
+          <h4>全系列产品参数对比</h4>
+          <p>皮带秤/传感器/仪表选型对照表</p>
+          <span class="cta">查看产品详情 →</span>
+        </a>
+  </div>
+</section>
+
+<footer class="footer">
     <div class="container">
       <p>© 2026 苏衡测控 · 徐州市铜山区康平路 · 服务热线 188-1190-6890</p>
       <p>邮箱：info@suhengcekong.cn · 备案号：苏ICP备2024107758号-1</p>
