@@ -244,6 +244,73 @@ var _hmt = _hmt || [];
         </div>
       </div>
 
+      <style>
+    .content-text p { font-size:15px; line-height:1.9; color:#555; margin-bottom:14px; }
+    .content-text ul { margin:8px 0 14px 0; padding-left:20px; }
+    .content-text li { font-size:14px; line-height:1.8; color:#666; margin-bottom:5px; }
+    .faq-item { margin-bottom:16px; padding:16px 20px; background:#f7f9fc; border-radius:8px; border-left:3px solid #e85c1a; }
+    .faq-q { font-weight:600; color:#0a4a8a; font-size:15px; margin-bottom:6px; }
+    .faq-a { font-size:14px; line-height:1.8; color:#666; }
+      </style>
+      <!-- 工作原理 -->
+      <div class="detail-block">
+        <h3 class="block-title">工作原理</h3>
+        <div class="content-text">
+          <p>称重仪表接收传感器输出的mV级模拟信号，经前置放大器放大100-500倍后由24位A/D转换器数字化。MCU处理器对数字信号做滤波（滑动平均/数字低通）、温度补偿、线性修正后计算实际重量值。</p>
+          <p>仪表同时接收测速信号，按W=∫F·v·dt计算累计量。显示模块采用TFT彩屏，支持实时曲线和历史报表。通讯模块支持Modbus RTU/TCP、Profibus-DP等工业总线协议，可将数据上传至上位机或DCS系统。仪表内置掉电保护，参数存储在EEPROM中。</p>
+        </div>
+      </div>
+
+      <!-- 选型指南 -->
+      <div class="detail-block">
+        <h3 class="block-title">选型指南</h3>
+        <div class="content-text">
+          <p>选型需确认：</p>
+          <ul>
+            <li><strong>传感器路数</strong>：单路接1组传感器，双路接2组，多路（4-8路）用于配料系统</li>
+            <li><strong>显示方式</strong>：数码管适合车间现场（亮度高），TFT彩屏适合控制室（信息量大）</li>
+            <li><strong>通讯接口</strong>：接入DCS选Modbus TCP或Profibus-DP，简单采集选RS485</li>
+            <li><strong>功能需求</strong>：配料控制选带PID输出型，贸易结算选带打印/数据存储型</li>
+            <li><strong>防护等级</strong>：控制室IP54，车间现场IP65</li>
+          </ul>
+          <p>建议选ARM处理器+Linux系统的智能仪表，运算速度快，支持远程升级。</p>
+        </div>
+      </div>
+
+      <!-- 安装与调试 -->
+      <div class="detail-block">
+        <h3 class="block-title">安装与调试</h3>
+        <div class="content-text">
+          <p>安装要点：仪表安装在控制柜面板上需预留后方200mm散热空间；传感器信号线与动力线分管走线，间距≥200mm防止电磁干扰；接线时严格按六线制/四线制对应接线，接错会烧毁传感器。</p>
+          <p>上电后先设置传感器参数（灵敏度、量程、分度数），再做空载调零。标定时按菜单引导先标零点再标量程，标定砝码重量≥最大秤量50%。通讯调试先在本机用串口工具测试，确认协议帧格式正确后再接入DCS。</p>
+        </div>
+      </div>
+
+      <!-- 校准与维护 -->
+      <div class="detail-block">
+        <h3 class="block-title">校准与维护</h3>
+        <div class="content-text">
+          <p>日常维护：</p>
+          <ul>
+            <li>保持仪表清洁，散热风扇无堵塞</li>
+            <li>每月检查接线端子是否松动</li>
+            <li>每季度用标准信号源校验A/D通道精度</li>
+            <li>每年用标准砝码做全量程标定</li>
+          </ul>
+          <p>常见故障：仪表死机先查供电电压是否稳定，再查电磁干扰（加磁环/滤波器）；显示跳动检查传感器接线和信号屏蔽接地；数据丢失检查电池是否失效（CR2032纽扣电池，2-3年更换）。软件建议保持稳定版本，非必要不升级。</p>
+        </div>
+      </div>
+
+      <!-- 常见问题 -->
+      <div class="detail-block">
+        <h3 class="block-title">常见问题</h3>
+        <div class="content-text">
+          <div class="faq-item"><div class="faq-q">Q：仪表怎么配Modbus通讯？</div><div class="faq-a">A：三步：①仪表菜单设通讯参数（地址、波特率9600、校验N.8.1）；②DCS侧配置从站地址映射表（瞬时流量、累计量、运行状态地址）；③联调时先读单个寄存器验证再批量读取。常见问题：地址冲突、波特率不匹配、字节序相反。</div></div>
+          <div class="faq-item"><div class="faq-q">Q：多台仪表能接一个DCS吗？</div><div class="faq-a">A：可以。RS485总线挂多台仪表，每台设不同从站地址（1-247），总线最远1200米，末端加120Ω终端电阻。超过32台需加RS485中继器。</div></div>
+          <div class="faq-item"><div class="faq-q">Q：仪表显示值和实际偏差大？</div><div class="faq-a">A：排查顺序：传感器接线→零点是否漂移→标定参数是否丢失→传感器是否损坏。快速判断：进入标定菜单看传感器原始mV值，空载应接近0，加载时线性增长，若不增长则传感器或接线故障。</div></div>
+        </div>
+      </div>
+
       <!-- 相关产品推荐 -->
       <div class="detail-block">
         <h3 class="block-title">配套产品</h3>

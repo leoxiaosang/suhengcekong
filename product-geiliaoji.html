@@ -234,6 +234,74 @@ var _hmt = _hmt || [];
         </div>
       </div>
 
+      <style>
+    .content-text p { font-size:15px; line-height:1.9; color:#555; margin-bottom:14px; }
+    .content-text ul { margin:8px 0 14px 0; padding-left:20px; }
+    .content-text li { font-size:14px; line-height:1.8; color:#666; margin-bottom:5px; }
+    .faq-item { margin-bottom:16px; padding:16px 20px; background:#f7f9fc; border-radius:8px; border-left:3px solid #e85c1a; }
+    .faq-q { font-weight:600; color:#0a4a8a; font-size:15px; margin-bottom:6px; }
+    .faq-a { font-size:14px; line-height:1.8; color:#666; }
+      </style>
+      <!-- 工作原理 -->
+      <div class="detail-block">
+        <h3 class="block-title">工作原理</h3>
+        <div class="content-text">
+          <p>定量给料机由储料仓、给料机构（皮带/螺旋/振动）、称重机构和控制系统组成。物料从储料仓经闸门落入给料皮带，称重传感器测量皮带单位长度物料重量，测速传感器测量皮带速度，仪表计算瞬时给料量。</p>
+          <p>控制系统将实际给料量与设定值比较，通过PID算法调节变频器输出频率，改变电机转速从而调节给料量，形成闭环控制。稳态精度可达±0.5%-1.0%。皮带式适合粉状和颗粒状物料，螺旋式适合粘性粉料，振动式适合块状物料。</p>
+        </div>
+      </div>
+
+      <!-- 选型指南 -->
+      <div class="detail-block">
+        <h3 class="block-title">选型指南</h3>
+        <div class="content-text">
+          <p>选型关键：</p>
+          <ul>
+            <li><strong>物料特性</strong>：堆密度、粒度、含水率、流动性，决定给料机构形式和仓壁倾角</li>
+            <li><strong>给料量范围</strong>：最小/最大给料量比值（量程比）建议≤1:10，超出需多台并联</li>
+            <li><strong>精度要求</strong>：配料控制±0.5%-1.0%，计量结算±0.25%需配高精度秤体</li>
+            <li><strong>场地限制</strong>：空间受限选螺旋式，宽敛建议皮带式</li>
+            <li><strong>控制方式</strong>：单机控制选仪表内置PID，多机配料系统选PLC集中控制</li>
+          </ul>
+          <p>物料易结拱的需配仓壁振动器或流化装置。</p>
+        </div>
+      </div>
+
+      <!-- 安装与调试 -->
+      <div class="detail-block">
+        <h3 class="block-title">安装与调试</h3>
+        <div class="content-text">
+          <p>安装要点：给料机上方料仓出口需设手动闸阀便于检修；皮带式给料机安装倾角≤3°，否则物料侧滑影响计量；称重传感器安装面需水平，偏载≤5%；变频器与电机之间电缆必须用屏蔽电缆，长度≤50米。</p>
+          <p>安装后先空载运行2小时，检查皮带跑偏、电机温升、轴承异响。调试顺序：先标定秤体（零点+量程），再设PID参数（P先设大，I缓慢加入，D通常为0），最后做闭环扰动测试——人为改变料仓料位，观察给料量恢复时间。</p>
+        </div>
+      </div>
+
+      <!-- 校准与维护 -->
+      <div class="detail-block">
+        <h3 class="block-title">校准与维护</h3>
+        <div class="content-text">
+          <p>维护周期：</p>
+          <ul>
+            <li>每天检查皮带是否跑偏，清理托辊粘料</li>
+            <li>每周检查给料闸门开度，确保下料顺畅</li>
+            <li>每月用砝码或链码标定称重系统</li>
+            <li>每季度检查减速机润滑油</li>
+            <li>每半年更换皮带（高频使用场景）</li>
+          </ul>
+          <p>常见故障：堵料检查闸门开度和物料结拱；给料量波动检查PID参数和皮带速度稳定性；精度下降检查皮带磨损和传感器零点。建议储备关键备件：皮带、传感器、变频器。</p>
+        </div>
+      </div>
+
+      <!-- 常见问题 -->
+      <div class="detail-block">
+        <h3 class="block-title">常见问题</h3>
+        <div class="content-text">
+          <div class="faq-item"><div class="faq-q">Q：给料量不稳定怎么调？</div><div class="faq-a">A：先排除物料因素（含水率变化、料位波动），然后调PID：P值太小响应慢太大振荡，I值太小稳态误差大太大超调。经验值先P=50%I=10s做阶跃测试按响应曲线微调。若波动持续检查变频器输出频率稳定性。</div></div>
+          <div class="faq-item"><div class="faq-q">Q：量程比能做到多少？</div><div class="faq-a">A：皮带式给料机量程比1:10，螺旋式1:5。超出范围精度无法保证。如需1:20的大量程比，建议大小两台给料机配合，大量用大机小量切换小机。</div></div>
+          <div class="faq-item"><div class="faq-q">Q：粘性物料容易堵料怎么办？</div><div class="faq-a">A：三项措施：①仓壁内衬UHMWPE板减小摩擦角；②给料皮带选用带挡边波纹皮带防止侧漏；③料仓出口配气动锤或仓壁振动器定时振打。极端粘性物料改用失重式给料机。</div></div>
+        </div>
+      </div>
+
       <!-- 相关产品推荐 -->
       <div class="detail-block">
         <h3 class="block-title">相关产品</h3>

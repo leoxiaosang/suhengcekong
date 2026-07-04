@@ -230,6 +230,72 @@ var _hmt = _hmt || [];
         </div>
       </div>
 
+      <style>
+    .content-text p { font-size:15px; line-height:1.9; color:#555; margin-bottom:14px; }
+    .content-text ul { margin:8px 0 14px 0; padding-left:20px; }
+    .content-text li { font-size:14px; line-height:1.8; color:#666; margin-bottom:5px; }
+    .faq-item { margin-bottom:16px; padding:16px 20px; background:#f7f9fc; border-radius:8px; border-left:3px solid #e85c1a; }
+    .faq-q { font-weight:600; color:#0a4a8a; font-size:15px; margin-bottom:6px; }
+    .faq-a { font-size:14px; line-height:1.8; color:#666; }
+      </style>
+      <!-- 工作原理 -->
+      <div class="detail-block">
+        <h3 class="block-title">工作原理</h3>
+        <div class="content-text">
+          <p>电子皮带秤通过安装在输送机托辊下方的称重传感器实时测量皮带上物料重量，同时测速传感器采集皮带运行速度。仪表将重量信号与速度信号相乘得到瞬时流量（t/h），并对时间积分得到累计输送量。称重框架采用单托辊或多托辊结构，多托辊通过增加称量段长度提高精度。传感器输出的mV级信号经放大器放大后由A/D转换器数字化，仪表内部采用数字滤波算法消除皮带振动、张力波动等干扰，确保计量数据稳定。</p>
+        </div>
+      </div>
+
+      <!-- 选型指南 -->
+      <div class="detail-block">
+        <h3 class="block-title">选型指南</h3>
+        <div class="content-text">
+          <p>选型需确认五项核心参数：</p>
+          <ul>
+            <li><strong>皮带宽度</strong>：500-2200mm，与现有输送机一致</li>
+            <li><strong>最大流量</strong>：根据物料堆密度和带速计算，留20%余量</li>
+            <li><strong>精度要求</strong>：工艺控制±0.5%即可，贸易结算需±0.25%配多托辊</li>
+            <li><strong>工况环境</strong>：高温/粉尘/防爆需选配相应防护等级传感器</li>
+            <li><strong>通讯需求</strong>：是否接入DCS/PLC系统，选择对应协议</li>
+          </ul>
+          <p>带宽超过1400mm时必须选多托辊结构。有贸易结算需求的场景，需确认当地计量部门认可的精度等级。</p>
+        </div>
+      </div>
+
+      <!-- 安装与调试 -->
+      <div class="detail-block">
+        <h3 class="block-title">安装与调试</h3>
+        <div class="content-text">
+          <p>安装位置应选在皮带机直线段，远离导料槽、张紧装置和转载点至少3-5倍托辊间距。称重段托辊需逐一检测，径向跳动不超过0.2mm。</p>
+          <p>安装完成后先做空载运行，检查零点稳定性，零点波动应在满量程0.05%以内。负载调试采用链码标定或实物标定：链码标定操作简便适合日常校验；实物标定精度最高，是贸易结算级皮带秤验收的必须步骤。调试中常见问题是皮带跑偏导致零点漂移，需先调正皮带再标定。</p>
+        </div>
+      </div>
+
+      <!-- 校准与维护 -->
+      <div class="detail-block">
+        <h3 class="block-title">校准与维护</h3>
+        <div class="content-text">
+          <p>日常维护重点：</p>
+          <ul>
+            <li>每周检查称重托辊转动是否灵活，清理托辊表面粘料</li>
+            <li>每月做一次零点校准，确保零点不漂移</li>
+            <li>每季度用链码做量程标定，修正精度偏差</li>
+            <li>每年至少一次实物标定（贸易结算场景必须）</li>
+          </ul>
+          <p>传感器接线盒要定期检查密封性，防止潮气进入导致绝缘下降。雨季前检查仪表箱密封条。仪表运行中如出现流量跳变，首先检查测速传感器是否松动、皮带是否有局部磨损。</p>
+        </div>
+      </div>
+
+      <!-- 常见问题 -->
+      <div class="detail-block">
+        <h3 class="block-title">常见问题</h3>
+        <div class="content-text">
+          <div class="faq-item"><div class="faq-q">Q：精度突然下降怎么排查？</div><div class="faq-a">A：按顺序排查：皮带是否跑偏→称重托辊是否卡滞→传感器接线是否松动→零点是否漂移→测速轮是否打滑。90%的精度下降由托辊卡滞或皮带跑偏引起。</div></div>
+          <div class="faq-item"><div class="faq-q">Q：单托辊和多托辊怎么选？</div><div class="faq-a">A：带宽≤1000mm且精度要求±1%以内可选单托辊；带宽>1000mm或精度≤±0.5%建议双托辊；贸易结算场景必须4托辊以上。</div></div>
+          <div class="faq-item"><div class="faq-q">Q：防爆环境能用吗？</div><div class="faq-a">A：可以。需选配Ex-d IIB T4防爆传感器和防爆仪表，整体通过防爆认证。煤矿井下需选矿用隔爆型（Ex-d I）。</div></div>
+        </div>
+      </div>
+
       <!-- 相关产品推荐 -->
       <div class="detail-block">
         <h3 class="block-title">相关产品</h3>

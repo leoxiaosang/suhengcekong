@@ -212,14 +212,14 @@ https://www.suhengcekong.com/seo/chongqing-belt-scale.html | submitted | 2026-07
 https://www.suhengcekong.com/seo/hefei-belt-scale.html | submitted | 2026-07-03 | success:1 | |
 https://www.suhengcekong.com/seo/changsha-belt-scale.html | submitted | 2026-07-03 | success:1 | |
 https://www.suhengcekong.com/seo/belt-scale-high-temperature-design.html | submitted | 2026-07-03 | success:1 | |
-https://www.suhengcekong.com/seo/belt-scale-remote-calibration-tech.html | queued | 2026-07-04 | over_quota |
-https://www.suhengcekong.com/seo/belt-scale-dustproof-waterproof-design.html | queued | 2026-07-04 | over_quota |
-https://www.suhengcekong.com/seo/belt-scale-plc-dcs-integration.html | queued | 2026-07-04 | over_quota |
-https://www.suhengcekong.com/seo/belt-scale-multi-vs-single-idler.html | queued | 2026-07-04 | over_quota |
-https://www.suhengcekong.com/seo/feed-industry-belt-scale-solution.html | queued | 2026-07-04 | over_quota |
-https://www.suhengcekong.com/seo/glass-industry-belt-scale-solution.html | queued | 2026-07-04 | over_quota |
-https://www.suhengcekong.com/seo/belt-scale-tco-analysis.html | queued | 2026-07-04 | over_quota |
-https://www.suhengcekong.com/seo/weighing-feeder-selection-guide.html | queued | 2026-07-04 | over_quota |
-https://www.suhengcekong.com/seo/quantitative-feeder-control-system.html | queued | 2026-07-04 | over_quota |
-https://www.suhengcekong.com/seo/belt-scale-verification-procedure-guide.html | queued | 2026-07-04 | over_quota |
-https://www.suhengcekong.com/product-custom.html | queued | 2026-07-04 | over_quota |
+https://www.suhengcekong.com/seo/belt-scale-remote-calibration-tech.html | submitted | 2026-07-04 | success |
+https://www.suhengcekong.com/seo/belt-scale-dustproof-waterproof-design.html | submitted | 2026-07-04 | success |
+https://www.suhengcekong.com/seo/belt-scale-plc-dcs-integration.html | submitted | 2026-07-04 | success |
+https://www.suhengcekong.com/seo/belt-scale-multi-vs-single-idler.html | submitted | 2026-07-04 | success |
+https://www.suhengcekong.com/seo/feed-industry-belt-scale-solution.html | submitted | 2026-07-04 | success |
+https://www.suhengcekong.com/seo/glass-industry-belt-scale-solution.html | submitted | 2026-07-04 | success |
+https://www.suhengcekong.com/seo/belt-scale-tco-analysis.html | submitted | 2026-07-04 | success |
+https://www.suhengcekong.com/seo/weighing-feeder-selection-guide.html | submitted | 2026-07-04 | success |
+https://www.suhengcekong.com/seo/quantitative-feeder-control-system.html | submitted | 2026-07-04 | success |
+https://www.suhengcekong.com/seo/belt-scale-verification-procedure-guide.html | submitted | 2026-07-04 | success |
+https://www.suhengcekong.com/product-custom.html | queued | 2026-07-05 | daily_limit |

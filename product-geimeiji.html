@@ -236,6 +236,74 @@ var _hmt = _hmt || [];
         </div>
       </div>
 
+      <style>
+    .content-text p { font-size:15px; line-height:1.9; color:#555; margin-bottom:14px; }
+    .content-text ul { margin:8px 0 14px 0; padding-left:20px; }
+    .content-text li { font-size:14px; line-height:1.8; color:#666; margin-bottom:5px; }
+    .faq-item { margin-bottom:16px; padding:16px 20px; background:#f7f9fc; border-radius:8px; border-left:3px solid #e85c1a; }
+    .faq-q { font-weight:600; color:#0a4a8a; font-size:15px; margin-bottom:6px; }
+    .faq-a { font-size:14px; line-height:1.8; color:#666; }
+      </style>
+      <!-- 工作原理 -->
+      <div class="detail-block">
+        <h3 class="block-title">工作原理</h3>
+        <div class="content-text">
+          <p>耐压式计量给煤机专为锅炉输煤系统设计。煤仓中的原煤经进口闸阀落入给煤皮带，称重段传感器测量皮带上煤层重量，测速传感器采集皮带速度，仪表计算瞬时给煤量并累计总煤量。</p>
+          <p>控制系统根据锅炉燃烧指令调节给煤量，通过变频器调节皮带速度实现闭环控制。壳体采用耐压密封设计，内部充入微正压密封风（高于炉膛压力）防止煤粉外泄。配备温度监测、断煤报警、堵煤报警等安全保护装置，适用于正压直吹式制粉系统，工作压力可达0.35MPa。</p>
+        </div>
+      </div>
+
+      <!-- 选型指南 -->
+      <div class="detail-block">
+        <h3 class="block-title">选型指南</h3>
+        <div class="content-text">
+          <p>给煤机选型需匹配锅炉参数：</p>
+          <ul>
+            <li><strong>给煤量</strong>：按锅炉最大连续蒸发量（BMCR）的1.1倍选型，预留余量</li>
+            <li><strong>煤种</strong>：烟煤/无烟煤/褐煤堆积密度和流动性不同，影响皮带宽度和闸门设计</li>
+            <li><strong>工作压力</strong>：正压直吹式需耐压壳体，负压系统可选普通密封</li>
+            <li><strong>防爆等级</strong>：煤粉环境需Ex-d IIB T4，本体需通过防爆认证</li>
+            <li><strong>接口尺寸</strong>：进口法兰与煤仓出口匹配，出口与磨煤机进口匹配</li>
+          </ul>
+          <p>选型时确认检修方式（侧开门/上开门），影响厂房布置。</p>
+        </div>
+      </div>
+
+      <!-- 安装与调试 -->
+      <div class="detail-block">
+        <h3 class="block-title">安装与调试</h3>
+        <div class="content-text">
+          <p>安装要求严格：基础预埋件水平度≤2mm/m，地脚螺栓预紧力按设计值；进出口管道法兰密封面需清理干净，密封垫选用耐温石墨垫片；密封风管路单独接入，风压高于壳体工作压力2-5kPa。</p>
+          <p>煤位探测器、温度传感器等安全联锁装置必须接线正确，参与锅炉MFT保护。安装后做整体气密性试验，充压至工作压力1.25倍保压30分钟无泄漏。调试顺序：先单机试转（皮带跑偏调整、电机方向确认），再冷态标定（砝码标定称重系统），最后热态投运（随锅炉启停验证联锁保护）。</p>
+        </div>
+      </div>
+
+      <!-- 校准与维护 -->
+      <div class="detail-block">
+        <h3 class="block-title">校准与维护</h3>
+        <div class="content-text">
+          <p>维护重点：</p>
+          <ul>
+            <li>每天巡检皮带运行状态，听有无异响，看跑偏指示</li>
+            <li>每周清理称重段积煤，防止托辊卡滞</li>
+            <li>每月检查密封风压力，确保正压稳定</li>
+            <li>每季度用标准砝码标定称重系统</li>
+            <li>每年检查壳体磨损，磨损量超过原厚度1/3需补焊或更换</li>
+          </ul>
+          <p>检修前必须切断煤仓闸阀，通入氮气置换内部残余煤气，检测CO浓度<24ppm、O2>18%后方可打开检修门。皮带更换周期约2-3年，变频器建议每年除尘。</p>
+        </div>
+      </div>
+
+      <!-- 常见问题 -->
+      <div class="detail-block">
+        <h3 class="block-title">常见问题</h3>
+        <div class="content-text">
+          <div class="faq-item"><div class="faq-q">Q：给煤量偏差大怎么排查？</div><div class="faq-a">A：按顺序排查：皮带是否跑偏或打滑→称重段是否积煤→煤层厚度是否均匀（闸门开度）→皮带速度是否稳定（变频器输出）→标定参数是否丢失。热态偏差通常由皮带热膨胀导致张力变化引起，需定期复标。</div></div>
+          <div class="faq-item"><div class="faq-q">Q：防爆等级怎么选？</div><div class="faq-a">A：制粉系统属于II类B级T4组爆炸性气体环境（甲烷/煤粉），选Ex-d IIB T4。壳体需整体防爆认证，传感器、仪表、电机均为防爆型。正压壳体本身也是一种防爆方式（p型），但需配失压联锁保护。</div></div>
+          <div class="faq-item"><div class="faq-q">Q：断煤报警频繁触发？</div><div class="faq-a">A：三种可能：①煤仓搭桥——加装仓壁振动器或空气炮；②闸门开度过小——调整初始开度；③煤层探测器灵敏度偏高——适当降低灵敏度或加延时。频繁断煤会影响锅炉燃烧稳定性，需及时处理。</div></div>
+        </div>
+      </div>
+
       <!-- 相关产品推荐 -->
       <div class="detail-block">
         <h3 class="block-title">相关产品</h3>

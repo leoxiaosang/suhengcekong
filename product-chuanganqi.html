@@ -263,6 +263,74 @@ var _hmt = _hmt || [];
         </div>
       </div>
 
+      <style>
+    .content-text p { font-size:15px; line-height:1.9; color:#555; margin-bottom:14px; }
+    .content-text ul { margin:8px 0 14px 0; padding-left:20px; }
+    .content-text li { font-size:14px; line-height:1.8; color:#666; margin-bottom:5px; }
+    .faq-item { margin-bottom:16px; padding:16px 20px; background:#f7f9fc; border-radius:8px; border-left:3px solid #e85c1a; }
+    .faq-q { font-weight:600; color:#0a4a8a; font-size:15px; margin-bottom:6px; }
+    .faq-a { font-size:14px; line-height:1.8; color:#666; }
+      </style>
+      <!-- 工作原理 -->
+      <div class="detail-block">
+        <h3 class="block-title">工作原理</h3>
+        <div class="content-text">
+          <p>称重传感器的核心是弹性体和电阻应变计。弹性体采用合金钢或不锈钢材质，受力时产生弹性形变。粘贴在弹性体上的4片电阻应变计组成惠斯通电桥，形变导致应变计电阻变化，电桥输出与受力成正比的mV级电压信号。</p>
+          <p>传感器内部有温度补偿元件，修正蠕变和温度漂移。信号经仪表放大后转换为重量数值。C3级传感器精度达1/3000，C4级达1/5000，满足工业计量和贸易结算需求。</p>
+        </div>
+      </div>
+
+      <!-- 选型指南 -->
+      <div class="detail-block">
+        <h3 class="block-title">选型指南</h3>
+        <div class="content-text">
+          <p>选型五要素：</p>
+          <ul>
+            <li><strong>量程</strong>：应为最大秤量的1.5-2倍，预留安全余量</li>
+            <li><strong>精度等级</strong>：工艺控制选C3，贸易结算选C3以上</li>
+            <li><strong>防护等级</strong>：常规车间IP65，潮湿/粉尘环境IP67，冲洗环境IP68</li>
+            <li><strong>材质</strong>：常规用合金钢，腐蚀环境（化工/海水）选不锈钢</li>
+            <li><strong>结构形式</strong>：悬臂梁式适合皮带秤/料斗秤，柱式适合大吨位汽车衡，S型适合吊秤</li>
+          </ul>
+          <p>还需确认传感器灵敏度（通常2.0mV/V）和激励电压（5-12VDC）与仪表匹配。</p>
+        </div>
+      </div>
+
+      <!-- 安装与调试 -->
+      <div class="detail-block">
+        <h3 class="block-title">安装与调试</h3>
+        <div class="content-text">
+          <p>安装注意事项：受力方向必须与传感器标称方向一致，偏载会导致输出偏差；安装面需平整，平面度≤0.1mm/m；传感器接线采用六线制时需接SENSE线补偿线缆电阻损失。</p>
+          <p>多传感器并联使用时需调整角差，确保各传感器输出一致。安装后做预压（加最大秤量80%载荷保持30分钟），消除机械间隙。调试时先用标准砝码标定各承重点，再做空载和满载标定。</p>
+        </div>
+      </div>
+
+      <!-- 校准与维护 -->
+      <div class="detail-block">
+        <h3 class="block-title">校准与维护</h3>
+        <div class="content-text">
+          <p>维护要点：</p>
+          <ul>
+            <li>定期检查传感器安装螺栓是否松动</li>
+            <li>检查接线盒密封，防止水汽进入</li>
+            <li>每年用标准砝码标定一次</li>
+            <li>传感器长期过载会永久损坏，确保不过载运行</li>
+            <li>室外安装需接信号防雷器，雷雨季前检查接地电阻（≤4Ω）</li>
+          </ul>
+          <p>判断传感器故障：用万用表测量输入/输出电阻，与标称值偏差>5Ω需更换；测绝缘电阻<2000MΩ说明受潮，需烘干或更换。更换后必须重新标定整个称重系统。</p>
+        </div>
+      </div>
+
+      <!-- 常见问题 -->
+      <div class="detail-block">
+        <h3 class="block-title">常见问题</h3>
+        <div class="content-text">
+          <div class="faq-item"><div class="faq-q">Q：传感器量程怎么选？</div><div class="faq-a">A：单传感器秤：量程=最大秤量×1.5。多传感器秤：单只量程=（最大秤量+秤体自重）÷传感器数量×1.3。例如秤体200kg+物料300kg，4只传感器，单只量程=(200+300)/4×1.3≈163kg，选200kg量程。</div></div>
+          <div class="faq-item"><div class="faq-q">Q：C3和C4有什么区别？</div><div class="faq-a">A：C3精度1/3000（约0.033%），C4精度1/5000（约0.02%）。C3满足绝大多数工业计量需求，C4用于高精度贸易结算或实验室，价格约为C3的1.5-2倍。</div></div>
+          <div class="faq-item"><div class="faq-q">Q：传感器受潮了怎么办？</div><div class="faq-a">A：轻度受潮拆下放入60℃烘箱烘24小时，测绝缘恢复后可继续使用。严重受潮（绝缘<500MΩ）建议直接更换。预防：接线盒加干燥剂，电缆入口朝下，定期检查密封圈。</div></div>
+        </div>
+      </div>
+
       <!-- 相关产品推荐 -->
       <div class="detail-block">
         <h3 class="block-title">相关产品</h3>
