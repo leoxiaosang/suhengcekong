@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <link rel="canonical" href="https://www.suhengcekong.com/seo/belt-scale-working-principle.html">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>电子皮带秤工作原理及核心结构详解 - 苏衡测控技术科普</title>
-  <meta name="description" content="苏衡测控深度解析电子皮带秤的工作原理、核心结构、信号处理与安装要求，帮助工程师理解动态计量底层逻辑，为选型与维护提供专业参考。">
-  <meta name="keywords" content="电子皮带秤工作原理,皮带秤结构,皮带秤称重原理,苏衡测控,动态计量原理">
-  <link rel="stylesheet" href="../style.css">
-  <style>
-    .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
-    .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
-    .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
-    .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
-    .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
-    .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
-    .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
-    .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
-    .art-warn{background:rgba(232,92,26,0.06);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#7a3a10}
-    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
-    th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
-    th{background:var(--primary);color:#fff;font-weight:600}
-    tr:nth-child(even)td{background:#f9f9f9}
-    .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
-    .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
-    .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
-  </style>
+ <link rel="canonical" href="https://www.suhengcekong.com/seo/belt-scale-working-principle.html">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>电子皮带秤工作原理及核心结构详解</title>
+ <meta name="description" content="深度解析电子皮带秤的工作原理、核心结构、信号处理与安装要求，帮助工程师理解动态计量底层逻辑，为选型与维护提供专业参考。">
+ <meta name="keywords" content="电子皮带秤工作原理,皮带秤结构,皮带秤称重原理,,动态计量原理">
+ <link rel="stylesheet" href="../style.css">
+ <style>
+ .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
+ .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
+ .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
+ .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
+ .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
+ .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
+ .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
+ .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
+ .art-warn{background:rgba(232,92,26,0.06);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#7a3a10}
+ table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+ th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
+ th{background:var(--primary);color:#fff;font-weight:600}
+ tr:nth-child(even)td{background:#f9f9f9}
+ .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
+ .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
+ .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
+ </style>
 </head>
 <body>
 <div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>&#x1F4DE; 188 1190 6890</span><span>&#x2709; info@suhengcekong.cn</span></div></div></div>
@@ -41,17 +41,17 @@
 <h2>一、底层力学模型：从皮带受力到累积量</h2>
 <p>电子皮带秤本质上是一台"连续积分的质量流量计"。其数学表达可归结为一个核心积分式：</p>
 <p style="background:#f5f8fc;padding:16px 20px;border-radius:8px;font-size:16px;font-weight:600;text-align:center;color:var(--primary)">
-  Q = &#x222B; q(t) &times; v(t) dt
+ Q = &#x222B; q(t) &times; v(t) dt
 </p>
 <p>其中 q(t) 为皮带上单位长度的物料质量（线密度，单位 kg/m），v(t) 为皮带的瞬时运行速度（单位 m/s）。在一个积分周期内，仪表对每个采样瞬间（间隔50~200ms）的重量信号和速度信号同时采样并相乘，累加得到该时间段的总输送量。</p>
 <p>这个看似简洁的公式背后有三个工程难点：第一，如何在皮带运动状态下分离物料重力与皮带自重的影响；第二，速度信号须与重量信号严格同步采样，时滞会引入系统误差；第三，传感器输出的mV级信号需经过多级放大和滤波处理，才能达到工程精度的信噪比要求。</p>
 
 <h2>二、四层结构体系</h2>
 <h3>1. 力学承载层：称重框架</h3>
-<p>称重框架是系统的基础骨架，通常采用箱形梁焊接结构。苏衡测控的称重框架经过有限元分析优化，刚度达到同级别产品的1.3倍，在满载状态下挠度控制在0.2mm以内。框架上安装1~4组称重托辊，支撑一段特定长度的皮带，使这段皮带上的物料重力完整传递到传感器上。称重托辊的径向跳动量需控制在0.3mm以下，否则周期性跳动会产生伪信号。</p>
+<p>称重框架是系统的基础骨架，通常采用箱形梁焊接结构。称重框架经过有限元分析优化，刚度达到同级别产品的1.3倍，在满载状态下挠度控制在0.2mm以内。框架上安装1~4组称重托辊，支撑一段特定长度的皮带，使这段皮带上的物料重力完整传递到传感器上。称重托辊的径向跳动量需控制在0.3mm以下，否则周期性跳动会产生伪信号。</p>
 
 <h3>2. 信号转换层：称重传感器</h3>
-<p>称重传感器是精度的第一道关口。苏衡测控采用应变式称重传感器，量程覆盖75-500KG，灵敏度2.0mV/V，非线性误差控制在&plusmn;0.02% F.S.以内。传感器内部集成温度补偿电路，在-20&deg;C至+60&deg;C范围内温漂小于0.001% F.S./&deg;C。选型时要注意：传感器额定量程应为最大载荷的1.5~2倍，保留足够的过载安全裕度。</p>
+<p>称重传感器是精度的第一道关口。采用应变式称重传感器，量程覆盖75-500KG，灵敏度2.0mV/V，非线性误差控制在&plusmn;0.02% F.S.以内。传感器内部集成温度补偿电路，在-20&deg;C至+60&deg;C范围内温漂小于0.001% F.S./&deg;C。选型时要注意：传感器额定量程应为最大载荷的1.5~2倍，保留足够的过载安全裕度。</p>
 
 <h3>3. 速度感知层：测速传感器</h3>
 <p>测速传感器通常安装于皮带机尾部滚筒上，使用光电编码器或霍尔效应传感器。每转输出60~600个脉冲，脉冲频率正比于皮带线速度。测速轮的直径公差必须控制在&plusmn;0.1mm，因为直径误差会直接等比例转化为速度误差。在煤尘严重的矿井环境，建议选用密封型霍尔传感器，抗粉尘干扰能力优于光电编码器。</p>
@@ -73,7 +73,7 @@
 
 <h2>四、实际安装中的三大难题与解法</h2>
 <h3>难题一：皮带张力波动的零点漂移</h3>
-<p>皮带在重载与空载之间张力变化可达30%~50%，导致称重框架的受力基线偏移。解决方法：在跑空状态下先执行零点标定；然后在50%额定载荷下进行实物校准，记录张力补偿系数；苏衡测控的智能仪表支持自动零点追踪功能，可在运行过程中以固定周期（如每15分钟）自动记录空载段信号并动态修正零点。</p>
+<p>皮带在重载与空载之间张力变化可达30%~50%，导致称重框架的受力基线偏移。解决方法：在跑空状态下先执行零点标定；然后在50%额定载荷下进行实物校准，记录张力补偿系数；智能仪表支持自动零点追踪功能，可在运行过程中以固定周期（如每15分钟）自动记录空载段信号并动态修正零点。</p>
 
 <h3>难题二：物料冲击引起的瞬间超量程</h3>
 <p>大块物料（如矿石、原煤）落到皮带上时产生的冲击力可能是静态载荷的3~5倍。解决方法：称重框架安装位置应距离落料点至少4倍托辊间距，保证物料到达称重段时已基本稳定；同时传感器选型时应预留过载能力。</p>
@@ -85,36 +85,36 @@
 
 <div class="cta">
 <h3>需要专业的电子皮带秤选型与安装方案？</h3>
-<p>苏衡测控工程师团队深耕称重计量十余年，为您提供从工况分析到安装调试的全流程技术支持</p>
+<p>工程师团队深耕称重计量十余年，为您提供从工况分析到安装调试的全流程技术支持</p>
 <a href="../contact.html">免费获取技术方案 &#x2192;</a>
 </div>
 
-    <div class="related-articles">
-      <h3>📚 相关文章</h3>
-      <ul>
-          <li><a href="belt-scale-accuracy-02-vs-025.html">0.2级与0.25级皮带秤精度区别及选型指南 - 苏衡测控技术科普</a></li>
-          <li><a href="belt-scale-calibration-methods.html">皮带秤校准方法与检定规程详解 - 苏衡测控</a></li>
-          <li><a href="belt-scale-installation-guide.html">电子皮带秤安装与调试规范 - 苏衡测控</a></li>
-          <li><a href="belt-scale-vs-loss-in-weight.html">皮带秤和失重秤怎么选？不同工况适配方案 - 苏衡测控选型指南</a></li>
-      </ul>
-    </div>
+ <div class="related-articles">
+ <h3>📚 相关文章</h3>
+ <ul>
+ <li><a href="belt-scale-accuracy-02-vs-025.html">0.2级与0.25级皮带秤精度区别及选型指南技术科普</a></li>
+ <li><a href="belt-scale-calibration-methods.html">皮带秤校准方法与检定规程详解</a></li>
+ <li><a href="belt-scale-installation-guide.html">电子皮带秤安装与调试规范</a></li>
+ <li><a href="belt-scale-vs-loss-in-weight.html">皮带秤和失重秤怎么选？不同工况适配方案选型指南</a></li>
+ </ul>
+ </div>
 <p style="font-size:12px;color:#aaa;text-align:center;margin-top:36px;font-style:italic;letter-spacing:0.5px;">案例为我公司售后及技术人员根据对应现场整理。</p>
 </main>
 
 <section class="related-products" style="background:#f7f9fc;padding:36px 24px;margin:40px auto;max-width:920px;border-radius:12px;">
-  <h3 style="color:#1a3a5c;font-size:1.4em;margin:0 0 20px;text-align:center;">相关产品</h3>
-  <div class="related-products-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
-        <a href="../product-dianzi.html" class="related-product-card">
-          <h4>电子皮带秤</h4>
-          <p>±0.25%精度, 15年厂家, 支持非标定制</p>
-          <span class="cta">查看产品详情 →</span>
-        </a>
-        <a href="../product-chuanganqi.html" class="related-product-card">
-          <h4>称重传感器</h4>
-          <p>C3/C6级精度, 合金钢IP68防护</p>
-          <span class="cta">查看产品详情 →</span>
-        </a>
-  </div>
+ <h3 style="color:#1a3a5c;font-size:1.4em;margin:0 0 20px;text-align:center;">相关产品</h3>
+ <div class="related-products-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+ <a href="../product-dianzi.html" class="related-product-card">
+ <h4>电子皮带秤</h4>
+ <p>±0.25%精度, 15年厂家, 支持非标定制</p>
+ <span class="cta">查看产品详情 →</span>
+ </a>
+ <a href="../product-chuanganqi.html" class="related-product-card">
+ <h4>称重传感器</h4>
+ <p>C3/C6级精度, 合金钢IP68防护</p>
+ <span class="cta">查看产品详情 →</span>
+ </a>
+ </div>
 </section>
 
 <footer class="footer"><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 苏衡测控 | 徐州市苏衡自动化控制技术有限公司</p><span>苏ICP备2024107758号-1</span></div></div></footer>

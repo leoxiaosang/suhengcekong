@@ -1,91 +1,91 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <link rel="canonical" href="https://www.suhengcekong.com/seo/xuzhou-industrial-weighing-automation.html">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南 - 苏衡测控</title>
-  <meta property="og:title" content="徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南 - 苏衡测控">
-  <meta property="og:description" content="工业称重系统数字化集成完全指南：4-20mA/Modbus/PROFIBUS协议选型，与西门子/汇川PLC对接方法，老旧皮带秤数字化改造三种方案，徐州工厂案例参考。">
-  <meta property="og:image" content="https://www.suhengcekong.com/images/电子皮带秤.jpg">
-  <meta property="og:type" content="website">
-  <meta name="description" content="工业称重系统数字化集成完全指南：4-20mA/Modbus/PROFIBUS协议选型，与西门子/汇川PLC对接方法，老旧皮带秤数字化改造三种方案，徐州工厂案例参考。">
-  <meta name="keywords" content="工业称重系统集成,皮带秤Modbus,皮带秤PLC对接,称重仪表通讯,工厂数字化称重">
-  <link rel="stylesheet" href="../style.css">
-    <style>
-    .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
-    .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
-    .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
-    .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
-    .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
-    .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
-    .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
-    .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
-    .art-warn{background:rgba(232,92,26,0.06);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#7a3a10}
-    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
-    th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
-    th{background:var(--primary);color:#fff;font-weight:600}
-    tr:nth-child(even)td{background:#f9f9f9}
-    .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
-    .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
-    .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
-    .art-hero{ background: linear-gradient(135deg, #0a4a8a,#1565c0); padding: 64px 20px 44px; text-align: center; margin-bottom: 0; }
-    .art-hero .tag { display: inline-block; background: rgba(255,255,255,0.18); color: #fff; font-size: 12px; font-weight: 600; padding: 3px 12px; border-radius: 2px; margin-bottom: 14px; }
-    .art-hero h1 { color: #fff; font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; margin-bottom: 14px; line-height: 1.35; max-width: 700px; margin-left: auto; margin-right: auto; }
-    .art-hero .meta { color: rgba(255,255,255,0.75); font-size: 13.5px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
-    .art-tldr{background:linear-gradient(135deg,#f0f7ff,#e8f4e8);border-left:5px solid var(--primary);padding:20px 24px;margin:0 0 32px;border-radius:0 8px 8px 0}
-    .art-tldr .tldr-label{display:inline-block;background:var(--primary);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:3px;margin-bottom:12px}
-    .art-tldr p{font-size:14.5px;line-height:1.75;color:#333;margin-bottom:12px!important}
-    .art-tldr ul{margin:0;padding-left:18px}
-    .art-tldr li{font-size:13.5px;line-height:1.7;color:#444;margin-bottom:6px}
-    .art-def{background:#fffbf0;border-left:4px solid #e6a23c;padding:14px 20px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#5c4a00}
-  </style>
+ <link rel="canonical" href="https://www.suhengcekong.com/seo/xuzhou-industrial-weighing-automation.html">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南</title>
+ <meta property="og:title" content="徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南">
+ <meta property="og:description" content="工业称重系统数字化集成完全指南：4-20mA/Modbus/PROFIBUS协议选型，与西门子/汇川PLC对接方法，老旧皮带秤数字化改造三种方案，徐州工厂案例参考。">
+ <meta property="og:image" content="https://www.suhengcekong.com/images/电子皮带秤.jpg">
+ <meta property="og:type" content="website">
+ <meta name="description" content="工业称重系统数字化集成完全指南：4-20mA/Modbus/PROFIBUS协议选型，与西门子/汇川PLC对接方法，老旧皮带秤数字化改造三种方案，徐州工厂案例参考。">
+ <meta name="keywords" content="工业称重系统集成,皮带秤Modbus,皮带秤PLC对接,称重仪表通讯,工厂数字化称重">
+ <link rel="stylesheet" href="../style.css">
+ <style>
+ .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
+ .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
+ .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
+ .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
+ .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
+ .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
+ .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
+ .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
+ .art-warn{background:rgba(232,92,26,0.06);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#7a3a10}
+ table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+ th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
+ th{background:var(--primary);color:#fff;font-weight:600}
+ tr:nth-child(even)td{background:#f9f9f9}
+ .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
+ .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
+ .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
+ .art-hero{ background: linear-gradient(135deg, #0a4a8a,#1565c0); padding: 64px 20px 44px; text-align: center; margin-bottom: 0; }
+ .art-hero .tag { display: inline-block; background: rgba(255,255,255,0.18); color: #fff; font-size: 12px; font-weight: 600; padding: 3px 12px; border-radius: 2px; margin-bottom: 14px; }
+ .art-hero h1 { color: #fff; font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; margin-bottom: 14px; line-height: 1.35; max-width: 700px; margin-left: auto; margin-right: auto; }
+ .art-hero .meta { color: rgba(255,255,255,0.75); font-size: 13.5px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+ .art-tldr{background:linear-gradient(135deg,#f0f7ff,#e8f4e8);border-left:5px solid var(--primary);padding:20px 24px;margin:0 0 32px;border-radius:0 8px 8px 0}
+ .art-tldr .tldr-label{display:inline-block;background:var(--primary);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:3px;margin-bottom:12px}
+ .art-tldr p{font-size:14.5px;line-height:1.75;color:#333;margin-bottom:12px!important}
+ .art-tldr ul{margin:0;padding-left:18px}
+ .art-tldr li{font-size:13.5px;line-height:1.7;color:#444;margin-bottom:6px}
+ .art-def{background:#fffbf0;border-left:4px solid #e6a23c;padding:14px 20px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#5c4a00}
+ </style>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.suhengcekong.com/" },
-    { "@type": "ListItem", "position": 2, "name": "行业资讯", "item": "https://www.suhengcekong.com/seo/" },
-    { "@type": "ListItem", "position": 3, "name": "徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南", "item": "https://www.suhengcekong.com/seo/xuzhou-industrial-weighing-automation.html" }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+ { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.suhengcekong.com/" },
+ { "@type": "ListItem", "position": 2, "name": "行业资讯", "item": "https://www.suhengcekong.com/seo/" },
+ { "@type": "ListItem", "position": 3, "name": "徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南", "item": "https://www.suhengcekong.com/seo/xuzhou-industrial-weighing-automation.html" }
+ ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南 - 苏衡测控","author":{"@type":"Organization","name":"苏衡测控","url":"https://www.suhengcekong.com"},"publisher":{"@type":"Organization","name":"苏衡测控","url":"https://www.suhengcekong.com"},"datePublished":"2026-06-11","dateModified":"2026-06-11","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.suhengcekong.com/seo/xuzhou-industrial-weighing-automation.html"},"image":"https://www.suhengcekong.com/images/电子皮带秤.jpg"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南","author":{"@type":"Organization","name":"","url":"https://www.suhengcekong.com"},"publisher":{"@type":"Organization","name":"","url":"https://www.suhengcekong.com"},"datePublished":"2026-06-11","dateModified":"2026-06-11","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.suhengcekong.com/seo/xuzhou-industrial-weighing-automation.html"},"image":"https://www.suhengcekong.com/images/电子皮带秤.jpg"}</script>
 <script type="application/ld+json">
-{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "皮带秤仪表如何与西门子PLC通讯？","acceptedAnswer": {"@type": "Answer","text": "西门子S7系列PLC（S7-200/300/1200/1500）与皮带秤仪表通讯的主要方式：①RS485 Modbus RTU——通过CM485扩展模块，在TIA Portal中使用MB_COMM_LOAD和MB_MASTER功能块，轮询仪表寄存器（苏衡SH-300标准寄存器定义可提供）；②4-20mA模拟量——通过SM1231 AI模拟量输入模块，将流量信号转换为工程量。Modbus方式可以读取多个参数（流量/累计/状态），推荐使用。"}},{"@type": "Question","name": "皮带秤数据怎么上传到MES系统？","acceptedAnswer": {"@type": "Answer","text": "常见路径：皮带秤仪表（Modbus TCP/RTU）→工业以太网→PLC→OPC UA服务器→MES系统。如果MES是国产系统（如用友/金蝶/派格工业），通常支持直接的Modbus TCP采集，可以跳过PLC中转。苏衡测控SH-300仪表支持Modbus TCP，可直接配置IP地址接入工厂网络。"}},{"@type": "Question","name": "老旧皮带秤改造成智能化大概要多少钱？","acceptedAnswer": {"@type": "Answer","text": "分三种改造深度：①仅替换仪表（保留传感器/秤体），增加Modbus通讯——材料费3000-8000元，施工1天；②加装RTU数据采集盒（无需停机）——材料2000-5000元，施工半天；③全套更换（传感器+仪表+秤架+通讯）——1.5-5万元，施工1-3天。建议先评估现有传感器状态，如果传感器精度还好则优先换仪表，成本最低。"}},{"@type": "Question","name": "PROFIBUS和Modbus哪个适合皮带秤？","acceptedAnswer": {"@type": "Answer","text": "两者都可以，取决于现场主控系统：如果工厂已经是西门子PROFIBUS网络（常见于大型水泥厂、汽车制造），皮带秤选PROFIBUS-DP版本集成最顺畅（总线拓扑，响应时间<10ms）；如果是一般工厂，Modbus RTU/TCP更经济（协议免费，PLC原生支持）。苏衡测控两种协议均支持，无需额外费用。"}},{"@type": "Question","name": "徐州有没有提供称重系统集成的厂家？","acceptedAnswer": {"@type": "Answer","text": "苏衡测控提供从传感器、仪表到上位机集成的全套服务，在徐州工程机械、水泥、矿山企业有多个DCS/PLC对接项目经验。也可以只购买设备+仪表，自行对接（提供完整技术手册和示例程序）。徐州其他规模较大的称重企业一般以硬件供货为主，系统集成能力参差不齐，建议前期沟通时明确询问'有没有类似项目的集成经验'。"}}]}
+{"@context": "https://schema.org","@type": "FAQPage","mainEntity": [{"@type": "Question","name": "皮带秤仪表如何与西门子PLC通讯？","acceptedAnswer": {"@type": "Answer","text": "西门子S7系列PLC（S7-200/300/1200/1500）与皮带秤仪表通讯的主要方式：①RS485 Modbus RTU——通过CM485扩展模块，在TIA Portal中使用MB_COMM_LOAD和MB_MASTER功能块，轮询仪表寄存器（SH-300标准寄存器定义可提供）；②4-20mA模拟量——通过SM1231 AI模拟量输入模块，将流量信号转换为工程量。Modbus方式可以读取多个参数（流量/累计/状态），推荐使用。"}},{"@type": "Question","name": "皮带秤数据怎么上传到MES系统？","acceptedAnswer": {"@type": "Answer","text": "常见路径：皮带秤仪表（Modbus TCP/RTU）→工业以太网→PLC→OPC UA服务器→MES系统。如果MES是国产系统（如用友/金蝶/派格工业），通常支持直接的Modbus TCP采集，可以跳过PLC中转。智能仪表仪表支持Modbus TCP，可直接配置IP地址接入工厂网络。"}},{"@type": "Question","name": "老旧皮带秤改造成智能化大概要多少钱？","acceptedAnswer": {"@type": "Answer","text": "分三种改造深度：①仅替换仪表（保留传感器/秤体），增加Modbus通讯——材料费3000-8000元，施工1天；②加装RTU数据采集盒（无需停机）——材料2000-5000元，施工半天；③全套更换（传感器+仪表+秤架+通讯）——1.5-5万元，施工1-3天。建议先评估现有传感器状态，如果传感器精度还好则优先换仪表，成本最低。"}},{"@type": "Question","name": "PROFIBUS和Modbus哪个适合皮带秤？","acceptedAnswer": {"@type": "Answer","text": "两者都可以，取决于现场主控系统：如果工厂已经是西门子PROFIBUS网络（常见于大型水泥厂、汽车制造），皮带秤选PROFIBUS-DP版本集成最顺畅（总线拓扑，响应时间<10ms）；如果是一般工厂，Modbus RTU/TCP更经济（协议免费，PLC原生支持）。两种协议均支持，无需额外费用。"}},{"@type": "Question","name": "徐州有没有提供称重系统集成的厂家？","acceptedAnswer": {"@type": "Answer","text": "提供从传感器、仪表到上位机集成的全套服务，在徐州工程机械、水泥、矿山企业有多个DCS/PLC对接项目经验。也可以只购买设备+仪表，自行对接（提供完整技术手册和示例程序）。徐州其他规模较大的称重企业一般以硬件供货为主，系统集成能力参差不齐，建议前期沟通时明确询问'有没有类似项目的集成经验'。"}}]}
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南 - 苏衡测控",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "position": 1,
-      "name": "工业称重系统的架构演进",
-      "text": "工业称重系统的架构演进"
-    },
-    {
-      "@type": "HowToStep",
-      "position": 2,
-      "name": "通讯协议选择：哪种适合你的工厂？",
-      "text": "通讯协议选择：哪种适合你的工厂？"
-    },
-    {
-      "@type": "HowToStep",
-      "position": 3,
-      "name": "老旧皮带秤数字化改造方案",
-      "text": "老旧皮带秤数字化改造方案"
-    },
-    {
-      "@type": "HowToStep",
-      "position": 4,
-      "name": "与PLC系统的实际对接流程",
-      "text": "与PLC系统的实际对接流程"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "name": "徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南",
+ "step": [
+ {
+ "@type": "HowToStep",
+ "position": 1,
+ "name": "工业称重系统的架构演进",
+ "text": "工业称重系统的架构演进"
+ },
+ {
+ "@type": "HowToStep",
+ "position": 2,
+ "name": "通讯协议选择：哪种适合你的工厂？",
+ "text": "通讯协议选择：哪种适合你的工厂？"
+ },
+ {
+ "@type": "HowToStep",
+ "position": 3,
+ "name": "老旧皮带秤数字化改造方案",
+ "text": "老旧皮带秤数字化改造方案"
+ },
+ {
+ "@type": "HowToStep",
+ "position": 4,
+ "name": "与PLC系统的实际对接流程",
+ "text": "与PLC系统的实际对接流程"
+ }
+ ]
 }
 </script>
 </head>
@@ -93,23 +93,23 @@
 <div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>&#x1F4DE; 188 1190 6890</span><span>&#x2709; info@suhengcekong.cn</span></div></div></div>
 <nav class="navbar"><div class="container nav-inner"><a href="../index.html" class="logo"><span class="logo-zh">苏衡测控</span><span class="logo-en">SUHENG</span></a><ul class="nav-menu"><li><a href="../index.html">首页</a></li><li><a href="../products.html">产品中心</a></li><li><a href="index.html">行业资讯</a></li><li><a href="../contact.html">联系我们</a></li></ul></div></nav>
 <div class="art-hero">
-  <div class="container">
-    <span class="tag">自动化集成</span>
-    <h1>工业皮带秤自动化集成指南：Modbus/4-20mA与PLC对接全解析</h1>
-    <div class="meta"><span>2026-06-11</span><span>自动化集成</span><span>阅读约9分钟</span></div>
-  </div>
+ <div class="container">
+ <span class="tag">自动化集成</span>
+ <h1>工业皮带秤自动化集成指南：Modbus/4-20mA与PLC对接全解析</h1>
+ <div class="meta"><span>2026-06-11</span><span>自动化集成</span><span>阅读约9分钟</span></div>
+ </div>
 </div>
 <main class="art-wrap">
 <div class="art-tldr">
-  <div class="tldr-label">核心结论</div>
-  <p><strong>徐州工业自动化称重系统</strong>近年来从单一计量向"称重+控制+数据"三位一体方向演进。现代皮带秤不再只是计量工具，而是连接PLC/DCS控制系统的工业节点。<strong>系统集成核心</strong>：传感器→仪表→通讯协议（Modbus/4-20mA/PROFIBUS）→上位机/MES/ERP。苏衡测控不仅提供硬件，还提供数据集成服务，支持与西门子S7、和汇川PLC对接，覆盖徐州及江苏大部分工厂自动化场景。</p>
-  <ul>
-    <li>系统架构：传感器→SH系列智能仪表→PLC/DCS→MES/ERP</li>
-    <li>通讯协议：4-20mA模拟量、Modbus RTU/TCP、PROFIBUS-DP</li>
-    <li>主流集成：西门子S7系列、Quantum、汇川/台达PLC</li>
-    <li>数字化升级：老旧皮带秤改造为带通讯接口的智能版本，无需换秤体</li>
-    <li>苏衡测控：提供仪表+集成方案+现场调试全套服务</li>
-  </ul>
+ <div class="tldr-label">核心结论</div>
+ <p><strong>徐州工业自动化称重系统</strong>近年来从单一计量向"称重+控制+数据"三位一体方向演进。现代皮带秤不再只是计量工具，而是连接PLC/DCS控制系统的工业节点。<strong>系统集成核心</strong>：传感器→仪表→通讯协议（Modbus/4-20mA/PROFIBUS）→上位机/MES/ERP。不仅提供硬件，还提供数据集成服务，支持与西门子S7、和汇川PLC对接，覆盖徐州及江苏大部分工厂自动化场景。</p>
+ <ul>
+ <li>系统架构：传感器→SH系列智能仪表→PLC/DCS→MES/ERP</li>
+ <li>通讯协议：4-20mA模拟量、Modbus RTU/TCP、PROFIBUS-DP</li>
+ <li>主流集成：西门子S7系列、Quantum、汇川/台达PLC</li>
+ <li>数字化升级：老旧皮带秤改造为带通讯接口的智能版本，无需换秤体</li>
+ <li>：提供仪表+集成方案+现场调试全套服务</li>
+ </ul>
 </div>
 <div class="art-bc"><a href="../index.html">首页</a> / <a href="index.html">行业资讯</a> / 徐州工业自动化称重系统：皮带秤与PLC/DCS集成完全指南</div>
 <p>徐州制造企业在推进工厂数字化转型时，工业称重系统的智能化升级是绕不开的一环。很多企业仍在使用10年以上的老旧皮带秤，数据不能联网、不能追溯，成为整体自动化的短板。本文从系统集成视角，解析现代工业称重系统的架构和升级路径。</p>
@@ -118,7 +118,7 @@
 <p>过去的皮带秤只是一台"数字磅"：传感器接仪表，仪表显示数字，人工抄表记录。这种模式的问题：数据无法追溯、不能远程监控、与生产管理完全脱节。</p>
 <p>现代工业称重系统架构分三层：</p>
 <p><strong>感知层</strong>：高精度称重传感器（C3/C6级）+ 速度传感器，实时采集料重和带速数据。</p>
-<p><strong>控制层</strong>：智能积算仪表（如苏衡SH-300系列），计算瞬时流量/累计量，通过Modbus或4-20mA信号输出到PLC/DCS。</p>
+<p><strong>控制层</strong>：智能积算仪表（如SH-300系列），计算瞬时流量/累计量，通过Modbus或4-20mA信号输出到PLC/DCS。</p>
 <p><strong>管理层</strong>：上位机软件（SCADA/MES/ERP），接收多台设备数据，实现生产统计、质量追溯、能耗分析。</p>
 
 <h2>二、通讯协议选择：哪种适合你的工厂？</h2>
@@ -134,49 +134,49 @@
 
 <h2>三、老旧皮带秤数字化改造方案</h2>
 <p>很多企业不需要换掉整套皮带秤，只需要升级"大脑"（仪表）就能实现数字化：</p>
-<p><strong>方案一：仪表替换</strong> 保留原有传感器和称重框架，将老式模拟仪表替换为苏衡SH-300智能仪表（带Modbus RTU/TCP）。改造成本约3000~8000元，施工周期1天。</p>
+<p><strong>方案一：仪表替换</strong> 保留原有传感器和称重框架，将老式模拟仪表替换为SH-300智能仪表（带Modbus RTU/TCP）。改造成本约3000~8000元，施工周期1天。</p>
 <p><strong>方案二：加装数据采集模块</strong> 在原仪表基础上增加RTU数据采集器（读取4-20mA信号，转换为Modbus或MQTT上传到云端）。适合设备老旧但不适合停机的场景，成本约2000~5000元。</p>
 <p><strong>方案三：整体更换</strong> 原设备超过15年或精度完全不符合要求，建议整体更换，同时规划通讯接口和上位机软件。</p>
 
 <h2>四、与PLC系统的实际对接流程</h2>
 <p>以西门子S7-1200/1500为例，皮带秤Modbus对接的典型步骤：</p>
-<p>1. 确认仪表Modbus地址表（苏衡SH-300标准寄存器：瞬时流量@3001，累计量@3003，设备状态@3010）</p>
+<p>1. 确认仪表Modbus地址表（SH-300标准寄存器：瞬时流量@3001，累计量@3003，设备状态@3010）</p>
 <p>2. 在TIA Portal中配置CM485通讯模块，设置波特率（默认9600）、奇偶校验（无）、停止位（1）</p>
 <p>3. 编写Modbus FC3（读保持寄存器）指令，轮询间隔建议500ms~1s</p>
 <p>4. 在触摸屏（HMI）设计流量趋势图和累计量统计报表</p>
-<p>苏衡测控提供对接技术手册和示例PLC程序，西门子/汇川/台达PLC均有现成配置模板。</p>
+<p>提供对接技术手册和示例PLC程序，西门子/汇川/台达PLC均有现成配置模板。</p>
 
 <div class="cta">
 <h3>徐州工厂称重系统数字化改造咨询</h3>
 <p>提供现场评估 + 集成方案设计 + PLC对接支持，全程技术陪跑</p>
 <a href="../contact.html">预约现场评估 &#x2192;</a>
 </div>
-      <div class="related-articles">
-        <h3>📚 相关文章</h3>
-        <ul>
-          <li><a href="belt-scale-accuracy-02-vs-025.html">0.2级与0.25级皮带秤精度区别及选型指南 - 苏衡测控技术科普</a></li>
-          <li><a href="belt-scale-accuracy-grade-guide.html">电子皮带秤精度等级怎么选？0.5级/0.25级/0.2级全解析 - 苏衡测控技术专栏</a></li>
-          <li><a href="belt-scale-accuracy-grade.html">皮带秤精度等级_电子皮带秤精度等级C3C6选型指南-苏衡测控</a></li>
-        </ul>
+ <div class="related-articles">
+ <h3>📚 相关文章</h3>
+ <ul>
+ <li><a href="belt-scale-accuracy-02-vs-025.html">0.2级与0.25级皮带秤精度区别及选型指南技术科普</a></li>
+ <li><a href="belt-scale-accuracy-grade-guide.html">电子皮带秤精度等级怎么选？0.5级/0.25级/0.2级全解析技术专栏</a></li>
+ <li><a href="belt-scale-accuracy-grade.html">皮带秤精度等级_电子皮带秤精度等级C3C6选型指南</a></li>
+ </ul>
 
 <p style="font-size:12px;color:#aaa;text-align:center;margin-top:36px;font-style:italic;letter-spacing:0.5px;">案例为我公司售后及技术人员根据对应现场整理。</p>
 </div>
 </main>
 
 <section class="related-products" style="background:#f7f9fc;padding:36px 24px;margin:40px auto;max-width:920px;border-radius:12px;">
-  <h3 style="color:#1a3a5c;font-size:1.4em;margin:0 0 20px;text-align:center;">相关产品</h3>
-  <div class="related-products-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
-        <a href="../product-dianzi.html" class="related-product-card">
-          <h4>电子皮带秤</h4>
-          <p>±0.25%精度, 15年厂家, 支持非标定制</p>
-          <span class="cta">查看产品详情 →</span>
-        </a>
-        <a href="../product-chuanganqi.html" class="related-product-card">
-          <h4>称重传感器</h4>
-          <p>C3/C6级精度, 合金钢IP68防护</p>
-          <span class="cta">查看产品详情 →</span>
-        </a>
-  </div>
+ <h3 style="color:#1a3a5c;font-size:1.4em;margin:0 0 20px;text-align:center;">相关产品</h3>
+ <div class="related-products-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+ <a href="../product-dianzi.html" class="related-product-card">
+ <h4>电子皮带秤</h4>
+ <p>±0.25%精度, 15年厂家, 支持非标定制</p>
+ <span class="cta">查看产品详情 →</span>
+ </a>
+ <a href="../product-chuanganqi.html" class="related-product-card">
+ <h4>称重传感器</h4>
+ <p>C3/C6级精度, 合金钢IP68防护</p>
+ <span class="cta">查看产品详情 →</span>
+ </a>
+ </div>
 </section>
 
 <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 徐州苏衡测控设备有限公司 版权所有 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">苏ICP备2024107758号-1</a></p></div></div></footer>

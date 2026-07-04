@@ -1,153 +1,153 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <link rel="canonical" href="https://www.suhengcekong.com/seo/feeder-pid-control-principle.html">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>给料机PID控制原理详解-闭环调节/参数整定/实战调参 | 苏衡测控</title>
-  
-  <meta property="og:title" content="给料机PID控制原理详解-闭环调节/参数整定/实战调参 | 苏衡测控">
-  <meta property="og:description" content="深入解析给料机PID控制原理：比例-积分-微分闭环调节机制、PID参数整定方法（Z-N法/临界比例度法）、给料机流量波动抑制策略与实战调参经验。">
-  <meta property="og:image" content="https://www.suhengcekong.com/images/电子皮带秤.jpg">
-  <meta property="og:type" content="website">
-  <meta name="description" content="深入解析给料机PID控制原理：比例-积分-微分闭环调节机制、PID参数整定方法（Z-N法/临界比例度法）、给料机流量波动抑制策略与实战调参经验。">
-  <meta name="keywords" content="给料机PID控制,PID参数整定,给料机闭环控制,流量调节原理,给料机调速控制,PID调参方法,苏衡测控">
-  <link rel="stylesheet" href="../style.css">
-    <style>
-    .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
-    .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
-    .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
-    .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
-    .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
-    .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
-    .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
-    .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
-    table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
-    th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
-    th{background:var(--primary);color:#fff;font-weight:600}
-    tr:nth-child(even)td{background:#f9f9f9}
-    .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
-    .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
-    .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
-    .formula{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 20px;margin:14px 0;font-family:monospace;font-size:14px;color:#334155}
-    .pid-block{background:linear-gradient(135deg,#f0f5ff,#e8efff);border:1px solid #c5d6f5;border-radius:10px;padding:20px 24px;margin:16px 0}
-    .pid-block .pb-title{font-size:17px;font-weight:700;color:var(--primary);margin-bottom:8px}
-    .pid-block .pb-value{font-size:22px;font-weight:800;color:#e85c1a;margin:8px 0}
-    .pid-block .pb-desc{font-size:13px;color:#666;line-height:1.7}
+ <link rel="canonical" href="https://www.suhengcekong.com/seo/feeder-pid-control-principle.html">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>给料机PID控制原理详解-闭环调节/参数整定/实战调参 | </title>
+ 
+ <meta property="og:title" content="给料机PID控制原理详解-闭环调节/参数整定/实战调参 | ">
+ <meta property="og:description" content="深入解析给料机PID控制原理：比例-积分-微分闭环调节机制、PID参数整定方法（Z-N法/临界比例度法）、给料机流量波动抑制策略与实战调参经验。">
+ <meta property="og:image" content="https://www.suhengcekong.com/images/电子皮带秤.jpg">
+ <meta property="og:type" content="website">
+ <meta name="description" content="深入解析给料机PID控制原理：比例-积分-微分闭环调节机制、PID参数整定方法（Z-N法/临界比例度法）、给料机流量波动抑制策略与实战调参经验。">
+ <meta name="keywords" content="给料机PID控制,PID参数整定,给料机闭环控制,流量调节原理,给料机调速控制,PID调参方法,">
+ <link rel="stylesheet" href="../style.css">
+ <style>
+ .art-wrap{max-width:800px;margin:0 auto;padding:48px 20px 80px;background:#fff}
+ .art-bc{font-size:13px;color:#888;margin-bottom:28px}.art-bc a{color:var(--primary);text-decoration:none}
+ .art-wrap h1{font-size:26px;font-weight:800;color:var(--text-dark);line-height:1.45;margin-bottom:18px}
+ .art-meta{display:flex;gap:16px;font-size:13px;color:#aaa;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid #f0f0f0}
+ .art-wrap h2{font-size:20px;font-weight:700;color:var(--primary);margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--accent)}
+ .art-wrap h3{font-size:16px;font-weight:600;color:var(--text-dark);margin:22px 0 10px}
+ .art-wrap p{font-size:15px;line-height:1.85;color:#444;margin-bottom:14px}
+ .art-tip{background:rgba(10,74,138,0.05);border-left:4px solid var(--primary);padding:14px 18px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#555}
+ table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+ th,td{border:1px solid #e0e0e0;padding:9px 13px;text-align:left}
+ th{background:var(--primary);color:#fff;font-weight:600}
+ tr:nth-child(even)td{background:#f9f9f9}
+ .cta{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:26px 30px;border-radius:10px;text-align:center;margin:36px 0}
+ .cta h3{color:#fff;font-size:19px;margin-bottom:10px}.cta p{color:rgba(255,255,255,.82);font-size:14px}
+ .cta a{display:inline-block;background:#fff;color:var(--primary);padding:11px 28px;border-radius:6px;font-weight:700;text-decoration:none;margin-top:12px}
+ .formula{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 20px;margin:14px 0;font-family:monospace;font-size:14px;color:#334155}
+ .pid-block{background:linear-gradient(135deg,#f0f5ff,#e8efff);border:1px solid #c5d6f5;border-radius:10px;padding:20px 24px;margin:16px 0}
+ .pid-block .pb-title{font-size:17px;font-weight:700;color:var(--primary);margin-bottom:8px}
+ .pid-block .pb-value{font-size:22px;font-weight:800;color:#e85c1a;margin:8px 0}
+ .pid-block .pb-desc{font-size:13px;color:#666;line-height:1.7}
 * 文章封面 */
 .art-hero h1{color:#fff;font-size:clamp(22px,3.5vw,36px);font-weight:800;margin-bottom:14px;line-height:1.35;max-width:700px;margin-left:auto;margin-right:auto}
-    .art-hero{ background: linear-gradient(135deg, #2e7d32,#43a047); padding: 64px 20px 44px; text-align: center; margin-bottom: 0; }
-    .art-hero .tag { display: inline-block; background: rgba(255,255,255,0.18); color: #fff; font-size: 12px; font-weight: 600; padding: 3px 12px; border-radius: 2px; margin-bottom: 14px; }
-    .art-hero h1 { color: #fff; font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; margin-bottom: 14px; line-height: 1.35; max-width: 700px; margin-left: auto; margin-right: auto; }
-    .art-hero .meta { color: rgba(255,255,255,0.75); font-size: 13.5px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+ .art-hero{ background: linear-gradient(135deg, #2e7d32,#43a047); padding: 64px 20px 44px; text-align: center; margin-bottom: 0; }
+ .art-hero .tag { display: inline-block; background: rgba(255,255,255,0.18); color: #fff; font-size: 12px; font-weight: 600; padding: 3px 12px; border-radius: 2px; margin-bottom: 14px; }
+ .art-hero h1 { color: #fff; font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; margin-bottom: 14px; line-height: 1.35; max-width: 700px; margin-left: auto; margin-right: auto; }
+ .art-hero .meta { color: rgba(255,255,255,0.75); font-size: 13.5px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
 /* GEO优化 */
-    .art-tldr{background:linear-gradient(135deg,#f0f7ff,#e8f4e8);border-left:5px solid var(--primary);padding:20px 24px;margin:0 0 32px;border-radius:0 8px 8px 0}
-    .art-tldr .tldr-label{display:inline-block;background:var(--primary);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:3px;margin-bottom:12px}
-    .art-tldr p{font-size:14.5px;line-height:1.75;color:#333;margin-bottom:12px!important}
-    .art-tldr ul{margin:0;padding-left:18px}
-    .art-tldr li{font-size:13.5px;line-height:1.7;color:#444;margin-bottom:6px}
-    .art-def{background:#fffbf0;border-left:4px solid #e6a23c;padding:14px 20px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#5c4a00}
+ .art-tldr{background:linear-gradient(135deg,#f0f7ff,#e8f4e8);border-left:5px solid var(--primary);padding:20px 24px;margin:0 0 32px;border-radius:0 8px 8px 0}
+ .art-tldr .tldr-label{display:inline-block;background:var(--primary);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:3px;margin-bottom:12px}
+ .art-tldr p{font-size:14.5px;line-height:1.75;color:#333;margin-bottom:12px!important}
+ .art-tldr ul{margin:0;padding-left:18px}
+ .art-tldr li{font-size:13.5px;line-height:1.7;color:#444;margin-bottom:6px}
+ .art-def{background:#fffbf0;border-left:4px solid #e6a23c;padding:14px 20px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14px;color:#5c4a00}
 
 </style>
 <!-- 百度统计 -->
 <script>
 var _hmt = _hmt || [];
 (function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?c163182d2ada0476a04ec758faa4149e";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
+ var hm = document.createElement("script");
+ hm.src = "https://hm.baidu.com/hm.js?c163182d2ada0476a04ec758faa4149e";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"给料机PID控制原理详解与实战调参指南","description":"深入解析给料机PID控制原理、闭环调节机制、参数整定方法及实战调参经验","author":{"@type":"Organization","name":"苏衡测控"},"publisher":{"@type":"Organization","name":"苏衡测控","url":"https://www.suhengcekong.com/"},"datePublished":"2026-06-01","dateModified":"2026-06-01","mainEntityOfPage":"https://www.suhengcekong.com/seo/feeder-pid-control-principle.html","image":"https://www.suhengcekong.com/images/电子皮带秤.jpg"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"给料机PID控制原理详解与实战调参指南","description":"深入解析给料机PID控制原理、闭环调节机制、参数整定方法及实战调参经验","author":{"@type":"Organization","name":""},"publisher":{"@type":"Organization","name":"","url":"https://www.suhengcekong.com/"},"datePublished":"2026-06-01","dateModified":"2026-06-01","mainEntityOfPage":"https://www.suhengcekong.com/seo/feeder-pid-control-principle.html","image":"https://www.suhengcekong.com/images/电子皮带秤.jpg"}</script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.suhengcekong.com/" },
-    { "@type": "ListItem", "position": 2, "name": "行业资讯", "item": "https://www.suhengcekong.com/seo/" },
-    { "@type": "ListItem", "position": 3, "name": "给料机PID控制原理详解-闭环调节/参数整定/实战调参", "item": "https://www.suhengcekong.com/seo/feeder-pid-control-principle.html" }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+ { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.suhengcekong.com/" },
+ { "@type": "ListItem", "position": 2, "name": "行业资讯", "item": "https://www.suhengcekong.com/seo/" },
+ { "@type": "ListItem", "position": 3, "name": "给料机PID控制原理详解-闭环调节/参数整定/实战调参", "item": "https://www.suhengcekong.com/seo/feeder-pid-control-principle.html" }
+ ]
 }
 </script>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"给料机PID控制原理详解-闭环调节/参数整定/实战调参 | 苏衡测控","author":{"@type":"Organization","name":"苏衡测控","url":"https://www.suhengcekong.com"},"publisher":{"@type":"Organization","name":"苏衡测控","url":"https://www.suhengcekong.com"},"datePublished":"2026-06-01","dateModified":"2026-06-01","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.suhengcekong.com/seo/feeder-pid-control-principle.html"},"image":"https://www.suhengcekong.com/images/电子皮带秤.jpg"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"给料机PID控制原理详解-闭环调节/参数整定/实战调参 | ","author":{"@type":"Organization","name":"","url":"https://www.suhengcekong.com"},"publisher":{"@type":"Organization","name":"","url":"https://www.suhengcekong.com"},"datePublished":"2026-06-01","dateModified":"2026-06-01","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.suhengcekong.com/seo/feeder-pid-control-principle.html"},"image":"https://www.suhengcekong.com/images/电子皮带秤.jpg"}</script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "给料机PID控制原理详解-闭环调节/参数整定/实战调参 | 苏衡测控是什么？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "给料机PID控制原理详解-闭环调节/参数整定/实战调参 | 苏衡测控是苏衡测控的核心业务领域。作为徐州专业称重设备制造商，苏衡测控拥有丰富技术积累和项目经验，产品广泛应用于水泥、矿山、电力、港口等行业。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "如何选择给料机PID控制原理？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "选择建议：①工况需求（流量、精度、环境）②预算（采购+维护成本）③厂家实力（资质、案例、售后）。苏衡提供免费现场评估和方案设计。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "给料机PID控制原理详解-闭环调节/参数整定/实战调参 | 苏衡测控有哪些优势？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "优势：①技术成熟——多年研发迭代 ②品质可靠——优质元器件+严格品控 ③服务完善——安装到维护全流程 ④性价比高——较进口品牌价格优势明显。"
-      }
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "给料机PID控制原理详解-闭环调节/参数整定/实战调参 | 是什么？",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "给料机PID控制原理详解-闭环调节/参数整定/实战调参 | 是核心业务领域。作为徐州专业称重设备制造商，拥有丰富技术积累和项目经验，产品广泛应用于水泥、矿山、电力、港口等行业。"
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "如何选择给料机PID控制原理？",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "选择建议：①工况需求（流量、精度、环境）②预算（采购+维护成本）③厂家实力（资质、案例、售后）。提供免费现场评估和方案设计。"
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "给料机PID控制原理详解-闭环调节/参数整定/实战调参 | 有哪些优势？",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "优势：①技术成熟——多年研发迭代 ②品质可靠——优质元器件+严格品控 ③服务完善——安装到维护全流程 ④性价比高——较进口品牌价格优势明显。"
+ }
+ }
+ ]
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "给料机PID控制原理详解-闭环调节/参数整定/实战调参 | 苏衡测控",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "position": 1,
-      "name": "给料机为什么需要PID控制",
-      "text": "给料机为什么需要PID控制"
-    },
-    {
-      "@type": "HowToStep",
-      "position": 2,
-      "name": "PID控制原理：三个环节协同",
-      "text": "PID控制原理：三个环节协同"
-    },
-    {
-      "@type": "HowToStep",
-      "position": 3,
-      "name": "PID参数整定：三种实用方法",
-      "text": "PID参数整定：三种实用方法"
-    },
-    {
-      "@type": "HowToStep",
-      "position": 4,
-      "name": "给料机PID实战：常见工况调参策略",
-      "text": "给料机PID实战：常见工况调参策略"
-    },
-    {
-      "@type": "HowToStep",
-      "position": 5,
-      "name": "高级控制策略：超越基础PID",
-      "text": "高级控制策略：超越基础PID"
-    },
-    {
-      "@type": "HowToStep",
-      "position": 6,
-      "name": "常见问题排查指南",
-      "text": "常见问题排查指南"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "name": "给料机PID控制原理详解-闭环调节/参数整定/实战调参 | ",
+ "step": [
+ {
+ "@type": "HowToStep",
+ "position": 1,
+ "name": "给料机为什么需要PID控制",
+ "text": "给料机为什么需要PID控制"
+ },
+ {
+ "@type": "HowToStep",
+ "position": 2,
+ "name": "PID控制原理：三个环节协同",
+ "text": "PID控制原理：三个环节协同"
+ },
+ {
+ "@type": "HowToStep",
+ "position": 3,
+ "name": "PID参数整定：三种实用方法",
+ "text": "PID参数整定：三种实用方法"
+ },
+ {
+ "@type": "HowToStep",
+ "position": 4,
+ "name": "给料机PID实战：常见工况调参策略",
+ "text": "给料机PID实战：常见工况调参策略"
+ },
+ {
+ "@type": "HowToStep",
+ "position": 5,
+ "name": "高级控制策略：超越基础PID",
+ "text": "高级控制策略：超越基础PID"
+ },
+ {
+ "@type": "HowToStep",
+ "position": 6,
+ "name": "常见问题排查指南",
+ "text": "常见问题排查指南"
+ }
+ ]
 }
 </script>
 </head>
@@ -155,29 +155,29 @@ var _hmt = _hmt || [];
 <div class="top-bar"><div class="container top-bar-inner"><div class="top-bar-left"><span>📞 188 1190 6890</span><span>✉ info@suhengcekong.cn</span></div></div></div>
 <nav class="navbar"><div class="container nav-inner"><a href="../index.html" class="logo"><span class="logo-zh">苏衡测控</span><span class="logo-en">SUHENG</span></a><ul class="nav-menu"><li><a href="../index.html">首页</a></li><li><a href="../products.html">产品中心</a></li><li><a href="index.html">行业资讯</a></li><li><a href="../contact.html">联系我们</a></li></ul></div></nav>
 <div class="art-hero">
-  <div class="container">
-    <span class="tag">给料机PID控制原理详解</span>
-<h1>给料机PID控制原理详解\-闭环调节/参数整定/实战调参\ \|\ 苏衡测控</h1>
-        <div class="meta">
+ <div class="container">
+ <span class="tag">给料机PID控制原理详解</span>
+<h1>给料机PID控制原理详解\-闭环调节/参数整定/实战调参\ \|\ </h1>
+ <div class="meta">
 <span>2026-06-01</span><span>给料机PID控制原理详解</span><span>阅读约14分钟</span></div>
-  </div>
+ </div>
 </div>
 <main class="art-wrap">
-    <div class="art-tldr">
-      <div class="tldr-label">核心结论</div>
-      <p><strong>给料机PID控制原理详解-闭环调节/参数整定/实战调参 | </strong>是工业称重领域的专业话题。本文从原理、选型、应用和维护等维度系统阐述，结合<strong>苏衡测控</strong>在徐州17年的行业实践经验。</p>
-      <ul>
-          <li>苏衡测控：徐州专注电子皮带秤/给料机17年制造商</li>
-          <li>资质完备：行业设备专业生产资质</li>
-          <li>覆盖行业：水泥/矿山/电厂/港口/粮食/化工</li>
-          <li>服务网络：全国24-48小时上门响应</li>
-          <li>免费咨询：188 1190 6890</li>
-      </ul>
-    </div>
+ <div class="art-tldr">
+ <div class="tldr-label">核心结论</div>
+ <p><strong>给料机PID控制原理详解-闭环调节/参数整定/实战调参 | </strong>是工业称重领域的专业话题。本文从原理、选型、应用和维护等维度系统阐述，结合<strong></strong>在徐州17年的行业实践经验。</p>
+ <ul>
+ <li>：徐州专注电子皮带秤/给料机17年制造商</li>
+ <li>资质完备：行业设备专业生产资质</li>
+ <li>覆盖行业：水泥/矿山/电厂/港口/粮食/化工</li>
+ <li>服务网络：全国24-48小时上门响应</li>
+ <li>免费咨询：188 1190 6890</li>
+ </ul>
+ </div>
 
 
 <div class="art-bc"><a href="../index.html">首页</a> / <a href="index.html">行业资讯</a> / 给料机PID控制原理详解</div>
-<p>在散料连续生产过程中，给料机的流量稳定性直接决定了下游工艺的产品质量和能耗水平。无论是皮带秤给料机、螺旋给料机还是<strong>失重式给料秤</strong>，要实现精确的流量控制，PID（比例-积分-微分）闭环控制都是核心技术。本文从控制原理出发，结合苏衡测控给料机仪表的实战经验，系统讲解PID控制的底层逻辑与参数整定方法。</p>
+<p>在散料连续生产过程中，给料机的流量稳定性直接决定了下游工艺的产品质量和能耗水平。无论是皮带秤给料机、螺旋给料机还是<strong>失重式给料秤</strong>，要实现精确的流量控制，PID（比例-积分-微分）闭环控制都是核心技术。本文从控制原理出发，结合给料机仪表的实战经验，系统讲解PID控制的底层逻辑与参数整定方法。</p>
 
 <h2>一、给料机为什么需要PID控制</h2>
 <p>给料机的理想状态是：设定流量后，实际流量能立即稳定并保持在设定值。但现实工况中，存在大量<strong>扰动因素</strong>：</p>
@@ -192,30 +192,30 @@ var _hmt = _hmt || [];
 <p>PID控制的核心思想是：通过实时监测<strong>设定值（SP）与实际值（PV）之间的偏差</strong>，计算出一个控制量（MV）来驱动执行机构（变频器/电机），使偏差趋近于零。</p>
 
 <div class="formula">
-  <strong>PID输出公式：</strong><br>
-  MV(t) = Kp × e(t) + Ki × ∫e(t)dt + Kd × de(t)/dt<br><br>
-  其中：<br>
-  e(t) = SP - PV（偏差 = 设定值 - 实际值）<br>
-  Kp = 比例系数 &nbsp;|&nbsp; Ki = 积分系数 &nbsp;|&nbsp; Kd = 微分系数
+ <strong>PID输出公式：</strong><br>
+ MV(t) = Kp × e(t) + Ki × ∫e(t)dt + Kd × de(t)/dt<br><br>
+ 其中：<br>
+ e(t) = SP - PV（偏差 = 设定值 - 实际值）<br>
+ Kp = 比例系数 &nbsp;|&nbsp; Ki = 积分系数 &nbsp;|&nbsp; Kd = 微分系数
 </div>
 
 <h3>1. 比例控制（P）：即时响应</h3>
 <p>比例环节根据当前偏差的大小直接输出控制量。<strong>偏差越大，输出越大</strong>——就像开车时，离目的地越远，油门踩得越重。</p>
 <div class="pid-block">
-  <div class="pb-title">⚡ 比例控制特性</div>
-  <div class="pb-value">P_out = Kp × e(t)</div>
-  <div class="pb-desc">Kp越大，响应越快，但过大会导致超调和振荡。纯比例控制存在"稳态误差"——系统稳定后，实际值永远无法完全等于设定值。</div>
+ <div class="pb-title">⚡ 比例控制特性</div>
+ <div class="pb-value">P_out = Kp × e(t)</div>
+ <div class="pb-desc">Kp越大，响应越快，但过大会导致超调和振荡。纯比例控制存在"稳态误差"——系统稳定后，实际值永远无法完全等于设定值。</div>
 </div>
 <p><strong>给料机应用要点：</strong>皮带秤给料机通常将Kp设定在0.5~2.0之间。对于响应慢的大流量给料机（>100t/h），Kp宜取较小值（0.5~1.0），避免频繁调速导致皮带抖动。</p>
 
 <h3>2. 积分控制（I）：消除余差</h3>
 <p>积分环节对偏差进行累积。只要有偏差存在，积分输出就会持续增长，直到偏差为零。积分控制的作用是<strong>彻底消除稳态误差</strong>。</p>
 <div class="pid-block">
-  <div class="pb-title">🔄 积分控制特性</div>
-  <div class="pb-value">I_out = Ki × ∫e(t)dt</div>
-  <div class="pb-desc">Ki越大，消除余差越快，但过大会导致积分饱和（ windup ），在设定值突变时产生严重超调。</div>
+ <div class="pb-title">🔄 积分控制特性</div>
+ <div class="pb-value">I_out = Ki × ∫e(t)dt</div>
+ <div class="pb-desc">Ki越大，消除余差越快，但过大会导致积分饱和（ windup ），在设定值突变时产生严重超调。</div>
 </div>
-<p><strong>给料机应用要点：</strong>积分时间是关键参数。苏衡测控SH-S1200仪表默认积分时间Ti=30秒。对于给料机，Ti通常在10~120秒范围内：</p>
+<p><strong>给料机应用要点：</strong>积分时间是关键参数。SH-S1200仪表默认积分时间Ti=30秒。对于给料机，Ti通常在10~120秒范围内：</p>
 <table>
 <tr><th>给料机类型</th><th>典型流量范围</th><th>推荐Ti</th><th>原因</th></tr>
 <tr><td>微量给料机</td><td>0.1~5t/h</td><td>10~30s</td><td>响应快，需快速消除偏差</td></tr>
@@ -226,9 +226,9 @@ var _hmt = _hmt || [];
 <h3>3. 微分控制（D）：预测趋势</h3>
 <p>微分环节关注偏差的变化速率。<strong>偏差变化越快，微分输出越大</strong>——它像是一种"预测"能力，在偏差还没有变得很大时，就提前施加反向调节，抑制超调。</p>
 <div class="pid-block">
-  <div class="pb-title">🔮 微分控制特性</div>
-  <div class="pb-value">D_out = Kd × de(t)/dt</div>
-  <div class="pb-desc">Kd过大会对信号噪声敏感，导致输出抖动。在散料给料机中，微分控制往往设置为0或极小值，因为流量信号本身含有较大噪声。</div>
+ <div class="pb-title">🔮 微分控制特性</div>
+ <div class="pb-value">D_out = Kd × de(t)/dt</div>
+ <div class="pb-desc">Kd过大会对信号噪声敏感，导致输出抖动。在散料给料机中，微分控制往往设置为0或极小值，因为流量信号本身含有较大噪声。</div>
 </div>
 <p><strong>给料机应用要点：</strong>大多数皮带秤给料机采用<strong>PI控制</strong>（微分设为0）。仅在要求极高响应速度的场景（如高速动态配料线）才启用微分，且Kd通常&lt;0.1。</p>
 
@@ -267,15 +267,15 @@ var _hmt = _hmt || [];
 <tr><td>高频抖动</td><td>Kd偏大或信号噪声</td><td>Kd设为0，检查信号滤波</td></tr>
 </table>
 
-<h3>方法三：苏衡仪表自整定功能</h3>
-<p>苏衡测控SH-S1200/SH-S600系列智能仪表内置<strong>一键自整定（Auto-Tuning）</strong>功能：</p>
+<h3>方法三：仪表自整定功能</h3>
+<p>SH-S1200/SH-S600系列智能仪表内置<strong>一键自整定（Auto-Tuning）</strong>功能：</p>
 <p>1. 将仪表切换到自整定模式<br>
 2. 仪表自动在设定值上下施加小幅阶跃扰动<br>
 3. 通过分析系统的阶跃响应曲线，自动计算最优Kp、Ki、Kd<br>
 4. 整定完成后自动保存参数并切换回正常运行模式</p>
 <p>自整定过程通常需要<strong>3~5分钟</strong>，期间给料机流量会有±5%~±10%的波动。建议在非生产高峰期执行。</p>
 
-<div class="art-tip">💡 苏衡实测数据：在100t/h皮带秤给料机上，手动整定最优参数（Kp=1.2, Ti=45s）后，流量稳态误差±0.8%；使用自整定功能后，流量稳态误差进一步降至±0.5%，且超调量从12%降至4%。</div>
+<div class="art-tip">💡 实测数据：在100t/h皮带秤给料机上，手动整定最优参数（Kp=1.2, Ti=45s）后，流量稳态误差±0.8%；使用自整定功能后，流量稳态误差进一步降至±0.5%，且超调量从12%降至4%。</div>
 
 <h2>四、给料机PID实战：常见工况调参策略</h2>
 
@@ -309,7 +309,7 @@ var _hmt = _hmt || [];
 <p>保守的参数设置牺牲了一定的响应速度，但换取了更好的稳定性。对于大流量给料机，<strong>稳定性远比快速响应更重要</strong>——一次大幅超调可能导致下游设备堵塞或空仓。</p>
 
 <h2>五、高级控制策略：超越基础PID</h2>
-<p>在复杂工况下，基础PID可能无法满足要求。苏衡测控仪表支持以下高级控制功能：</p>
+<p>在复杂工况下，基础PID可能无法满足要求。仪表支持以下高级控制功能：</p>
 
 <h3>1. 前馈控制（Feedforward）</h3>
 <p>当扰动可测量时（如料仓仓压、物料水分），前馈控制可以在扰动影响输出之前，提前调节给料量。例如：</p>
@@ -318,7 +318,7 @@ var _hmt = _hmt || [];
 <p>前馈+PID复合控制可将流量波动抑制在<strong>±0.3%以内</strong>。</p>
 
 <h3>2. 自适应PID（Self-Tuning PID）</h3>
-<p>自适应PID能根据系统运行状态，实时调整PID参数。苏衡SH-S1200仪表的算法会在以下场景自动调整：</p>
+<p>自适应PID能根据系统运行状态，实时调整PID参数。SH-S1200仪表的算法会在以下场景自动调整：</p>
 <table>
 <tr><th>场景</th><th>自动调整策略</th></tr>
 <tr><td>流量设定值大幅变化（&gt;30%）</td><td>临时增大Kp、增大Ti，加速过渡过程</td></tr>
@@ -327,7 +327,7 @@ var _hmt = _hmt || [];
 </table>
 
 <h3>3. 多秤联动配比控制</h3>
-<p>在配料系统中，多台给料机按固定比例运行。苏衡仪表支持<strong>主从联动模式</strong>：</p>
+<p>在配料系统中，多台给料机按固定比例运行。仪表支持<strong>主从联动模式</strong>：</p>
 <p>• 主秤：按设定流量运行，PID控制保持自身流量稳定<br>
 • 从秤：实时跟踪主秤实际流量，按配比自动计算设定值<br>
 • 联动响应延迟&lt;2秒，配比精度±0.5%</p>
@@ -344,37 +344,37 @@ var _hmt = _hmt || [];
 
 <div class="cta">
 <h3>需要给料机控制系统升级或调试支持？</h3>
-<p>苏衡测控技术团队提供从仪表选型、参数整定到系统联调的全流程技术服务，帮助您的给料系统达到最佳控制精度</p>
+<p>技术团队提供从仪表选型、参数整定到系统联调的全流程技术服务，帮助您的给料系统达到最佳控制精度</p>
 <a href="../contact.html">获取给料机控制技术支持 →</a>
 </div>
 
 <p style="font-size:13px;color:#999;margin-top:20px">相关阅读：<a href="belt-scale-calibration-methods.html">皮带秤校准方法详解</a> | <a href="belt-scale-installation-guide.html">皮带秤安装规范</a> | <a href="smart-instrument-sh-s600-s1200-guide.html">SH-S600/S1200仪表使用指南</a> | <a href="high-precision-belt-scale-tech-deep-dive.html">高精度皮带秤技术详解</a> | <a href="../faq.html">常见问题</a></p>
-      <div class="related-articles">
-        <h3>📚 相关文章</h3>
-        <ul>
-          <li><a href="belt-scale-accuracy-02-vs-025.html">0.2级与0.25级皮带秤精度区别及选型指南 - 苏衡测控技术科普</a></li>
-          <li><a href="belt-scale-calibration-methods.html">皮带秤校准方法与检定规程详解 - 苏衡测控技术指南</a></li>
-          <li><a href="belt-scale-inaccurate-causes.html">电子皮带秤计量不准的原因及解决方法 - 苏衡测控故障运维指南</a></li>
-        </ul>
+ <div class="related-articles">
+ <h3>📚 相关文章</h3>
+ <ul>
+ <li><a href="belt-scale-accuracy-02-vs-025.html">0.2级与0.25级皮带秤精度区别及选型指南技术科普</a></li>
+ <li><a href="belt-scale-calibration-methods.html">皮带秤校准方法与检定规程详解技术指南</a></li>
+ <li><a href="belt-scale-inaccurate-causes.html">电子皮带秤计量不准的原因及解决方法故障运维指南</a></li>
+ </ul>
 
 <p style="font-size:12px;color:#aaa;text-align:center;margin-top:36px;font-style:italic;letter-spacing:0.5px;">案例为我公司售后及技术人员根据对应现场整理。</p>
 </div>
 </main>
 
 <section class="related-products" style="background:#f7f9fc;padding:36px 24px;margin:40px auto;max-width:920px;border-radius:12px;">
-  <h3 style="color:#1a3a5c;font-size:1.4em;margin:0 0 20px;text-align:center;">相关产品</h3>
-  <div class="related-products-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
-        <a href="../product-geiliaoji.html" class="related-product-card">
-          <h4>定量给料机</h4>
-          <p>±0.25%静态精度, 配料系统核心设备</p>
-          <span class="cta">查看产品详情 →</span>
-        </a>
-        <a href="../product-dianzi.html" class="related-product-card">
-          <h4>电子皮带秤</h4>
-          <p>±0.25%精度, 15年厂家, 支持非标定制</p>
-          <span class="cta">查看产品详情 →</span>
-        </a>
-  </div>
+ <h3 style="color:#1a3a5c;font-size:1.4em;margin:0 0 20px;text-align:center;">相关产品</h3>
+ <div class="related-products-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+ <a href="../product-geiliaoji.html" class="related-product-card">
+ <h4>定量给料机</h4>
+ <p>±0.25%静态精度, 配料系统核心设备</p>
+ <span class="cta">查看产品详情 →</span>
+ </a>
+ <a href="../product-dianzi.html" class="related-product-card">
+ <h4>电子皮带秤</h4>
+ <p>±0.25%精度, 15年厂家, 支持非标定制</p>
+ <span class="cta">查看产品详情 →</span>
+ </a>
+ </div>
 </section>
 
 <footer class="footer"><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 苏衡测控 | 徐州市苏衡自动化控制技术有限公司</p><span>苏ICP备2024107758号-1</span></div></div></footer>

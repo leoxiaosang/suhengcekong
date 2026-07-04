@@ -55,6 +55,8 @@ deploy/
 
 **原因**：全站只有一个CSS文件 `style.css`，在根目录。不存在 `seo-style.css`。
 
+**⚠️ 禁止重复引用**：每个页面只能引用 `style.css` 一次。重复引用会导致CSS规则叠加，可能引起排版异常。
+
 ### 规则3：顶级页面链接
 
 | 源页面位置 | 正确写法 | 错误写法 |
@@ -113,41 +115,73 @@ deploy/
 </html>
 ```
 
-### 规则7：footer必须存在
+### 规则7：footer必须存在且结构正确
 
 每个正式页面（非验证文件）必须包含 `<footer>` 和 `</footer>`。
 
-**seo/目录文章的标准footer**：
+**⚠️ footer的class必须是 `footer`**（CSS中仅定义了 `.footer` 类）。
+禁止使用 `main-footer`、`footer-about` 等不存在的class，会导致footer无背景色、无排版。
+
+**seo/目录文章的标准footer（精简版，116+页面在用）**：
+```html
+<footer class="footer"><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 苏衡测控 | 徐州市苏衡自动化控制技术有限公司</p><span>苏ICP备2024107758号-1</span></div></div></footer>
+```
+
+**根目录页面的标准footer（完整版）**：
 ```html
 <footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-col">
-      <div class="footer-logo">苏衡测控</div>
-      <p class="footer-desc">专注工业计量设备研发与制造，成立于2012年，总部位于徐州市铜山区。</p>
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-zh">苏衡测控</span>
+            <span class="logo-en">SUHENG MEASUREMENT</span>
+          </div>
+          <p class="footer-slogan">专注皮带秤 · 电子皮带秤 · 精准计量解决方案</p>
+          <div class="footer-contact">
+            <p>📞 188 1190 6890</p>
+            <p>✉ info@suhengcekong.cn</p>
+            <p>📍 徐州市铜山区康平路</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>产品中心</h5>
+            <a href="product-dianzi.html">电子皮带秤</a>
+            <a href="product-gaojingdu.html">高精度皮带秤</a>
+            <a href="product-chuanganqi.html">称重传感器</a>
+            <a href="product-yibiao.html">智能仪表</a>
+            <a href="product-geiliaoji.html">给料机</a>
+            <a href="product-geimeiji.html">给煤机</a>
+          </div>
+          <div class="footer-col">
+            <h5>快速链接</h5>
+            <a href="about.html">关于我们</a>
+            <a href="industries.html">客户案例</a>
+            <a href="knowledge.html">技术知识</a>
+            <a href="seo/index.html">行业资讯</a>
+            <a href="contact.html">联系我们</a>
+            <a href="search.html">站内搜索</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>产品中心</h4>
-      <ul>
-        <li><a href="../product-dianzi.html">电子皮带秤</a></li>
-        <li><a href="../product-gaojingdu.html">高精度皮带秤</a></li>
-        <li><a href="../product-chuanganqi.html">称重传感器</a></li>
-        <li><a href="../product-geiliaoji.html">给料机</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>Copyright © 2012-2026 苏衡测控技术有限公司 All Rights Reserved.</p>
+        <span>苏ICP备2024107758号-1</span>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>联系我们</h4>
-      <ul>
-        <li>📞 188 1190 6890</li>
-        <li>✉️ info@suhengcekong.cn</li>
-        <li>📍 徐州市铜山区康平路</li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 苏衡测控 版权所有 | <a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备2024107758号-1</a></p>
-  </div>
 </footer>
 ```
+
+**禁止的footer模式**：
+| 错误模式 | 问题 | 后果 |
+|----------|------|------|
+| `class="footer-about"` | CSS中无此class | footer无样式，排版错乱 |
+| `class="main-footer"` | CSS中无此class | footer无背景色、无文字颜色 |
+| `<div class="footer-links"><h4>...</h4><ul>...` | footer-links是5列grid容器，不是单列 | 内容被挤到5列grid的左上角 |
+| footer-bottom无 `footer-bottom-inner` | 缺少flex布局 | copyright文字无法居中对齐 |
 
 ### 规则8：DIV标签必须平衡
 
@@ -170,11 +204,12 @@ assert op == cl, f"DIV不平衡: {op} vs {cl}"
 
 新增或批量修改页面后，必须执行以下检查：
 
-1. **死链扫描**：运行 `/tmp/scan_site_links_and_layout.py`，死链数应为 0（favicon data URI 和 JS 模板字符串除外）
+1. **死链扫描**：运行 `industrial-website/scan_site_links_and_layout.py`，死链数应为 0（favicon data URI 和 JS 模板字符串除外）
 2. **DIV平衡**：所有文件 `<div>` 与 `</div>` 数量差为 0
-3. **Footer存在**：所有正式页面包含 `<footer>`
+3. **Footer存在且结构正确**：所有正式页面包含 `<footer class="footer">`，无 `footer-about`/`main-footer` 等错误class
 4. **SECTION平衡**：`<section>` 与 `</section>` 数量差为 0
 5. **MAIN平衡**：`<main>` 与 `</main>` 数量差为 0
+6. **CSS引用唯一**：每个页面 `style.css` 只引用一次
 
 ## 五、常见错误模式总结
 
@@ -186,3 +221,5 @@ assert op == cl, f"DIV不平衡: {op} vs {cl}"
 | `product-jiliaoji.html` 死链 | 产品页文件名拼写错误 | 使用规则5中的正确文件名 |
 | 底部排版错乱 | DIV不平衡或缺少footer | 每次修改后运行DIV平衡检查 |
 | footer缺失 | 新建页面忘记加footer | 复制标准footer模板 |
+| footer排版错乱 | 使用CSS中不存在的class（footer-about/main-footer） | 必须使用 `class="footer"` |
+| CSS重复引用 | 复制模板时未删除多余的link标签 | 每个页面style.css只引用一次 |
