@@ -2163,3 +2163,302 @@ blockquote,
   .honor-grid { grid-template-columns: 1fr; }
   .region-table { display: block; overflow-x: auto; white-space: nowrap; }
 }
+
+/* === 修复旧系统顶部导航 (header/main-nav/bare nav) === */
+
+/* ---------- 通用导航容器 ---------- */
+.header,
+body > .main-nav,
+body > nav:not(.navbar):not(.nav):not(.navbar):not(.nav) {
+  background: rgba(255,255,255,0.97);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 16px rgba(10,74,138,0.06);
+}
+
+/* ---------- System C: <header class="header"> ---------- */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--navbar-h);
+}
+
+/* Logo (图片形式；如图片缺失则显示文字兜底) */
+.header .logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  width: 160px;
+  height: 40px;
+  position: relative;
+}
+.header .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  opacity: 0;
+}
+.header .logo:not(:has(.logo-zh))::after {
+  content: "苏衡测控";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--primary);
+  letter-spacing: 2px;
+  line-height: 40px;
+  white-space: nowrap;
+}
+
+/* .main-nav 在 .header 内：包裹 .nav-list */
+.header .main-nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+  justify-content: center;
+}
+
+/* 水平菜单列表 */
+.header .nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header .nav-list > li,
+.header .nav-list > li.dropdown {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header .nav-list > li > a,
+.header .nav-list > li.dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 18px;
+  height: 100%;
+  color: var(--text-dark);
+  font-size: 14.5px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition);
+  position: relative;
+}
+.header .nav-list > li > a::after,
+.header .nav-list > li.dropdown > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 3px;
+  background: var(--accent);
+  transition: var(--transition);
+}
+.header .nav-list > li:hover > a,
+.header .nav-list > li.dropdown:hover > a,
+.header .nav-list > li > a.active {
+  color: var(--primary);
+}
+.header .nav-list > li:hover > a::after,
+.header .nav-list > li.dropdown:hover > a::after,
+.header .nav-list > li > a.active::after {
+  left: 18px;
+  right: 18px;
+}
+.header .nav-list li.dropdown .arrow {
+  font-size: 10px;
+  transition: var(--transition);
+}
+.header .nav-list li.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+.header .nav-list li.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* 右侧操作区 */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.header-actions .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--accent);
+  color: #fff;
+}
+.header-actions .btn-primary:hover {
+  background: var(--accent-light);
+}
+
+/* 汉堡菜单 */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+.mobile-menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-dark);
+  border-radius: 2px;
+}
+
+/* ---------- System Dmain: <nav class="main-nav"> ---------- */
+body > .main-nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--navbar-h);
+}
+body > .main-nav .logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+body > .main-nav .logo:not(:has(.logo-zh))::before,
+body > nav:not(.navbar):not(.nav) .logo:not(:has(.logo-zh))::before {
+  content: "苏衡测控";
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--primary);
+  letter-spacing: 2px;
+}
+body > .main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body > .main-nav ul > li {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+body > .main-nav ul > li > a {
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  height: 100%;
+  color: var(--text-dark);
+  font-size: 14.5px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition);
+  position: relative;
+}
+body > .main-nav ul > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 3px;
+  background: var(--accent);
+  transition: var(--transition);
+}
+body > .main-nav ul > li:hover > a {
+  color: var(--primary);
+}
+body > .main-nav ul > li:hover > a::after {
+  left: 18px;
+  right: 18px;
+}
+
+/* ---------- System E: bare <nav> ---------- */
+body > nav:not(.navbar):not(.nav) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: var(--navbar-h);
+  padding: 0 24px;
+}
+body > nav:not(.navbar):not(.nav) .logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  margin-right: 12px;
+}
+body > nav:not(.navbar):not(.nav) > a:not(.logo) {
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  height: 100%;
+  color: var(--text-dark);
+  font-size: 14.5px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition);
+  position: relative;
+}
+body > nav:not(.navbar):not(.nav) > a:not(.logo)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 3px;
+  background: var(--accent);
+  transition: var(--transition);
+}
+body > nav:not(.navbar):not(.nav) > a:not(.logo):hover {
+  color: var(--primary);
+}
+body > nav:not(.navbar):not(.nav) > a:not(.logo):hover::after {
+  left: 18px;
+  right: 18px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 992px) {
+  .header .nav-list,
+  body > .main-nav ul,
+  body > nav:not(.navbar):not(.nav) > a:not(.logo) {
+    display: none;
+  }
+  .header-actions .btn-primary {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: flex; }
+  body > .main-nav .container,
+  body > nav:not(.navbar):not(.nav) {
+    justify-content: space-between;
+  }
+}
