@@ -1,12 +1,12 @@
 # 百度站长平台推送配置 - 苏衡测控
-# 每日配额: 20条 (百度后台确认 2026-06-13)
+# 每日配额: 实测10条 (2026-07-07 再次确认，API返回over quota)
 # API文档: https://ziyuan.baidu.com/college/courseinfo?id=267&page=2
 
 # API URL (请勿修改)
 API_URL="http://data.zz.baidu.com/urls?site=www.suhengcekong.com&token=hysPuLuaxFUCI6OS"
 
 # 每日配额
-DAILY_QUOTA=20
+DAILY_QUOTA=10
 
 # 网站域名 (用于生成完整URL)
 SITE_URL="https://www.suhengcekong.com"

@@ -222,4 +222,40 @@ https://www.suhengcekong.com/seo/belt-scale-tco-analysis.html | submitted | 2026
 https://www.suhengcekong.com/seo/weighing-feeder-selection-guide.html | submitted | 2026-07-04 | success |
 https://www.suhengcekong.com/seo/quantitative-feeder-control-system.html | submitted | 2026-07-04 | success |
 https://www.suhengcekong.com/seo/belt-scale-verification-procedure-guide.html | submitted | 2026-07-04 | success |
-https://www.suhengcekong.com/product-custom.html | queued | 2026-07-05 | daily_limit |
+https://www.suhengcekong.com/product-custom.html | submitted | 2026-07-08 18:41 | {"remain":9,"success":1}
+
+
+# === 推送批次 2026-07-07 11:34 ===
+https://www.suhengcekong.com/product-custom.html | submitted | 2026-07-07 11:34 | {"remain":9,"success":1}
+https://www.suhengcekong.com/seo/cement-industry-solutions.html | submitted | 2026-07-07 11:34 | {"remain":8,"success":1}
+https://www.suhengcekong.com/seo/chemical-industry-solutions.html | submitted | 2026-07-07 11:34 | {"remain":7,"success":1}
+https://www.suhengcekong.com/seo/chemical-loss-in-weight-application.html | submitted | 2026-07-07 11:34 | {"remain":6,"success":1}
+https://www.suhengcekong.com/seo/chengdu-belt-scale.html | submitted | 2026-07-07 11:34 | {"remain":5,"success":1}
+https://www.suhengcekong.com/seo/dalian-belt-scale.html | submitted | 2026-07-07 11:34 | {"remain":4,"success":1}
+https://www.suhengcekong.com/seo/feeder-uneven-discharge-repair.html | submitted | 2026-07-07 11:34 | {"remain":3,"success":1}
+https://www.suhengcekong.com/seo/fixed-vs-suspended-belt-scale.html | submitted | 2026-07-07 11:34 | {"remain":2,"success":1}
+https://www.suhengcekong.com/seo/guangzhou-belt-scale.html | submitted | 2026-07-07 11:34 | {"remain":1,"success":1}
+https://www.suhengcekong.com/seo/industrial-weigher-maintenance-calibration.html | submitted | 2026-07-07 11:34 | {"remain":0,"success":1}
+https://www.suhengcekong.com/seo/lithium-battery-belt-scale-applications.html | submitted | 2026-07-08 18:41 | {"remain":8,"success":1}
+
+https://www.suhengcekong.com/seo/new-energy-industry-solutions.html | submitted | 2026-07-08 18:41 | {"remain":7,"success":1}
+
+https://www.suhengcekong.com/seo/power-industry-solutions.html | submitted | 2026-07-08 18:41 | {"remain":6,"success":1}
+
+https://www.suhengcekong.com/seo/qingdao-belt-scale.html | submitted | 2026-07-08 18:41 | {"remain":5,"success":1}
+
+https://www.suhengcekong.com/seo/shenyang-belt-scale.html | submitted | 2026-07-08 18:41 | {"remain":4,"success":1}
+
+https://www.suhengcekong.com/seo/steel-industry-solutions.html | submitted | 2026-07-08 18:41 | {"remain":3,"success":1}
+
+https://www.suhengcekong.com/seo/steel-plant-feeder-coal-feeder-applications.html | submitted | 2026-07-08 18:41 | {"remain":2,"success":1}
+
+https://www.suhengcekong.com/seo/suzhou-belt-scale.html | submitted | 2026-07-08 18:41 | {"remain":1,"success":1}
+
+https://www.suhengcekong.com/seo/tangshan-belt-scale.html | submitted | 2026-07-08 18:41 | {"remain":0,"success":1}
+
+https://www.suhengcekong.com/seo/tianjin-belt-scale.html | submitted | 2026-07-07 11:34 | daily_quota
+https://www.suhengcekong.com/seo/wuhan-belt-scale.html | submitted | 2026-07-07 11:34 | daily_quota
+https://www.suhengcekong.com/seo/wuxi-belt-scale.html | submitted | 2026-07-07 11:34 | daily_quota
+https://www.suhengcekong.com/seo/xian-belt-scale.html | submitted | 2026-07-07 11:34 | daily_quota
+https://www.suhengcekong.com/seo/xuzhou-belt-scale-calibration-service.html | submitted | 2026-07-07 11:34 | daily_quota

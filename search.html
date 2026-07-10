@@ -142,186 +142,98 @@ var _hmt = _hmt || [];
 
 <!-- 页脚（与首页一致） -->
 <footer class="footer">
-  <div class="footer-subscribe">
-    <div class="container subscribe-inner">
-      <h3>获取最新报价</h3>
-      <p>留下您的联系方式，专业工程师为您免费选型报价</p>
-      <form class="subscribe-form" action="https://formspree.io/f/xvznlpdw" method="POST">
-        <input type="hidden" name="_subject" value="苏衡测控官网新咨询-搜索页订阅">
-        <input type="email" name="email" placeholder="请输入您的邮箱地址" required>
-        <button type="submit">立即咨询</button>
-      </form>
-    </div>
-  </div>
   <div class="footer-main">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
-          <h4>产品中心</h4>
-          <ul>
-            <li><a href="product-dianzi.html">电子皮带秤</a></li>
-            <li><a href="product-gaojingdu.html">高精度皮带秤</a></li>
-            <li><a href="product-chuanganqi.html">称重传感器</a></li>
-            <li><a href="product-yibiao.html">智能仪表</a></li>
-            <li><a href="product-geiliaoji.html">给料机</a></li>
-            <li><a href="product-geimeiji.html">给煤机</a></li>
-          </ul>
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-zh">苏衡测控</span>
+            <span class="logo-en">SUHENG MEASUREMENT</span>
+          </div>
+          <p class="footer-slogan">专注工业计量与称重控制设备研发制造，成立于2012年，总部位于徐州。</p>
+          <div class="footer-contact">
+            <p>📞 188 1190 6890</p>
+            <p>✉️ info@suhengcekong.cn</p>
+            <p>📍 徐州市铜山区康平路</p>
+          </div>
+          <div class="footer-social">
+            <a href="contact.html">在线咨询</a>
+            <a href="products.html">产品中心</a>
+          </div>
         </div>
-        <div class="footer-col">
-          <h4>快速链接</h4>
-          <ul>
-            <li><a href="about.html">关于苏衡</a></li>
-            <li><a href="industries.html">应用领域</a></li>
-            <li><a href="knowledge.html">技术服务</a></li>
-            <li><a href="news.html">新闻中心</a></li>
-            <li><a href="search.html">全站搜索</a></li>
-          </ul>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>产品中心</h5>
+            <a href="product-dianzi.html">电子皮带秤</a>
+            <a href="product-gaojingdu.html">高精度皮带秤</a>
+            <a href="product-chuanganqi.html">称重传感器</a>
+            <a href="product-yibiao.html">智能称重仪表</a>
+            <a href="product-geiliaoji.html">定量给料机</a>
+            <a href="product-geimeiji.html">称重给煤机</a>
+          </div>
+          <div class="footer-col">
+            <h5>解决方案</h5>
+            <a href="industries.html">行业应用</a>
+            <a href="product-comparison.html">参数对比</a>
+            <a href="product-custom.html">非标定制</a>
+            <a href="belt-weighing-system.html">皮带称重系统</a>
+            <a href="regions.html">全国服务网络</a>
+          </div>
+          <div class="footer-col">
+            <h5>服务支持</h5>
+            <a href="knowledge.html">技术知识库</a>
+            <a href="news.html">新闻动态</a>
+            <a href="faq.html">常见问题</a>
+            <a href="search.html">全站搜索</a>
+          </div>
+          <div class="footer-col">
+            <h5>关于我们</h5>
+            <a href="about.html">公司简介</a>
+            <a href="about.html">资质荣誉</a>
+            <a href="contact.html">联系我们</a>
+            <a href="products.html">产品总览</a>
+          </div>
+          <div class="footer-col">
+            <h5>联系我们</h5>
+            <a href="tel:18811906890">电话：188 1190 6890</a>
+            <a href="mailto:info@suhengcekong.cn">邮箱：info@suhengcekong.cn</a>
+            <a href="contact.html">地址：徐州市铜山区康平路</a>
+          </div>
         </div>
-        <div class="footer-col">
-          <h4>联系我们</h4>
-          <p>服务热线：188 1190 6890</p>
-          <p>邮箱：info@suhengcekong.cn</p>
-          <p>地址：徐州市铜山区康平路</p>
-          <p>苏ICP备2024107758号-1</p>
-        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 徐州苏衡测控科技有限公司 版权所有</p>
+      <div class="footer-bottom-links">
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">苏ICP备2024107758号-1</a>
+        <span>|</span>
+        <a href="sitemap.xml">网站地图</a>
+        <span>|</span>
+        <a href="contact.html">联系我们</a>
       </div>
     </div>
   </div>
 </footer>
 
+<!-- 回到顶部 -->
+<button class="back-to-top" id="backToTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
 <script src="script.js"></script>
-<script src="search-data.js"></script>
-<script>
-(function() {
-  const input = document.getElementById('searchInput');
-  const form = document.getElementById('searchForm');
-  const resultBox = document.getElementById('searchResult');
-  const total = (window.SEARCH_INDEX || []).length;
-  let lastQuery = '';
 
-  function escapeHtml(s) {
-    return s.replace(/[&<>"']/g, c => ({
-      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-    }[c]));
-  }
-
-  // 高亮关键词
-  function highlight(text, terms) {
-    if (!terms.length) return escapeHtml(text);
-    let out = escapeHtml(text);
-    terms.forEach(t => {
-      if (!t) return;
-      const re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-      out = out.replace(re, '<mark>$1</mark>');
-    });
-    return out;
-  }
-
-  // 评分函数：title 10分 / kw 5分 / desc 3分 / body 1分（按出现次数累加）
-  function score(page, terms) {
-    let s = 0;
-    const t = page.title.toLowerCase();
-    const k = page.kw.toLowerCase();
-    const d = page.desc.toLowerCase();
-    const b = page.body.toLowerCase();
-    terms.forEach(term => {
-      const tl = term.toLowerCase();
-      if (!tl) return;
-      const titleHits = (t.match(new RegExp(tl, 'g')) || []).length;
-      s += titleHits * 10;
-      const kwHits = (k.match(new RegExp(tl, 'g')) || []).length;
-      s += kwHits * 5;
-      const descHits = (d.match(new RegExp(tl, 'g')) || []).length;
-      s += descHits * 3;
-      const bodyHits = (b.match(new RegExp(tl, 'g')) || []).length;
-      s += bodyHits * 1;
-      // 完全匹配 title 加分
-      if (t === tl) s += 50;
-      if (t.includes(tl)) s += 5;
-    });
-    return s;
-  }
-
-  function search(query) {
-    query = (query || '').trim();
-    if (!query) {
-      resultBox.innerHTML = '<div class="no-result"><h3>请输入搜索关键词</h3><p>支持中文、英文、关键词组合（如：皮带秤 精度）</p></div>';
-      return;
-    }
-    const terms = query.split(/\s+/).filter(Boolean);
-    const idx = window.SEARCH_INDEX || [];
-    const results = [];
-    idx.forEach(p => {
-      const s = score(p, terms);
-      if (s > 0) results.push({ p, s });
-    });
-    results.sort((a, b) => b.s - a.s);
-    render(query, terms, results);
-  }
-
-  function render(query, terms, results) {
-    if (!results.length) {
-      resultBox.innerHTML =
-        '<div class="search-stats">未找到与 <strong>' + escapeHtml(query) + '</strong> 相关的内容（已搜索 ' + total + ' 个页面）</div>' +
-        '<div class="no-result"><h3>没有匹配结果</h3><p>建议：检查关键词拼写 / 使用更通用的词 / 尝试热搜标签</p></div>';
-      return;
-    }
-    const top = results.slice(0, 30);
-    let html = '<div class="search-stats">找到 <strong>' + results.length + '</strong> 条与 <strong>' + escapeHtml(query) + '</strong> 相关的内容（已搜索 ' + total + ' 个页面）</div>';
-    top.forEach(({ p }) => {
-      const titleHl = highlight(p.title, terms);
-      const descHl = highlight(p.desc || p.body.slice(0, 150), terms);
-      html +=
-        '<div class="result-item">' +
-          '<span class="result-section">' + escapeHtml(p.section) + '</span>' +
-          '<a href="' + escapeHtml(p.url) + '" class="result-title">' + titleHl + '</a>' +
-          '<div class="result-desc">' + descHl + '</div>' +
-          '<div class="result-url">www.suhengcekong.com' + escapeHtml(p.url) + '</div>' +
-        '</div>';
-    });
-    resultBox.innerHTML = html;
-  }
-
-  // 监听输入
-  let timer;
-  input.addEventListener('input', () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      const q = input.value.trim();
-      if (q === lastQuery) return;
-      lastQuery = q;
-      search(q);
-    }, 200);
-  });
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    search(input.value);
-  });
-
-  // 快捷标签
-  document.querySelectorAll('.quick-tag').forEach(el => {
-    el.addEventListener('click', e => {
-      e.preventDefault();
-      const q = el.dataset.q;
-      input.value = q;
-      lastQuery = q;
-      search(q);
-      window.scrollTo({ top: 200, behavior: 'smooth' });
-    });
-  });
-
-  // URL ?q= 支持
-  const params = new URLSearchParams(location.search);
-  const initial = params.get('q');
-  if (initial) {
-    input.value = initial;
-    lastQuery = initial;
-    search(initial);
-  } else {
-    resultBox.innerHTML = '<div class="no-result"><h3>请输入搜索关键词</h3><p>支持中文、英文、关键词组合（如：皮带秤 精度）</p></div>';
-  }
-})();
-</script>
+<!-- 悬浮联系按钮 -->
+<div class="contact-widget">
+  <a href="#" class="btn-wx" title="微信咨询" onclick="return false;">
+    <span class="tooltip">微信号：18811906890</span>
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18z"/></svg>
+  </a>
+  <a href="tel:18811906890" class="btn-phone" title="电话咨询">
+    <span class="tooltip">188 1190 6890</span>
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+  </a>
+</div>
 </body>
 </html>

@@ -124,7 +124,7 @@ deploy/
 
 **seo/目录文章的标准footer（精简版，116+页面在用）**：
 ```html
-<footer class="footer"><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 苏衡测控 | 徐州市苏衡自动化控制技术有限公司</p><span>苏ICP备2024107758号-1</span></div></div></footer>
+<footer class="footer"><div class="footer-bottom"><div class="container footer-bottom-inner"><p>&copy; 2026 苏衡测控 | 徐州苏衡测控科技有限公司</p><span>苏ICP备2024107758号-1</span></div></div></footer>
 ```
 
 **根目录页面的标准footer（完整版）**：
