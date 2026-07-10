@@ -2291,7 +2291,62 @@ body > nav:not(.navbar):not(.nav):not(.navbar):not(.nav) {
   display: block;
 }
 
-/* 右侧操作区 */
+/* 覆盖通用 .dropdown 对 System C <li class="dropdown"> 的误作用 */
+.header .nav-list > li.dropdown {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-top: none;
+  border-radius: 0;
+  overflow: visible;
+  min-width: 0;
+  animation: none;
+}
+
+/* System C dropdown-menu 完整样式 */
+.header .nav-list li.dropdown > .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  box-shadow: var(--shadow-lg);
+  border-top: 3px solid var(--primary);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 101;
+}
+.header .nav-list li.dropdown > .dropdown-menu li {
+  width: 100%;
+}
+.header .nav-list li.dropdown > .dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 13.5px;
+  color: var(--text-body);
+  text-decoration: none;
+  border-bottom: 1px solid #f0f4f8;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.header .nav-list li.dropdown > .dropdown-menu li:last-child a {
+  border-bottom: none;
+}
+.header .nav-list li.dropdown > .dropdown-menu li a:hover {
+  background: var(--bg-light);
+  color: var(--primary);
+  padding-left: 26px;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
