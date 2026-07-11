@@ -15,3 +15,51 @@
 [2026-06-29] pushed=2 failed=0
 [2026-07-02] pushed=0 failed=1
 [2026-07-03] pushed=10 failed=1
+[2026-07-10 23:40:36] === 每日部署任务启动 | TODAY=2026-07-11 [DRY-RUN] ===
+[2026-07-10 23:40:36] 今日节奏上限 N=1（周六1篇）
+[2026-07-10 23:40:36] 队列中待部署（pending/monthly_plan）共 49 条
+[2026-07-10 23:40:36] 首日：将随 deploy/qa/ 整体批次上线（qa 索引原子一致）
+[2026-07-10 23:40:36] 计划上线/推送 1 条：['belt-scale-display-inaccurate-7-causes.html']
+[2026-07-10 23:40:36] [DRY-RUN] 未做任何改动（文件/git/百度）。
+[2026-07-10 23:40:45] === 每日部署任务启动 | TODAY=2026-07-12 [DRY-RUN] ===
+[2026-07-10 23:40:45] 今日节奏上限 N=0（周日不部署）
+[2026-07-10 23:40:45] 队列中待部署（pending/monthly_plan）共 49 条
+[2026-07-10 23:40:45] 周日：不部署、不推送。
+[2026-07-10 23:40:45] === 每日部署任务启动 | TODAY=2026-07-13 [DRY-RUN] ===
+[2026-07-10 23:40:45] 今日节奏上限 N=2（工作日2篇）
+[2026-07-10 23:40:45] 队列中待部署（pending/monthly_plan）共 49 条
+[2026-07-10 23:40:45] 首日：将随 deploy/qa/ 整体批次上线（qa 索引原子一致）
+[2026-07-10 23:40:45] 计划上线/推送 2 条：['belt-scale-display-inaccurate-7-causes.html', 'belt-scale-load-cell-fault-replacement.html']
+[2026-07-10 23:40:45] [DRY-RUN] 未做任何改动（文件/git/百度）。
+[2026-07-10 23:40:45] === 每日部署任务启动 | TODAY=2026-08-11 [DRY-RUN] ===
+[2026-07-10 23:40:45] 今日节奏上限 N=2（工作日2篇）
+[2026-07-10 23:40:45] 队列中待部署（pending/monthly_plan）共 49 条
+[2026-07-10 23:40:45] 已过窗口结束日，兜底上线全部剩余 49 篇
+[2026-07-10 23:40:45] 首日：将随 deploy/qa/ 整体批次上线（qa 索引原子一致）
+[2026-07-10 23:40:45] 计划上线/推送 49 条：['belt-scale-display-inaccurate-7-causes.html', 'belt-scale-load-cell-fault-replacement.html', 'belt-scale-instrument-alarm-code-handling.html', 'belt-scale-cmc-license-explained.html', 'coal-mine-ma-explosion-proof-belt-scale.html', 'belt-scale-mandatory-verification-fee.html', 'import-vs-domestic-belt-scale-gap.html', 'grain-processing-belt-scale-selection.html', 'sand-gravel-aggregate-belt-scale.html', 'waste-incineration-feeding-weighing.html', 'chemical-fertilizer-corrosion-proof-belt-scale.html', 'feed-mill-batching-belt-scale-case.html', 'belt-scale-remote-monitoring-modbus-4g.html', 'belt-scale-dcs-plc-integration.html', 'unattended-belt-scale-metering-system.html', 'belt-scale-digital-upgrade-smart-report.html', 'belt-scale-price-trend-2026-h2.html', 'belt-scale-procurement-tender-spec.html', 'belt-scale-national-standard-gb-t7721-jjg195.html', 'belt-scale-accuracy-decay-3year-report.html', 'belt-scale-replace-vs-repair.html', 'belt-scale-lease-installment.html', 'qa-belt-scale-calibration-equipment.html', 'qa-belt-scale-feeder-interchangeable.html', 'qa-belt-scale-sensor-c3-to-c6.html', 'qa-belt-scale-commissioning-time.html', 'qa-belt-scale-warranty-responsibility.html', 'qa-belt-scale-error-tolerance.html', 'quantitative-feeder-vs-belt-scale-route.html', 'whole-plant-weighing-system-planning.html', 'steel-sintering-batching-belt-scale-retrofit.html', 'cement-raw-meal-batching-belt-scale-optimize.html', 'sh-s600-high-precision-belt-scale.html', 'sh-gl-quantitative-feeder.html', 'explosion-proof-belt-scale-coal-mine.html', 'belt-scale-installation-self-checklist.html', 'belt-scale-config-1m-vs-5m-ton.html', 'belt-scale-opex-whitepaper.html', 'belt-scale-procurement-pitfalls-guide.html', 'belt-scale-terminology-dictionary.html', 'belt-scale-spec-quick-reference.html', 'china-belt-scale-industry-report.html', 'belt-scale-selection-decision-tree.html', 'belt-scale-installation-illustrated-20steps.html', 'qa-belt-scale-top-20-questions.html', 'belt-scale-factory-inspection-report.html', 'suheng-iso9001-quality-system.html', 'classic-belt-scale-retrofit-cases.html', 'belt-scale-procurement-ultimate-guide.html']
+[2026-07-10 23:40:45] [DRY-RUN] 未做任何改动（文件/git/百度）。
+[2026-07-10 23:44:44] === 每日部署任务启动 | TODAY=2026-07-11 [DRY-RUN] ===
+[2026-07-10 23:44:44] 今日节奏上限 N=1（周六1篇）
+[2026-07-10 23:44:44] 队列中待部署（pending/monthly_plan）共 49 条
+[2026-07-10 23:44:44] 首日：将随 deploy/qa/ 整体批次上线（qa 索引原子一致）
+[2026-07-10 23:44:44] 计划上线/推送 1 条：['belt-scale-display-inaccurate-7-causes.html']
+[2026-07-10 23:44:44] [DRY-RUN] 未做任何改动（文件/git/百度）。
+[2026-07-11 11:51:35] === 每日部署任务启动 | TODAY=2026-07-11 [DRY-RUN] ===
+[2026-07-11 11:51:35] 今日节奏上限 N=1（周六1篇）
+[2026-07-11 11:51:35] 队列中待部署（pending/monthly_plan）共 49 条
+[2026-07-11 11:51:35] 首日：将随 deploy/qa/ 整体批次上线（qa 索引原子一致）
+[2026-07-11 11:51:35] 计划上线/推送 1 条：['belt-scale-display-inaccurate-7-causes.html']
+[2026-07-11 11:51:35] [DRY-RUN] 未做任何改动（文件/git/百度）。
+[2026-07-11 11:51:54] === 每日部署任务启动 | TODAY=2026-07-11 ===
+[2026-07-11 11:51:54] 今日节奏上限 N=1（周六1篇）
+[2026-07-11 11:51:54] 队列中待部署（pending/monthly_plan）共 49 条
+[2026-07-11 11:51:54] 首日：将随 deploy/qa/ 整体批次上线（qa 索引原子一致）
+[2026-07-11 11:51:54] 计划上线/推送 1 条：['belt-scale-display-inaccurate-7-causes.html']
+[2026-07-11 11:51:54] 插入卡片 belt-scale-display-inaccurate-7-causes.html -> 已插入
+[2026-07-11 11:51:54] qa/ 批次 git add 完成
+[2026-07-11 11:51:54] 已重建 search-data.js / sitemap.xml
+[2026-07-11 11:53:25] git push: fatal: unable to access 'https://github.com/leoxiaosang/suhengcekong.git/': Empty reply from server
+[2026-07-11 11:53:26] 百度推送成功 [1/10] https://www.suhengcekong.com/seo/belt-scale-display-inaccurate-7-causes.html (remain=9)
+[2026-07-11 11:53:26] 今日百度推送 1 条
+[2026-07-11 11:54:41] 队列状态已提交并推送: fatal: unable to access 'https://github.com/leoxiaosang/suhengcekong.git/': Failed to connect to github.com port 443 after 75003 ms: Couldn't connect to server
+[2026-07-11 11:54:41] === 每日部署任务结束 ===
