@@ -217,3 +217,10 @@ sitemap 生成完成：197 个 URL
 [2026-07-11 16:37:47] 本次将上线/推送 2 条（monthly 候选=47，plan_810 候选=36，plan_1112 候选=24）
 [2026-07-11 16:37:47] 计划上线/推送 2 条：['belt-scale-instrument-alarm-code-handling.html', 'belt-scale-cmc-license-explained.html']
 [2026-07-11 16:37:47] [DRY-RUN] 未做任何改动（文件/git/百度）。
+[2026-07-11 17:14:26] === 每日部署任务启动 | TODAY=2026-09-02 [DRY-RUN] ===
+[2026-07-11 17:14:26] 今日节奏上限 N=2（工作日2篇）
+[2026-07-11 17:14:26] 队列待部署：monthly_plan=47，plan_810=36，plan_1112=24，plan_0912=47
+[2026-07-11 17:14:26] 选择策略: 窗口结束追平(上限2) | 目标日期<=今日前2 | 未到窗口(11-1) | 目标日期<=今日前2
+[2026-07-11 17:14:26] 本次将上线/推送 2 条（monthly 候选=47，plan_810 候选=2，plan_1112 候选=0，plan_0912 候选=1）
+[2026-07-11 17:14:26] 计划上线/推送 2 条：['belt-scale-instrument-alarm-code-handling.html', 'belt-scale-cmc-license-explained.html']
+[2026-07-11 17:14:26] [DRY-RUN] 未做任何改动（文件/git/百度）。
