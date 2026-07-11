@@ -127,8 +127,8 @@ var _hmt = _hmt || [];
         <div class="contact-full-form">
           <h3>在线询价 / 咨询</h3>
           <p>填写以下表单，我们的专业工程师将在24小时内与您联系</p>
-          <form class="contact-form-full" action="https://formspree.io/f/xvznlpdw" method="POST">
-            <input type="hidden" name="_subject" value="苏衡测控官网新咨询">
+          <form class="contact-form-full" action="/api/contact" method="POST">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
             <div class="form-row-2">
               <div class="form-group">
                 <label>您的姓名 *</label>
@@ -166,6 +166,7 @@ var _hmt = _hmt || [];
               <label>需求描述</label>
               <textarea name="message" rows="5" placeholder="请描述您的需求（如：皮带秤选型、精度要求、带宽、流量等），我们将为您推荐最合适的产品方案…"></textarea>
             </div>
+            <p class="form-feedback" style="margin-top:10px;min-height:1.1em;font-size:14px;"></p>
             <button type="submit" class="btn-submit">提交需求 →</button>
           </form>
         </div>

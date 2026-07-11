@@ -180,21 +180,46 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(s => sectionObserver.observe(s));
 });
 
-// ─── Contact form submit feedback ──────────────────────────────────
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('.btn-submit');
-  const original = btn.textContent;
-  btn.textContent = '✓ 提交成功，我们将尽快联系您！';
-  btn.style.background = '#22c55e';
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = original;
-    btn.style.background = '';
-    btn.disabled = false;
-    this.reset();
-  }, 3500);
-});
+// ─── Contact form: AJAX submit to self-hosted lead API ─────────────
+function bindContactForm(form) {
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const btn = form.querySelector('.btn-submit') || form.querySelector('button[type="submit"]');
+    const original = btn ? btn.textContent : '提交需求 →';
+    const feedback = form.querySelector('.form-feedback');
+    const data = {};
+    new FormData(form).forEach(function (v, k) { data[k] = v; });
+    if (btn) { btn.disabled = true; btn.textContent = '提交中…'; }
+    if (feedback) { feedback.textContent = ''; feedback.style.color = ''; }
+    fetch(form.getAttribute('action') || '/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      return r.json().then(function (j) { return { status: r.status, j: j }; }).catch(function () { return { status: r.status, j: {} }; });
+    }).then(function (res) {
+      const j = res.j || {};
+      if (res.status === 200 && j.ok) {
+        if (btn) { btn.textContent = '✓ 提交成功，我们将尽快联系您！'; btn.style.background = '#22c55e'; }
+        if (feedback) { feedback.textContent = '提交成功，感谢您的咨询！'; feedback.style.color = '#22c55e'; }
+        form.reset();
+        setTimeout(function () {
+          if (btn) { btn.textContent = original; btn.style.background = ''; btn.disabled = false; }
+          if (feedback) { feedback.textContent = ''; }
+        }, 4000);
+      } else {
+        const msg = (j && j.error) ? j.error : '提交失败，请稍后重试或直接拨打 188 1190 6890';
+        if (btn) { btn.disabled = false; btn.textContent = original; }
+        if (feedback) { feedback.textContent = msg; feedback.style.color = '#ef4444'; }
+      }
+    }).catch(function () {
+      if (btn) { btn.disabled = false; btn.textContent = original; }
+      if (feedback) { feedback.textContent = '网络错误，请稍后重试或拨打 188 1190 6890'; feedback.style.color = '#ef4444'; }
+    });
+  });
+}
+document.querySelectorAll('.contact-form, .contact-form-full').forEach(bindContactForm);
 
 // ─── Subscribe form submit feedback ────────────────────────────────
 document.querySelector('.subscribe-form').addEventListener('submit', function(e) {
