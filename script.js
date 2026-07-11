@@ -2,54 +2,61 @@
 
 // ─── Navbar scroll effect ───────────────────────────────────────────
 const navbar = document.getElementById('navbar');
+const backToTopBtn = document.getElementById('backToTop');
 let lastScrollY = window.scrollY;
 
 window.addEventListener('scroll', () => {
   const currentScrollY = window.scrollY;
-  if (currentScrollY > 80) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
+  if (navbar) {
+    if (currentScrollY > 80) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
   }
   lastScrollY = currentScrollY;
 
   // Back to top
-  const btn = document.getElementById('backToTop');
-  if (currentScrollY > 500) {
-    btn.classList.add('visible');
-  } else {
-    btn.classList.remove('visible');
+  if (backToTopBtn) {
+    if (currentScrollY > 500) backToTopBtn.classList.add('visible');
+    else backToTopBtn.classList.remove('visible');
   }
 });
 
 // ─── Back to top ────────────────────────────────────────────────────
-document.getElementById('backToTop').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // ─── Search bar toggle ──────────────────────────────────────────────
 const searchBtn = document.getElementById('searchBtn');
 const searchBar = document.getElementById('searchBar');
 const closeSearch = document.getElementById('closeSearch');
 
-searchBtn.addEventListener('click', () => {
-  searchBar.classList.toggle('active');
-  if (searchBar.classList.contains('active')) {
-    searchBar.querySelector('input').focus();
-  }
-});
-closeSearch.addEventListener('click', () => {
-  searchBar.classList.remove('active');
-});
+if (searchBtn && searchBar) {
+  searchBtn.addEventListener('click', () => {
+    searchBar.classList.toggle('active');
+    if (searchBar.classList.contains('active')) {
+      const inp = searchBar.querySelector('input');
+      if (inp) inp.focus();
+    }
+  });
+}
+if (closeSearch && searchBar) {
+  closeSearch.addEventListener('click', () => {
+    searchBar.classList.remove('active');
+  });
+}
 
 // ─── Mobile hamburger ───────────────────────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('open');
-  hamburger.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+}
 
 // Mobile: toggle sub-menus
 document.querySelectorAll('.nav-item.has-dropdown > a, .nav-item.has-mega > a').forEach(link => {
@@ -81,9 +88,9 @@ function nextSlide() {
 }
 
 function startSlider() {
-  sliderInterval = setInterval(nextSlide, 5000);
+  if (slides.length > 1) sliderInterval = setInterval(nextSlide, 5000);
 }
-startSlider();
+if (slides.length) startSlider();
 
 dots.forEach((dot, idx) => {
   dot.addEventListener('click', () => {
@@ -222,17 +229,21 @@ function bindContactForm(form) {
 document.querySelectorAll('.contact-form, .contact-form-full').forEach(bindContactForm);
 
 // ─── Subscribe form submit feedback ────────────────────────────────
-document.querySelector('.subscribe-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('button');
-  btn.textContent = '✓ 订阅成功';
-  btn.style.background = '#22c55e';
-  setTimeout(() => {
-    btn.textContent = '立即订阅';
-    btn.style.background = '';
-    this.reset();
-  }, 2500);
-});
+const subscribeForm = document.querySelector('.subscribe-form');
+if (subscribeForm) {
+  subscribeForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button');
+    if (!btn) return;
+    btn.textContent = '✓ 订阅成功';
+    btn.style.background = '#22c55e';
+    setTimeout(() => {
+      btn.textContent = '立即订阅';
+      btn.style.background = '';
+      this.reset();
+    }, 2500);
+  });
+}
 
 // ─── 防复制 / 防爬取保护 ───────────────────────────────────
 (function() {

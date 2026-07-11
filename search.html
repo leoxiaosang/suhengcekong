@@ -140,6 +140,145 @@ var _hmt = _hmt || [];
   <div id="searchResult"></div>
 </div>
 
+<!-- 搜索索引与逻辑 -->
+<script src="search-data.js"></script>
+<script>
+(function () {
+  var RAW = (window.SEARCH_INDEX || []);
+  // 过滤垃圾条目：空标题、百度验证文件、sitemap、纯 hash body
+  var INDEX = RAW.filter(function (d) {
+    if (!d || !d.title || !d.title.trim()) return false;
+    var u = (d.url || '').toLowerCase();
+    if (u.indexOf('baidu_verify') !== -1) return false;
+    if (u.indexOf('sitemap') !== -1) return false;
+    return true;
+  });
+
+  var input = document.getElementById('searchInput');
+  var resultBox = document.getElementById('searchResult');
+  var form = document.getElementById('searchForm');
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+  function escapeReg(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+  // 关键词高亮
+  function highlight(text, terms) {
+    var out = escapeHtml(text);
+    terms.forEach(function (t) {
+      if (!t) return;
+      var re = new RegExp('(' + escapeReg(escapeHtml(t)) + ')', 'gi');
+      out = out.replace(re, '<mark>$1</mark>');
+    });
+    return out;
+  }
+
+  // 截取包含关键词的摘要片段
+  function snippet(body, terms, len) {
+    len = len || 140;
+    if (!body) return '';
+    var lower = body.toLowerCase();
+    var pos = -1;
+    for (var i = 0; i < terms.length; i++) {
+      var p = lower.indexOf(terms[i].toLowerCase());
+      if (p !== -1 && (pos === -1 || p < pos)) pos = p;
+    }
+    if (pos === -1) return body.slice(0, len);
+    var start = Math.max(0, pos - 40);
+    var seg = body.slice(start, start + len);
+    return (start > 0 ? '…' : '') + seg + (start + len < body.length ? '…' : '');
+  }
+
+  // 加权评分：title=10, kw=5, desc=3, body=1
+  function score(doc, terms) {
+    var s = 0;
+    var t = (doc.title || '').toLowerCase();
+    var k = (doc.kw || '').toLowerCase();
+    var d = (doc.desc || '').toLowerCase();
+    var b = (doc.body || '').toLowerCase();
+    terms.forEach(function (term) {
+      var q = term.toLowerCase();
+      if (!q) return;
+      if (t.indexOf(q) !== -1) s += 10;
+      if (k.indexOf(q) !== -1) s += 5;
+      if (d.indexOf(q) !== -1) s += 3;
+      if (b.indexOf(q) !== -1) s += 1;
+    });
+    return s;
+  }
+
+  function normalizeUrl(u) {
+    if (!u) return '#';
+    // 索引里是 /about.html、/seo/xxx.html 形式，去掉开头斜杠转成相对本页
+    return u.replace(/^\//, '');
+  }
+
+  function doSearch(query) {
+    query = (query || '').trim();
+    if (!query) { resultBox.innerHTML = ''; return; }
+    // 分词：空格拆分 + 整体作为一个词
+    var terms = query.split(/\s+/).filter(Boolean);
+    if (terms.indexOf(query) === -1) terms.unshift(query);
+
+    var hits = [];
+    for (var i = 0; i < INDEX.length; i++) {
+      var sc = score(INDEX[i], terms);
+      if (sc > 0) hits.push({ doc: INDEX[i], score: sc });
+    }
+    hits.sort(function (a, b) { return b.score - a.score; });
+
+    var stats = '<div class="search-stats">找到 <strong>' + hits.length +
+      '</strong> 条与 "<strong>' + escapeHtml(query) + '</strong>" 相关的结果</div>';
+
+    if (!hits.length) {
+      resultBox.innerHTML = stats +
+        '<div class="no-result"><h3>没有找到相关内容</h3><p>换个关键词试试，或直接拨打 188 1190 6890 咨询。</p></div>';
+      return;
+    }
+
+    var html = stats;
+    hits.slice(0, 50).forEach(function (h) {
+      var d = h.doc;
+      var url = normalizeUrl(d.url);
+      html += '<div class="result-item">' +
+        '<span class="result-section">' + escapeHtml(d.section || '页面') + '</span>' +
+        '<a class="result-title" href="' + escapeHtml(url) + '">' + highlight(d.title, terms) + '</a>' +
+        '<div class="result-desc">' + highlight(d.desc || snippet(d.body, terms), terms) + '</div>' +
+        '<div class="result-url">' + escapeHtml(url) + '</div>' +
+        '</div>';
+    });
+    resultBox.innerHTML = html;
+  }
+
+  // 表单提交
+  if (form) form.addEventListener('submit', function (e) { e.preventDefault(); doSearch(input.value); });
+  // 实时搜索（输入即搜，简单防抖）
+  var timer = null;
+  if (input) input.addEventListener('input', function () {
+    clearTimeout(timer);
+    timer = setTimeout(function () { doSearch(input.value); }, 200);
+  });
+
+  // 热门标签点击
+  document.querySelectorAll('.quick-tag').forEach(function (tag) {
+    tag.addEventListener('click', function () {
+      var q = tag.getAttribute('data-q') || tag.textContent;
+      if (input) input.value = q;
+      doSearch(q);
+      if (input) input.focus();
+    });
+  });
+
+  // 支持 ?q= 直接搜索
+  var params = new URLSearchParams(window.location.search);
+  var q0 = params.get('q');
+  if (q0) { if (input) input.value = q0; doSearch(q0); }
+})();
+</script>
+
 <!-- 页脚（与首页一致） -->
 <footer class="footer">
   <div class="footer-main">
