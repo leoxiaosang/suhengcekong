@@ -1,1 +1,6 @@
 .DS_Store
+# launchd 兜底调度运行时日志（com.suhengcekong.daily-deploy）
+.launchd-daily.out
+.launchd-daily.err
+# 部署脚本并发锁
+.deploy_daily.lock
