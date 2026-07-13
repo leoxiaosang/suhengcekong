@@ -4,3 +4,5 @@
 .launchd-daily.err
 # 部署脚本并发锁
 .deploy_daily.lock
+# 每日一次防重标记（不入库，避免误提交/误同步）
+.deploy_daily_done
